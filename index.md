@@ -1,15 +1,15 @@
 # Team Jackfruit
 
-Overview
-The Problem
+ **Overview**
+**The Problem**
 
 Access to affordable healthcare is a significant issue in Hawaii. Uninsured or underinsured individuals often struggle to find information about healthcare services that they can afford, leading to delayed or no care.
 
-The Solution
+**The Solution**
 
 A web application designed to guide uninsured and underinsured individuals in Hawaii to various healthcare options. It aggregates and simplifies information about various healthcare services, providing an easy-to-navigate platform that points users to the most relevant and cost-effective healthcare solutions.
 
-Approach
+***Approach***
 The web application will operate without storing personal user data, ensuring privacy and compliance with regulations. The application will feature:
 
 User Profiles: Users can indicate their insurance status (insured, uninsured, or underinsured) and their healthcare needs.
