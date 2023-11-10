@@ -4,5 +4,43 @@ google_analytics:
 show_downloads: true
 theme: jekyll-theme-minimal
 
-gems:
+plugins:
   - jekyll-mentions
+  - jekyll-seo-tag
+
+# SEO Tag plugin for better SEO
+seo:
+  type: WebApplication
+  image: assets/images/logo.png # Path to a relevant image/logo for the web app
+  twitter:
+    username: @teamjackfruit # Replace with your Twitter handle
+    card: summary_large_image
+
+# Include additional Jekyll plugins here as needed
+# ...
+
+# Customize the theme
+# Since you're using jekyll-theme-minimal, you can customize it further using these options:
+minima:
+  skin: "classic" # or you can choose 'dark', 'solarized', etc., based on the theme's available skins
+
+# Footer links
+footer_links:
+  - title: About Us
+    url: /about
+  - title: Services
+    url: /services
+  - title: Contact
+    url: /contact
+  - title: Privacy Policy
+    url: /privacy-policy
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Exclude from production build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
