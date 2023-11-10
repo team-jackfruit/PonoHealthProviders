@@ -60,3 +60,11 @@ body {
   font-size: 1rem; /* Adjust the size as needed */
   margin-top: 2rem; /* Space before the paragraph text */
 }
+
+.card{
+  transition: all 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.15);
+}
