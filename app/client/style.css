@@ -1,0 +1,62 @@
+/* Use Open Sans as the default sans serif font. */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700|Source+Code+Pro:300,400,500,700");
+
+/* Set up some CSS variables to theme the application. */
+:root {
+  --matr-navbar-bg: #ECECEC;
+  --matr-navbar-bg-rgb: 236, 236, 236;
+  --navbar-bg-color: #05445E;
+}
+
+/* Change bootstrap variable values.
+ See https://getbootstrap.com/docs/5.2/customize/css-variables/
+ */
+body {
+  --bs-light-rgb: var(--matr-navbar-bg-rgb);
+}
+
+/* Set the alert background on the signin and signup pages. */
+#signin-page .alert-light, #signup-page .alert-light {
+  --bs-alert-bg: var(--matr-navbar-bg);
+}
+
+/* Define custom styles */
+.gray-background {
+  background-color: var(--matr-navbar-bg);
+  color: var(--bs-dark);
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+/* Custom styles for header and footer */
+.custom-navbar {
+  background-color: var(--navbar-bg-color); /* Replace with your desired color */
+}
+
+.hero-banner {
+  background-image: url('images/banner.jpg'); /* Add your image path here */
+  background-size: cover;
+  background-position: center;
+  height: 600px; /* Adjust the height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Text color */
+  text-align: center;
+}
+
+.mission-section {
+  background-color: #2D9EDD; /* Replace with your specific color */
+  color: white; /* Adjust the text color as needed */
+  padding: 50px 0; /* Add padding to top and bottom as needed */
+}
+
+.mission-heading {
+  font-size: 2.5rem; /* Adjust the size as needed */
+  margin-bottom: 1rem; /* Space after the heading */
+}
+
+.mission-text {
+  font-size: 1rem; /* Adjust the size as needed */
+  margin-top: 2rem; /* Space before the paragraph text */
+}
