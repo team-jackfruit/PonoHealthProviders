@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col} from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 /* A simple static component to render some text for the landing page. */
 const Landing = () => (
@@ -12,16 +12,15 @@ const Landing = () => (
       </Col>
     </Row>
     {/* This is the Mission section */}
-    <Row className="mission-section justify-content-md-center align-items-center pb-5">
-      <Col md={10} lg={8} xl={6} className="text-center">
-        <p className="mission-heading">Need Medical Help?</p>
-        <p className="mission-heading">Anxious because you&apos;re uninsured or under-insured?</p>
-        <p className="mission-heading">Trying to find affordable healthcare?</p>
-        <p className="mission-text">
-          PonoHealth Providers aims to bridge the gap for the uninsured and under-insured, by enhancing healthcare
-          accessibility, promoting informed decision-making, and fostering a community where quality health services are
-          attainable for all, regardless of their financial circumstances.
-        </p>
+    <Row>
+      <Col xs={12} md={8} className="text-center text-md-left">
+        <h1>NEED MEDICAL HELP?</h1>
+        <h2>ANXIOUS BECAUSE YOU&apos;RE UNINSURED OR UNDER-INSURED?</h2>
+        <h3>TRYING TO FIND AFFORDABLE HEALTHCARE?</h3>
+        <p>PonoHealth Providers aims to bridge the gap for the uninsured and under-insured, by enhancing healthcare accessibility, promoting informed decision-making, and fostering a community where quality health services are attainable for all, regardless of their financial circumstances.</p>
+      </Col>
+      <Col xs={12} md={4} className="text-center">
+        {/* Your image/icon here */}
       </Col>
     </Row>
   </Container>
