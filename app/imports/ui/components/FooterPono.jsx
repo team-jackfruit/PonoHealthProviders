@@ -3,7 +3,7 @@ import { Container, Row, Col, Nav } from 'react-bootstrap';
 
 /** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
 const FooterPono = () => (
-  <footer className="fixed-bottom custom-navbar" style={{ color: 'white' }}>
+  <footer className="custom-navbar" style={{ color: 'white' }}>
     <Container>
       <Row className="py-3">
         <Col md={6} className="text-center text-md-left mb-3 mb-md-0">

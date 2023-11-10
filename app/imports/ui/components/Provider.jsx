@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card /* ,Image */ } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 const Provider = ({ provider }) => (
   <Card className="card h-100">
