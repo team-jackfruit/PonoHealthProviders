@@ -11,11 +11,11 @@
    - [Development History](#development-history)
    - [Contact Us](#contact-us)
 
-**The Problem** {#the-problem}
+## The Problem
 
 Access to affordable healthcare is a significant issue in Hawaii. Uninsured or underinsured individuals often struggle to find information about healthcare services that they can afford, leading to delayed or no care.
 
-**Overview** {#overview}
+## Overview
 
 *Approach*: *The web application will operate without storing personal user data, ensuring privacy and compliance with regulations. The application will feature:*
 
@@ -23,10 +23,10 @@ Access to affordable healthcare is a significant issue in Hawaii. Uninsured or u
 
 * **Directory**: A comprehensive listing of healthcare facilities, services offered, and costs, filterable by various criteria.
 
-**Implementation**
+### Implementation
 
 *Meteor:* Javascript-based implementation for the client and server code  
-*Bootstrap 5:* Creates a professional-looking user interface  
+*Bootstrap 5:* Creates a professional-looking user interface 
 
 
 
