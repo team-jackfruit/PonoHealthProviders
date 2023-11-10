@@ -38,7 +38,7 @@ const ListProviders = () => {
           </Row>
         </Col>
         <Col className="square border-start text-center">
-          <h2>Filter</h2>
+          <h1>Filter</h1>
           <Card className="text-center">
             <Table>
               <tr>
