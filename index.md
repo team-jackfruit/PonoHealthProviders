@@ -23,22 +23,20 @@ Access to affordable healthcare is a significant issue in Hawaii. Uninsured or u
 
 * **Directory**: A comprehensive listing of healthcare facilities, services offered, and costs, filterable by various criteria.
 
-## Implementation
+### Implementation
 
 *Meteor:* Javascript-based implementation for the client and server code  
 *Bootstrap 5:* Creates a professional-looking user interface 
 
+
+
 ## User Guide
-### Mockup Page Ideas
-**Landing Page**: Welcomes Users to the site, provides a mission statement of the website and lists the services provided.
-<img src="doc/Landing_Page.png" width="100" height="100">
-**Directory Page**: Lists healthcare services, allowing filtering by location, cost, services, and insurance accepted.
-<img src="doc/Resources_Page.png" width="100" height="100">
-**Resources Page**: Lists additional resources for users, including links to government programs and other organizations.
 
-## Development History
-
-
-## Contact Us
-
+Mockup Page Ideas
+Landing Page: Welcomes users and guides them to indicate their insurance status and healthcare needs.
+<img src="doc/Landing_Page.png">
+Directory: Lists healthcare services, allowing filtering by location, cost, services, and insurance accepted.
+<img src="doc/Resources_Page.png">
+Use Case Ideas
+An uninsured individual uses the web application to find a nearby clinic offering affordable services for their condition.
 
