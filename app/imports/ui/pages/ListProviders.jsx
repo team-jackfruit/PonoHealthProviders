@@ -37,7 +37,7 @@ const ListProviders = () => {
             {healthcareFacilities.map((each) => (each.facilities.map((provider) => (<Col key={provider._id}><Provider provider={provider} /></Col>))))}
           </Row>
         </Col>
-        <Col className="square border-start text-center" >
+        <Col className="square border-start text-center">
           <h2>Filter</h2>
           <Card className="text-center">
             <Table>
