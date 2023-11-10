@@ -1,0 +1,10 @@
+title: Team JaCKfruiT
+description: A web application for uninsured/underinsured residents of Hawaii to get care.
+google_analytics:
+show_downloads: false
+theme: jekyll-theme-cayman
+github:
+  is_project_page: true
+  repository_url: https://github.com/HACC2023/Team-JacKfruiT
+gems:
+  - jekyll-mentions
