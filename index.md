@@ -32,11 +32,12 @@ Access to affordable healthcare is a significant issue in Hawaii. Uninsured or u
 
 ## User Guide
 
-Mockup Page Ideas
 *Landing Page: Welcomes users and guides them to indicate their insurance status and healthcare needs.*
 <img src="doc/Landing_Page.png">
 *Directory: Lists healthcare services, allowing filtering by location, cost, services, and insurance accepted.*
-<img src="doc/Resources_Page.png">
+<img src="doc/Resources_Page.png">  
+  
+  
 Use Case Ideas
 An uninsured individual uses the web application to find a nearby clinic offering affordable services for their condition.
 
