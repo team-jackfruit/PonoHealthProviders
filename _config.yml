@@ -1,30 +1,10 @@
 title: Team JaCKfruiT
 description: A web application for uninsured/underinsured residents of Hawaii to get care.
 google_analytics:
-show_downloads: true
+show_downloads: false
 theme: jekyll-theme-cayman
-
-plugins:
+github:
+  is_project_page: true
+  repository_url: https://github.com/HACC2023/Team-JacKfruiT
+gems:
   - jekyll-mentions
-  - jekyll-seo-tag
-
-# SEO Tag plugin for better SEO
-seo:
-  type: WebApplication
-  image: assets/images/logo.png # Path to a relevant image/logo for the web app
-  twitter:
-    username: @teamjackfruit # Replace with your Twitter handle
-    card: summary_large_image
-
-minima:
-  skin: "classic" 
-
-# Build settings
-markdown: kramdown
-highlighter: rouge
-
-# Exclude from production build
-exclude:
-  - README.md
-  - Gemfile
-  - Gemfile.lock
