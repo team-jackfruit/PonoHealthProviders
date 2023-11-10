@@ -6,7 +6,7 @@ import { Stuffs } from '../../api/stuff/Stuff';
 // import StuffItem from '../components/StuffItem';
 import Provider from '../components/Provider';
 import LoadingSpinner from '../components/LoadingSpinner';
-import healthcareFacilities from '../components/data';
+import healthcareFacilities from '../../api/data';
 
 /* Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 const ListProviders = () => {
@@ -27,7 +27,7 @@ const ListProviders = () => {
   }, []);
 
   return (ready ? (
-    <Container className="py-3">
+    <Container className="py-3 pt-5">
       <Row className="justify-content-center">
         <Col md={7}>
           <Col className="text-center">
