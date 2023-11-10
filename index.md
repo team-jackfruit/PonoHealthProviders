@@ -4,18 +4,18 @@
 
 **Table of Contents**
 
-   - **The Problem**
-   - **Overview**
-   - **Deployment**
-   - **User Guide**
-   - **Development History**
-   - **Contact Us**
+   - [The Problem](#the-problem)
+   - [Overview](#overview)
+   - [Deployment](#deployment)
+   - [User Guide](#user-guide)
+   - [Development History](#development-history)
+   - [Contact Us](#contact-us)
 
-**The Problem**
+**The Problem** {#the-problem}
 
 Access to affordable healthcare is a significant issue in Hawaii. Uninsured or underinsured individuals often struggle to find information about healthcare services that they can afford, leading to delayed or no care.
 
-**Overview**
+**Overview** {#overview}
 
 *Approach*: *The web application will operate without storing personal user data, ensuring privacy and compliance with regulations. The application will feature:*
 
