@@ -1,2 +1,0 @@
-# team-jackfruit
-Group homepage
