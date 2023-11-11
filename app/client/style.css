@@ -68,3 +68,15 @@ body {
 .card:hover {
   transform: scale(1.15);
 }
+
+.service-type-radio-button {
+  font-size: 1.2em;
+}
+
+.coverage-type-radio-button {
+  font-size: 1.2em;
+}
+
+.island-radio-button {
+  font-size: 1.2em;
+}

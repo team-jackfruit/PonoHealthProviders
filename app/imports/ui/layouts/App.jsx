@@ -19,7 +19,7 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import InsuranceForm from '../pages/InsuranceForm';
 import NavBarPono from '../components/NavBarPono';
 import FooterPono from '../components/FooterPono';
-import ListProviders from '../pages/ListProviders';
+import ListProviderswFilterExtended from '../pages/ListProviderswFilterExtended';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => {
@@ -39,10 +39,10 @@ const App = () => {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signout" element={<SignOut />} />
           <Route path="/form" element={<InsuranceForm />} />
-          <Route path="/home" element={<ProtectedRoute><Landing /></ProtectedRoute>} />
-          <Route path="/list" element={<ListProviders />} />
-          <Route path="/add" element={<ProtectedRoute><AddStuff /></ProtectedRoute>} />
-          <Route path="/edit/:_id" element={<ProtectedRoute><EditStuff /></ProtectedRoute>} />
+          <Route path="/home" element={<Landing />} />
+          <Route path="/list" element={<ListProviderswFilterExtended />} />
+          <Route path="/add" element={<AddStuff />} />
+          <Route path="/edit/:_id" element={<EditStuff />} />
           <Route path="/admin" element={<AdminProtectedRoute ready={ready}><ListStuffAdmin /></AdminProtectedRoute>} />
           <Route path="/notauthorized" element={<NotAuthorized />} />
           <Route path="*" element={<NotFound />} />
