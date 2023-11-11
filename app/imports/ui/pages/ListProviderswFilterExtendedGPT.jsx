@@ -7,14 +7,12 @@ import Provider from '../components/Provider';
 import LoadingSpinner from '../components/LoadingSpinner';
 import healthcareFacilities from '../../api/data';
 
-/* Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 const ListProviders = () => {
-  // These are three separate 'useState' hooks to track the selected options for ServiceType, CoverageType, and which Island the user wants.
   const [serviceType, setServiceType] = useState('');
   const [coverageType, setCoverageType] = useState('');
   const [island, setIsland] = useState('');
   const [filters, setFilters] = useState({ serviceType: '', coverageType: '', island: '' });
-  // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
+
   const { ready } = useTracker(() => {
     const subscription = Meteor.subscribe(Stuffs.userPublicationName);
     const rdy = subscription.ready();
@@ -27,6 +25,7 @@ const ListProviders = () => {
 
   const applyFilters = (event) => {
     event.preventDefault();
+    console.log('Applying filters:', { serviceType, coverageType, island }); // Test log for applied filters
     setFilters({
       serviceType: serviceType,
       coverageType: coverageType,
@@ -41,9 +40,18 @@ const ListProviders = () => {
     setFilters({ serviceType: '', coverageType: '', island: '' });
   };
 
-  const filteredFacilities = ready ? healthcareFacilities.filter((facility) => (!filters.serviceType || facility.serviceType === filters.serviceType) &&
-      (!filters.coverageType || facility.coverageType === filters.coverageType) &&
-      (!filters.island || facility.island === filters.island)) : [];
+  // Test function to log the filtered facilities
+  const testFilteredFacilities = () => {
+    console.log('Current filters:', filters);
+    const testFilters = healthcareFacilities.filter((facility) => (!filters.serviceType || facility.serviceType === filters.serviceType) &&
+        (!filters.coverageType || facility.coverageType === filters.coverageType) &&
+        (!filters.island || facility.island === filters.island));
+    console.log('Filtered results:', testFilters);
+    return testFilters;
+  };
+
+  // Call the test function to filter facilities
+  const filteredFacilities = ready ? testFilteredFacilities() : [];
 
   return (ready ? (
     <Container className="py-3 pt-5">

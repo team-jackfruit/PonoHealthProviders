@@ -3,7 +3,6 @@ import { Meteor } from 'meteor/meteor';
 import { Col, Container, Row, Table, Dropdown, Card } from 'react-bootstrap';
 import { useTracker } from 'meteor/react-meteor-data';
 import { Stuffs } from '../../api/stuff/Stuff';
-// import StuffItem from '../components/StuffItem';
 import Provider from '../components/Provider';
 import LoadingSpinner from '../components/LoadingSpinner';
 import healthcareFacilities from '../../api/data';
