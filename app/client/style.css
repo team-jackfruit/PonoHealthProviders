@@ -54,9 +54,11 @@ body {
 .mission-heading {
   font-size: 2.5rem; /* Adjust the size as needed */
   margin-bottom: 1rem; /* Space after the heading */
+  color: #05445E;
 }
 
 .mission-text {
   font-size: 1rem; /* Adjust the size as needed */
   margin-top: 2rem; /* Space before the paragraph text */
+  color: #05445E;
 }
