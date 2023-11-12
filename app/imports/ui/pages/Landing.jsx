@@ -24,6 +24,47 @@ const Landing = () => (
       </Col>
     </Row>
     {/* This is the Services Provided section */}
+    <Row>
+      <Col>
+        <h2> Our Services </h2>
+      </Col>
+    </Row>
+    <Row>
+      <Col>
+        <Image src="images/Find_A_Provider.png" />
+      </Col>
+      <Col>
+        <h2>Find a Provider</h2>
+        <p>We aid you in finding healthcare providers ready to assist you</p>
+      </Col>
+    </Row>
+    <Row>
+      <Col>
+        <Image src="images/Healthcare_Guide.png" />
+      </Col>
+      <Col>
+        <h2>Healthcare Guide</h2>
+        <p>Benefit from our collected resources aimed at providing affordable healthcare solutions.</p>
+      </Col>
+    </Row>
+    <Row>
+      <Col>
+        <Image src="images/Guidance_Support.png" />
+      </Col>
+      <Col>
+        <h2>Guidance Support</h2>
+        <p>Our team is ready to answer all your healthcare related queries on our FAQ page.</p>
+      </Col>
+    </Row>
+    <Row>
+      <Col>
+        <Image src="images/Community_Forum.png" />
+      </Col>
+      <Col>
+        <h2>Community Forum</h2>
+        <p>Join the community forum to discuss and share healthcare solutions and experiences.</p>
+      </Col>
+    </Row>
   </Container>
 );
 
