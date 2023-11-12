@@ -7,8 +7,8 @@ const Landing = () => (
     {/* This is the Page Banner */}
     <Row className="justify-content-md-center align-items-center hero-banner">
       <Col className="text-center">
-        <h1 className="header-title">Welcome to PonoHealth Providers</h1>
-        <h2 className="header-subtitle">Where everyone gets equal access</h2>
+        <h1>Welcome to PonoHealth Providers</h1>
+        <h2>Where everyone gets equal access</h2>
       </Col>
     </Row>
     {/* This is the Mission section */}
@@ -24,43 +24,43 @@ const Landing = () => (
       </Col>
     </Row>
     {/* This is the Services Provided section */}
-    <Row className="justify-content-center">
-      <Col className="text-center">
+    <Row className="justify-content-center services-section">
+      <Col className="text-center services-section">
         <h1> Our Services </h1>
       </Col>
     </Row>
-    <Row className="mb-3">
-      <Col className="text-center">
+    <Row className="mb-3 align-items-center services-section">
+      <Col className="text-center services-section">
         <Image src="images/Find_A_Provider.png" width="150" height="150" />
       </Col>
-      <Col>
+      <Col className="services-section">
         <h2>Find a Provider</h2>
         <p>We aid you in finding healthcare providers ready to assist you</p>
       </Col>
     </Row>
-    <Row className="mb-3">
-      <Col className="text-center">
+    <Row className="mb-3 align-items-center services-section">
+      <Col className="text-center services-section">
         <Image src="images/Healthcare_Guide.png" width="150" height="150" />
       </Col>
-      <Col>
+      <Col className="services-section">
         <h2>Healthcare Guide</h2>
         <p>Benefit from our collected resources aimed at providing affordable healthcare solutions.</p>
       </Col>
     </Row>
-    <Row className="mb-3">
-      <Col className="text-center">
+    <Row className="mb-3 align-items-center services-section">
+      <Col className="text-center services-section">
         <Image src="images/Guidance_Support.png" width="150" height="150" />
       </Col>
-      <Col>
+      <Col className="services-section">
         <h2>Guidance Support</h2>
         <p>Our team is ready to answer all your healthcare related queries on our FAQ page.</p>
       </Col>
     </Row>
-    <Row className="mb-3">
-      <Col className="text-center">
+    <Row className="mb-3 align-items-center services-section">
+      <Col className="text-center services-section">
         <Image src="images/Community_Forum.png" width="150" height="150" />
       </Col>
-      <Col>
+      <Col className="services-section">
         <h2>Community Forum</h2>
         <p>Join the community forum to discuss and share healthcare solutions and experiences.</p>
       </Col>
