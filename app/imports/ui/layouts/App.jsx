@@ -19,8 +19,7 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import InsuranceForm from '../pages/InsuranceForm';
 import NavBarPono from '../components/NavBarPono';
 import FooterPono from '../components/FooterPono';
-import ListProviderswFilterExtended from '../pages/ListProviderswFilterExtended';
-import ListProviderswFilterExtendedGPT from "../pages/ListProviderswFilterExtendedGPT";
+import ListProviderswFilter from '../pages/ListProviderswFilter';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => {
@@ -41,7 +40,7 @@ const App = () => {
           <Route path="/signout" element={<SignOut />} />
           <Route path="/form" element={<InsuranceForm />} />
           <Route path="/home" element={<Landing />} />
-          <Route path="/list" element={<ListProviderswFilterExtendedGPT />} />
+          <Route path="/list" element={<ListProviderswFilter />} />
           <Route path="/add" element={<AddStuff />} />
           <Route path="/edit/:_id" element={<EditStuff />} />
           <Route path="/admin" element={<AdminProtectedRoute ready={ready}><ListStuffAdmin /></AdminProtectedRoute>} />
