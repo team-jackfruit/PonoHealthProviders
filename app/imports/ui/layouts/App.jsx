@@ -20,6 +20,7 @@ import InsuranceForm from '../pages/InsuranceForm';
 import NavBarPono from '../components/NavBarPono';
 import FooterPono from '../components/FooterPono';
 import ListProviderswFilter from '../pages/ListProviderswFilter';
+import Faq from '../pages/Faq';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => {
@@ -39,6 +40,7 @@ const App = () => {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signout" element={<SignOut />} />
           <Route path="/form" element={<InsuranceForm />} />
+          <Route path="/faq" element={<Faq />} />
           <Route path="/home" element={<Landing />} />
           <Route path="/list" element={<ListProviderswFilter />} />
           <Route path="/add" element={<AddStuff />} />

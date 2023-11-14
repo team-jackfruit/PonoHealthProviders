@@ -15,7 +15,7 @@ const NavBarPono = () => (
           <Nav.Link href="/list">FIND A PROVIDER</Nav.Link>
           <Nav.Link href="#home">HOME</Nav.Link>
           <Nav.Link href="#resources">RESOURCES</Nav.Link>
-          <Nav.Link href="#faq">FAQ</Nav.Link>
+          <Nav.Link href="/faq">FAQ</Nav.Link>
           <Nav.Link href="#blog">BLOG</Nav.Link>
         </Nav>
       </Navbar.Collapse>
