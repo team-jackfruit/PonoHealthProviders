@@ -20,6 +20,7 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import InsuranceForm from '../pages/InsuranceForm';
 import NavBarPono from '../components/NavBarPono';
 import FooterPono from '../components/FooterPono';
+import ResourcesPage from '../pages/Resources';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => {
@@ -35,6 +36,7 @@ const App = () => {
         <NavBarPono />
         <Routes>
           <Route exact path="/" element={<Landing />} />
+          <Route path="/resources" element={<ResourcesPage />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signout" element={<SignOut />} />
