@@ -70,3 +70,11 @@ body {
 .health-insurance-basics-section {
   background-color: #75E6DA; /* Replace with your desired color */
 }
+
+#provider-card{
+  transition: all 0.3s;
+}
+
+#provider-card:hover{
+  transform: scale(1.1);
+}
