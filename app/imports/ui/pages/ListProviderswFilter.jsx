@@ -71,7 +71,8 @@ const ListProviders = () => {
               <Form onSubmit={applyFilters}>
                 {/* Service Type Filter */}
                 <FormGroup>
-                  <FormLabel>Service Type</FormLabel>
+                  <FormLabel><h2>Service Type</h2></FormLabel>
+                  <p>**When selecting a option, please press APPLY FILTERS after each chosen option.**</p>
                   <div>
                     <FormCheck
                       className="service-type-radio-button"
