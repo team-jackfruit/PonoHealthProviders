@@ -8,6 +8,13 @@ import { Nav, Navbar, Container } from 'react-bootstrap';
 const NavBarPono = () => (
   <Navbar className="custom-navbar" variant="dark" expand="lg">
     <Container>
+      <img
+        alt="Logo"
+        src="images/PonoHealthProvidersLogo.png"
+        width="60"
+        height="60"
+        className="d-inline-block align-top"
+      />
       <Navbar.Brand href="#home">PONOHEALTH PROVIDERS</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
