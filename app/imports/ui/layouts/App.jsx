@@ -6,20 +6,14 @@ import { Roles } from 'meteor/alanning:roles';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 // import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
-import ListStuff from '../pages/ListStuff';
-import ListStuffAdmin from '../pages/ListStuffAdmin';
-import AddStuff from '../pages/AddStuff';
-import EditStuff from '../pages/EditStuff';
 import NotFound from '../pages/NotFound';
-import SignUp from '../pages/SignUp';
-import SignOut from '../pages/SignOut';
-// import NavBar from '../components/NavBar';
-import SignIn from '../pages/SignIn';
 import NotAuthorized from '../pages/NotAuthorized';
 import LoadingSpinner from '../components/LoadingSpinner';
-import InsuranceForm from '../pages/InsuranceForm';
 import NavBarPono from '../components/NavBarPono';
 import FooterPono from '../components/FooterPono';
+import ListProviderswFilter from '../pages/ListProviderswFilter';
+// eslint-disable-next-line import/no-named-as-default
+import Faq from '../pages/Faq';
 import ResourcesPage from '../pages/Resources';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
@@ -36,16 +30,10 @@ const App = () => {
         <NavBarPono />
         <Routes>
           <Route exact path="/" element={<Landing />} />
+          <Route path="/faq" element={<Faq />} />
           <Route path="/resources" element={<ResourcesPage />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/signout" element={<SignOut />} />
-          <Route path="/form" element={<InsuranceForm />} />
-          <Route path="/home" element={<ProtectedRoute><Landing /></ProtectedRoute>} />
-          <Route path="/list" element={<ProtectedRoute><ListStuff /></ProtectedRoute>} />
-          <Route path="/add" element={<ProtectedRoute><AddStuff /></ProtectedRoute>} />
-          <Route path="/edit/:_id" element={<ProtectedRoute><EditStuff /></ProtectedRoute>} />
-          <Route path="/admin" element={<AdminProtectedRoute ready={ready}><ListStuffAdmin /></AdminProtectedRoute>} />
+          <Route path="/home" element={<Landing />} />
+          <Route path="/list" element={<ListProviderswFilter />} />
           <Route path="/notauthorized" element={<NotAuthorized />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
