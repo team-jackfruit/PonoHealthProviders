@@ -43,8 +43,8 @@ const ListProviders = () => {
     .flatMap((facility) => facility.facilities)
     .filter((provider) => (
       (!filters.coverageType || provider.coverageType === filters.coverageType) &&
-          (!filters.island || provider.location.toLowerCase() === filters.island.toLowerCase()) &&
-          (filters.facilityType === 'Free-Standing' ? provider.freeStanding === 'X' : filters.facilityType === 'Provider-Based' ? provider.providerBased === 'X' : true)
+      (!filters.island || provider.location.toLowerCase() === filters.island.toLowerCase()) &&
+      (filters.facilityType === 'Free-Standing' ? provider.freeStanding === 'X' : filters.facilityType === 'Provider-Based' ? provider.providerBased === 'X' : true)
     ));
 
   // Render the providers list or loading spinner
