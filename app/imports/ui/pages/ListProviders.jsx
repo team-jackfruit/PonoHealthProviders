@@ -3,7 +3,6 @@ import { Meteor } from 'meteor/meteor';
 import { Col, Container, Row, Table, Dropdown, Card } from 'react-bootstrap';
 import { useTracker } from 'meteor/react-meteor-data';
 import { Stuffs } from '../../api/stuff/Stuff';
-// import StuffItem from '../components/StuffItem';
 import Provider from '../components/Provider';
 import LoadingSpinner from '../components/LoadingSpinner';
 import healthcareFacilities from '../../api/data';
@@ -38,16 +37,15 @@ const ListProviders = () => {
           </Row>
         </Col>
         <Col className="square border-start text-center">
-          <h2>Filter</h2>
+          <h1>Provider Filter</h1>
           <Card className="text-center">
             <Table>
               <tr>
                 <td>
                   <Dropdown>
                     <Dropdown.Toggle id="dropdown-basic">
-                      Island
+                      Service Type
                     </Dropdown.Toggle>
-
                     <Dropdown.Menu>
                       <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
                       <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
@@ -60,7 +58,6 @@ const ListProviders = () => {
                     <Dropdown.Toggle id="dropdown-basic">
                       Island
                     </Dropdown.Toggle>
-
                     <Dropdown.Menu>
                       <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
                       <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
