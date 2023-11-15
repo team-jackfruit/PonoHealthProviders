@@ -19,7 +19,7 @@ const ResourcesPage = () => (
             <Card.Text>
               Medicaid plans for low-income families, children, pregnant women, elderly adults, and individuals with disabilities.
             </Card.Text>
-            <Button variant="primary" href="#">visit website</Button>
+            <Button variant="primary" href="https://medquest.hawaii.gov/">Visit Website</Button>
           </Card.Body>
         </Card>
       </Col>
@@ -31,7 +31,7 @@ const ResourcesPage = () => (
             <Card.Text>
               Primarily for people who are 65 or older, or those with certain disabilities or conditions.
             </Card.Text>
-            <Button variant="primary" href="#">visit website</Button>
+            <Button variant="primary" href="https://www.medicare.gov/">Visit Website</Button>
           </Card.Body>
         </Card>
       </Col>
@@ -43,7 +43,7 @@ const ResourcesPage = () => (
             <Card.Text>
               For those with lower incomes, HealthCare.gov can help determine eligibility for subsidies that make premiums more affordable.
             </Card.Text>
-            <Button variant="primary" href="#">visit website</Button>
+            <Button variant="primary" href="https://www.healthcare.gov/">Visit Website</Button>
           </Card.Body>
         </Card>
       </Col>
@@ -57,7 +57,7 @@ const ResourcesPage = () => (
             <Card.Text>
               These centers receive federal funding to provide primary care services at reduced rates.
             </Card.Text>
-            <Button variant="primary" href="#">visit website</Button>
+            <Button variant="primary" href="https://www.hawaiipca.net/">visit website</Button>
           </Card.Body>
         </Card>
       </Col>
@@ -69,7 +69,7 @@ const ResourcesPage = () => (
             <Card.Text>
               A national non-profit, educates and empowers those seeking affordable healthcare.
             </Card.Text>
-            <Button variant="primary" href="#">visit website</Button>
+            <Button variant="primary" href="https://www.needymeds.org/">visit website</Button>
           </Card.Body>
         </Card>
       </Col>
