@@ -15,6 +15,9 @@ import ListProviderswFilter from '../pages/ListProviderswFilter';
 // eslint-disable-next-line import/no-named-as-default
 import Faq from '../pages/Faq';
 import ResourcesPage from '../pages/Resources';
+import SignIn from '../pages/SignIn';
+import SignUp from '../pages/SignUp';
+import SignOut from '../pages/SignOut';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => {
@@ -35,6 +38,9 @@ const App = () => {
           <Route path="/home" element={<Landing />} />
           <Route path="/list" element={<ListProviderswFilter />} />
           <Route path="/notauthorized" element={<NotAuthorized />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/signout" element={<SignOut />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <FooterPono />
