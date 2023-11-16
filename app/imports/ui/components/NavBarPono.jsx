@@ -16,7 +16,6 @@ const NavBarPono = () => (
         className="d-inline-block align-top"
       />
       <Navbar.Brand href="#home" className="p-3">PONOHEALTH PROVIDERS</Navbar.Brand>
-      <Navbar.Brand className="p-3" href="/home">PONOHEALTH PROVIDERS</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
         <Nav>

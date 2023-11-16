@@ -1,7 +1,5 @@
 import React from 'react';
 import { Button, Card, Col, Container, Row, Accordion } from 'react-bootstrap';
-// import ServiceSection from '../components/ServiceSection';
-// import InsuranceTerms from '../components/InsuranceTerms';
 
 const ResourcesPage = () => (
   <Container fluid>
@@ -48,7 +46,7 @@ const ResourcesPage = () => (
         </Card>
       </Col>
     </Row>
-    <Row className="px-5 healthcare-solutions-section">
+    <Row className="px-5 pb-5 pt-5 healthcare-solutions-section">
       <Col md={4}>
         <Card border="info">
           <Card.Img variant="top" src="images/HPCA_logo.png" />
@@ -77,46 +75,52 @@ const ResourcesPage = () => (
     </Row>
     {/* This is the Insurance Section */}
     <Row className="px-5 health-insurance-basics-section">
-      <Col md={12} className="text-center">
+      <Col md={12} className="text-center pt-2 pb-2">
         <h2>Know Health Insurance Basics</h2>
       </Col>
     </Row>
-    <Row className="px-5 health-insurance-basics-section">
+    <Row className="pb-5 pl-4 pr-4 health-insurance-basics-section">
       <Col md={4}>
         <Card>
           <Card.Body>
             <Card.Title>Picking Out Health Insurance Plans</Card.Title>
             <Card.Text>
+              {/* eslint-disable-next-line max-len */}
               Choosing the right healthcare or insurance plan is a critical decision that can significantly impact your health and financial well-being. This process involves understanding various plan options, considering your own health needs, and evaluating factors. Let&apos;s delve into the key considerations and steps involved in selecting a healthcare or insurance plan that best suits your individual needs and circumstances.
             </Card.Text>
             <Accordion>
               <Accordion.Item eventKey="0">
                 <Accordion.Header>Understanding Different Types of Health Insurance Plans</Accordion.Header>
                 <Accordion.Body>
+                  {/* eslint-disable-next-line max-len */}
                   An HMO (Health Maintenance Organization) offers lower premiums and a primary care physician who coordinates all healthcare needs, but requires staying in-network except for emergencies. A PPO (Preferred Provider Organization) offers more flexibility in choosing providers and doesn&apos;t require referrals, but typically comes with higher out-of-pocket costs. An EPO (Exclusive Provider Organization) is similar to an HMO in its network restrictions but often doesn&apos;t require referrals. Lastly, a POS (Point of Service) plan combines elements of HMOs and PPOs, requiring referrals but offering more provider options.
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="1">
                 <Accordion.Header>Evaluating Your Healthcare Needs</Accordion.Header>
                 <Accordion.Body>
+                  {/* eslint-disable-next-line max-len */}
                   Assessing your personal and family healthcare needs is a critical step in selecting the right plan. Consider factors such as how often you visit the doctor, any regular medications, and ongoing treatments or therapies. For those with chronic conditions, look for plans that offer extensive coverage for long-term care and medication. Anticipate future needs as well; if you plan to expand your family, explore plans that provide robust maternity and pediatric care.
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="2">
                 <Accordion.Header>Comparing Costs - Beyond Premiums</Accordion.Header>
                 <Accordion.Body>
+                  {/* eslint-disable-next-line max-len */}
                   While premiums are an important cost factor, they are not the only one. Deductibles, the amount you pay for healthcare services before your insurance kicks in, can significantly impact your overall expenses. Lower premiums often mean higher deductibles and vice versa. Copayments and coinsurance are other costs to consider. Copayments are fixed amounts for specific services (like a doctor’s visit), whereas coinsurance is a percentage of costs you pay after meeting your deductible. Calculate potential healthcare expenses under different scenarios to understand the true cost of a plan.
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="3">
                 <Accordion.Header>Choosing a Plan Based on Your Preferred Providers</Accordion.Header>
                 <Accordion.Body>
+                  {/* eslint-disable-next-line max-len */}
                   If you have preferred healthcare providers, it’s crucial to check whether they are in-network for the insurance plan you are considering. Out-of-network care is typically more expensive and sometimes not covered at all. If you don’t have specific providers in mind, consider the size and accessibility of the plan’s network. Larger networks offer more choices, which is particularly beneficial if you live in a rural area or have specialized healthcare needs.
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="4">
                 <Accordion.Header>Maximizing Additional Benefits and Coverage</Accordion.Header>
                 <Accordion.Body>
+                  {/* eslint-disable-next-line max-len */}
                   Many insurance plans offer additional benefits that can be decisive factors in your choice. These may include dental and vision coverage, mental health services, prescription drug coverage, and wellness programs. Also, consider the coverage for preventative care, which can include vaccinations, screenings, and annual check-ups. Evaluate these benefits in conjunction with the plan’s overall cost to determine which plan offers the best value for your specific health and wellness needs.
                 </Accordion.Body>
               </Accordion.Item>
@@ -129,6 +133,7 @@ const ResourcesPage = () => (
           <Card.Body>
             <Card.Title>Health Insurance Terms</Card.Title>
             <Card.Text>
+              {/* eslint-disable-next-line max-len */}
               Navigating the healthcare and insurance landscape can often feel overwhelming, especially due to the specific terms and jargon used in this sector. Understanding these terms is crucial for making informed decisions about healthcare and insurance coverage. These terms encompass a range of concepts, from types of coverage and benefits to rules about patient care and billing. Let's break down these terms and jargons to help demystify the language of healthcare and insurance, providing clarity on what these terms mean and how they affect your healthcare choices and experiences.
             </Card.Text>
             <Accordion>
@@ -186,6 +191,7 @@ const ResourcesPage = () => (
           <Card.Body>
             <Card.Title>Consumer Rights</Card.Title>
             <Card.Text>
+              {/* eslint-disable-next-line max-len */}
               Healthcare laws in the United States are designed to provide a variety of protections to ensure that individuals have access to necessary medical services, are treated fairly, and have their personal health information protected. These laws have been enacted to address various aspects of healthcare access and insurance coverage, aiming to create a more equitable and efficient healthcare system. Let&apos;s explore these protections in more detail to understand how they benefit patients and contribute to the overall healthcare landscape. Here are the key protections provided by healthcare law in the United States:
             </Card.Text>
             <Accordion>
@@ -198,6 +204,7 @@ const ResourcesPage = () => (
               <Accordion.Item eventKey="1">
                 <Accordion.Header>Preventive Care</Accordion.Header>
                 <Accordion.Body>
+                  {/* eslint-disable-next-line max-len */}
                   This provision mandates that health plans cover preventive services like vaccinations, screenings, and regular check-ups without any cost to the patient. This encourages individuals to seek preventative care, potentially reducing the likelihood of severe health issues later.
                 </Accordion.Body>
               </Accordion.Item>
@@ -210,6 +217,7 @@ const ResourcesPage = () => (
               <Accordion.Item eventKey="3">
                 <Accordion.Header>Ends Lifetime and Yearly Limits</Accordion.Header>
                 <Accordion.Body>
+                  {/* eslint-disable-next-line max-len */}
                   Insurers are prohibited from setting a lifetime or annual limit on the total amount they will spend on essential health benefits for an individual. This protection ensures that patients with significant or long-term health issues don&apos;t lose coverage when they need it most.
                 </Accordion.Body>
               </Accordion.Item>
@@ -258,6 +266,7 @@ const ResourcesPage = () => (
               <Accordion.Item eventKey="11">
                 <Accordion.Header>Pre-existing Health Conditions</Accordion.Header>
                 <Accordion.Body>
+                  {/* eslint-disable-next-line max-len */}
                   Insurance companies can&apos;t refuse coverage or charge more due to pre-existing conditions. This ensures that people with health issues, such as chronic illnesses or previous diagnoses, receive the same access to insurance as those without such conditions.
                 </Accordion.Body>
               </Accordion.Item>

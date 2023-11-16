@@ -17,7 +17,7 @@ const FooterPono = () => (
               <Nav.Link href="/" style={{ color: 'white' }}>Home</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/find-provider" style={{ color: 'white' }}>Find a Provider</Nav.Link>
+              <Nav.Link href="/list" style={{ color: 'white' }}>Find a Provider</Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="/resources" style={{ color: 'white' }}>Resources</Nav.Link>
