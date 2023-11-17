@@ -2,18 +2,6 @@
 
 *A web application designed to guide uninsured and underinsured individuals in Hawaii to various healthcare options. It aggregates and simplifies information about various healthcare services, providing an easy-to-navigate platform that points users to the most relevant and cost-effective healthcare solutions.*
 
-**Table of Contents**
-
-   - [The Problem](#the-problem)
-   - [Overview](#overview)
-   - [User Guide](#user-guide)
-   - [Deployment](#deployment)
-   - [Implementation](#implementation)
-   - [Development History](#development-history)
-   - [Deployment](#deployment)
-   - [Community Feedback](#community-feedback)
-   - [Team](#team)
-
 ## The Problem
 
 Access to affordable healthcare is a significant issue in Hawaii. Uninsured or underinsured individuals often struggle to find information about healthcare services that they can afford, leading to delayed or no care.
@@ -27,17 +15,7 @@ Access to affordable healthcare is a significant issue in Hawaii. Uninsured or u
 * **Directory**: A comprehensive listing of healthcare facilities, services offered, and costs, filterable by various criteria.
 
 * **Resources**: Links to government and non-profit resources for healthcare, as well as links to other healthcare-related websites.
-
-## User Guide
-### Mockup Page Ideas
-**Landing Page**: Welcomes users to the website and provides a brief mission statement. Lists the main services provided by the website.
-<img src="doc/Landing_Page.png">
-**Directory Page**: Lists healthcare services, allowing filtering by location, cost, services, and insurance accepted.
-<img src="doc/Directory_Page.png">
-**Resource Page**: Provides links to government and non-profit resources for healthcare. Also provides links to other healthcare-related websites.
-<img src="doc/Resource_Page.png">
-
-## Implementation
+  
 ### Prerequisites
 This application requires the following technologies to be installed:
 * [Meteor](https://www.meteor.com/install) for Javascript-based implementation of client and server code.
