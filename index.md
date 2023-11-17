@@ -65,14 +65,66 @@ If you run into issues, try:
 ### Milestone 1: Project Board
 [Milestone 1 Project Board](https://github.com/orgs/team-jackfruit/projects/3)
 
+### Home Page / Landing
+Introduction to webpage and services provided.
+<img src="doc/home.PNG">
+<img src="doc/home2.PNG">
+
+### Resources
+Information on various healthcare options with links to sites.
+<img src="doc/Resources.PNG">
+<img src="doc/Resources2.PNG">
+
+### Faq
+Page for commonly asked questions.
+<img src="doc/Faq.PNG">
+
+### Filter
+Provides user interactive filter to find providers. 
+<img src="doc/filter.PNG">
+<img src="doc/FilterTest.PNG">
+
+### Data Sample
+
+Snippet of data incorportated into Filter scrapped from [Hawaii.gov](https://health.hawaii.gov/ohca/medicare-facilities/)
+
+```
+const healthcareFacilities = [
+   {
+    category: 'Adult Day Health Centers',
+    facilities: [
+      {
+        number: 1,
+        facility: 'Ann Pearl Nursing Facility',
+        providerBased: 'X',
+        freeStanding: '',
+        location: 'Oahu',
+        address: '45-181 Waikalua Road, Kaneohe, Hawaii 96744',
+        phone: '(808) 247-8558',
+        fax: '(808) 247-4115',
+        administrator: 'Robin Fortin',
+      },
+      {
+        number: 2,
+        facility: 'Arcadia Adult Day Care & Day Health Center at Central Union Church',
+        providerBased: '',
+        freeStanding: 'X',
+        location: 'Oahu',
+        address: '1660 South Beretania Street, Honolulu, Hawaii 96826',
+        phone: '(808) 440-3020',
+        fax: '(808) 440-3084',
+        chiefOperatingOfficer: 'Stacey Young',
+      }, .....
+```
+
 ### Milestone 2: 
-***TBD***
+[M2](https://github.com/orgs/team-jackfruit/projects/5/views/1)
 
 ### Milestone 3:
 ***TBD***
 
 ## Deployment
-***TBD***
+[PonoHealthProviders](https://ponohealthproviders.com/)
 
 ## Community Feedback
 ***TBD***
