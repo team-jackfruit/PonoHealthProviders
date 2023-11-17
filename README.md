@@ -56,7 +56,7 @@ If you run into issues, try:
 ***TBD***
 
 ## Team
-[Team Jackfruit Contract](https://docs.google.com/document/d/1qJgPv2CSdPikN0eX_icKm8f14ZhrNpCa6SEnEY4vdhk/edit?usp=sharing)
+[Team Jackfruit Contract](PonoHealthProviders/Doc/TeamContract.pdf)
 
 PonoHealth Providers is designed, implemented and maintained by
 * [Liam (Kula) Van Asperen](https://liamkula.github.io/)
