@@ -71,10 +71,26 @@ body {
   background-color: #75E6DA; /* Replace with your desired color */
 }
 
+{/* Creates the smooth transition when hovering over provider cards*/}
 #provider-card{
   transition: all 0.3s;
 }
 
+{/* Scales the provider cards by 1.1 when hovering over the card */}
 #provider-card:hover{
   transform: scale(1.1);
 }
+
+#provider-page-title{
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+#filter-button{
+  margin: 20px 5px 10px 0px;
+}
+
+.card-address{
+  color: #505050;
+}
+
