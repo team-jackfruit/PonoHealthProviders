@@ -1112,7 +1112,7 @@ const healthcareFacilities = [
   },
   {
     category: 'Hospice',
-    facilities: [
+    facilities:
       [
         {
           number: 1,
@@ -1251,7 +1251,6 @@ const healthcareFacilities = [
           location: 'Oahu',
         },
       ],
-    ],
   },
   {
     category: 'Hospitals',

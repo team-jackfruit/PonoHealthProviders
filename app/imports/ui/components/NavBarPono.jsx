@@ -26,22 +26,20 @@ const NavBarPono = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
           <Nav>
-            <Nav.Link href="/list">FIND A PROVIDER</Nav.Link>
             <Nav.Link href="/home">HOME</Nav.Link>
+            <Nav.Link href="/list">FIND A PROVIDER</Nav.Link>
             <Nav.Link href="/resources">RESOURCES</Nav.Link>
             <Nav.Link href="/faq">FAQ</Nav.Link>
             {/* <Nav.Link href="/blog">BLOG</Nav.Link> */}
             {currentUser === '' ? (
-              <NavDropdown id="login-dropdown" title="Login">
+              <NavDropdown id="login-dropdown" title="LOGIN">
                 <NavDropdown.Item id="login-dropdown-sign-in" as={NavLink} to="/signin">
                   <PersonFill />
-                  Sign
-                  in
+                  Sign In
                 </NavDropdown.Item>
                 <NavDropdown.Item id="login-dropdown-sign-up" as={NavLink} to="/signup">
                   <PersonPlusFill />
-                  Sign
-                  up
+                  Sign Up
                 </NavDropdown.Item>
               </NavDropdown>
             ) : (
@@ -60,5 +58,25 @@ const NavBarPono = () => {
     </Navbar>
   );
 };
+
+/*
+const NavBarPono = () => (
+  <Navbar className="custom-navbar" variant="dark" expand="lg">
+    <Container>
+      <Navbar.Brand href="#home">PONOHEALTH PROVIDERS</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
+        <Nav>
+          <Nav.Link href="/list">FIND A PROVIDER</Nav.Link>
+          <Nav.Link href="/home">HOME</Nav.Link>
+          <Nav.Link href="/resources">RESOURCES</Nav.Link>
+          <Nav.Link href="/faq">FAQ</Nav.Link>
+          <Nav.Link href="/blog">BLOG</Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Container>
+  </Navbar>
+);
+ */
 
 export default NavBarPono;
