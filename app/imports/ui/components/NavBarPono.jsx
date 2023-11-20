@@ -30,7 +30,6 @@ const NavBarPono = () => {
             <Nav.Link href="/home">HOME</Nav.Link>
             <Nav.Link href="/resources">RESOURCES</Nav.Link>
             <Nav.Link href="/faq">FAQ</Nav.Link>
-            {/* <Nav.Link href="/blog">BLOG</Nav.Link> */}
             {currentUser === '' ? (
               <NavDropdown id="login-dropdown" title="Login">
                 <NavDropdown.Item id="login-dropdown-sign-in" as={NavLink} to="/signin">
@@ -42,11 +41,6 @@ const NavBarPono = () => {
                   <PersonPlusFill />
                   Sign
                   up
-                </NavDropdown.Item>
-                <NavDropdown.Item id="user-profile" as={NavLink} to="/userprofile">
-                  <PersonPlusFill />
-                  User
-                  profile
                 </NavDropdown.Item>
               </NavDropdown>
             ) : (

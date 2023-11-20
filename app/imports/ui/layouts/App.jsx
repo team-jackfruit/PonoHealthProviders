@@ -20,6 +20,7 @@ import SignUp from '../pages/SignUp';
 import SignOut from '../pages/SignOut';
 import EditUser from '../pages/EditUser';
 import UserProfile from '../pages/UserProfile';
+import CreateUser from '../pages/CreateUser';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => {
@@ -44,6 +45,7 @@ const App = () => {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signout" element={<SignOut />} />
+          <Route path="/createuser" element={<CreateUser />} />
           <Route path="/userprofile" element={<UserProfile />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

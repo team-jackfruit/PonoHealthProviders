@@ -1,36 +1,36 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Link, Navigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Accounts } from 'meteor/accounts-base';
 import { Alert, Card, Col, Container, Row } from 'react-bootstrap';
+import SimpleSchema from 'simpl-schema';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import { AutoForm, ErrorsField, SubmitField, TextField } from 'uniforms-bootstrap5';
-import { UsersData } from '../../api/userData/userData'; // Adjust the import path
 
-const SignUp = ({ location }) => {
+/**
+ * SignUp component is similar to signin component, but we create a new user instead.
+ */
+const SignUp = () => {
   const [error, setError] = useState('');
-  const [redirectToReferer, setRedirectToRef] = useState(false);
-  const bridge = new SimpleSchema2Bridge(UsersData.schema); // Use UsersData.schema
+  const navigate = useNavigate(); // Added useNavigate
+
+  const schema = new SimpleSchema({
+    email: String,
+    password: String,
+  });
+  const bridge = new SimpleSchema2Bridge(schema);
 
   const submit = (doc) => {
-    const { email, password, firstName, lastName, phoneNumber, address } = doc;
-    Accounts.createUser({ email, username: email, password, profile: { firstName, lastName, phoneNumber, address } }, (err) => {
+    const { email, password } = doc;
+    Accounts.createUser({ email, username: email, password }, (err) => {
       if (err) {
         setError(err.reason);
       } else {
-        // Insert the user data into the UsersData collection
-        UsersData.collection.insert({ firstName, lastName, email, phoneNumber, address }); // Use UsersData.collection
-
         setError('');
-        setRedirectToRef(true);
+        navigate('/createuser'); // Redirect to Create User page
       }
     });
   };
-
-  const { from } = location?.state || { from: { pathname: '/home' } };
-  if (redirectToReferer) {
-    return <Navigate to={from} />;
-  }
 
   return (
     <Container id="signup-page" className="py-3">
@@ -42,16 +42,6 @@ const SignUp = ({ location }) => {
           <AutoForm schema={bridge} onSubmit={data => submit(data)}>
             <Card>
               <Card.Body>
-                <Row>
-                  <Col>
-                    <TextField name="firstName" placeholder="First Name" />
-                  </Col>
-                  <Col>
-                    <TextField name="lastName" placeholder="Last Name" />
-                  </Col>
-                </Row>
-                <TextField name="address" placeholder="Address" />
-                <TextField name="phoneNumber" placeholder="Phone Number" />
                 <TextField name="email" placeholder="E-mail address" />
                 <TextField name="password" placeholder="Password" type="password" />
                 <ErrorsField />
@@ -78,6 +68,7 @@ const SignUp = ({ location }) => {
   );
 };
 
+/* Ensure that the React Router location object is available in case we need to redirect. */
 SignUp.propTypes = {
   location: PropTypes.shape({
     state: PropTypes.string,
