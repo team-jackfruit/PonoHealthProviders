@@ -18,6 +18,8 @@ import ResourcesPage from '../pages/Resources';
 import SignIn from '../pages/SignIn';
 import SignUp from '../pages/SignUp';
 import SignOut from '../pages/SignOut';
+import EditUser from '../pages/EditUser';
+import UserProfile from '../pages/UserProfile';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => {
@@ -37,10 +39,12 @@ const App = () => {
           <Route path="/resources" element={<ResourcesPage />} />
           <Route path="/home" element={<Landing />} />
           <Route path="/list" element={<ListProviderswFilter />} />
+          <Route path="/edituser/:email" element={<EditUser />} />
           <Route path="/notauthorized" element={<NotAuthorized />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signout" element={<SignOut />} />
+          <Route path="/userprofile" element={<UserProfile />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <FooterPono />

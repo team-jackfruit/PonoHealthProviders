@@ -43,6 +43,11 @@ const NavBarPono = () => {
                   Sign
                   up
                 </NavDropdown.Item>
+                <NavDropdown.Item id="user-profile" as={NavLink} to="/userprofile">
+                  <PersonPlusFill />
+                  User
+                  profile
+                </NavDropdown.Item>
               </NavDropdown>
             ) : (
               <NavDropdown id="navbar-current-user" title={currentUser}>
