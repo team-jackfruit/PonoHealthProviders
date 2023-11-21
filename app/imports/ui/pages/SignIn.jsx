@@ -41,12 +41,15 @@ const SignIn = () => {
   }
   // Otherwise return the Login form.
   return (
-    <Container id="signin-page" className="py-3">
+    <Container id="signin-page" className=" py-4 signin-form">
       <Row className="justify-content-center">
-        <Col xs={5}>
-          <Col className="text-center">
+        <Col md={6} className="position-relative w-50 h-100 flex flex-column">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" className="w-100 " alt="Login" />
+        </Col>
+        <Col md={6} className="p-0">
+          <div className="text-center">
             <h2>Login to your account</h2>
-          </Col>
+          </div>
           <AutoForm schema={bridge} onSubmit={data => submit(data)}>
             <Card>
               <Card.Body>
