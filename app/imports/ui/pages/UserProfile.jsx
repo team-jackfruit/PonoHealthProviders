@@ -1,52 +1,55 @@
 import React from 'react';
-import { useTracker } from 'meteor/react-meteor-data';
 import { Meteor } from 'meteor/meteor';
-import { Container, Card, ListGroup } from 'react-bootstrap';
-import { UsersData } from '../../api/userData/userData';
+import { Col, Container, Row, Table } from 'react-bootstrap';
+import { useTracker } from 'meteor/react-meteor-data';
+import { Users } from '../../api/userData/userData';
+import UserItem from '../components/UserItem';
+import LoadingSpinner from '../components/LoadingSpinner';
 
+/* Renders a table containing all of the User documents. Use <UserItem> to render each row. */
 const UserProfile = () => {
-  const { user, userData, isLoading } = useTracker(() => {
-    const noDataAvailable = { user: null, userData: null };
-    const handler = Meteor.subscribe('userData'); // Subscription name for the user data
-
-    if (!Meteor.user() || !handler.ready()) {
-      return { ...noDataAvailable, isLoading: true };
-    }
-
-    const user = Meteor.user();
-    const userData = UsersData.collection.findOne({ email: user.emails[0].address });
-
-    return { user, userData, isLoading: false };
+  // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
+  const { ready, users } = useTracker(() => {
+    // Note that this subscription will get cleaned up
+    // when your component is unmounted or deps change.
+    // Get access to User documents.
+    const subscription = Meteor.subscribe(Users.userPublicationName);
+    // Determine if the subscription is ready
+    const rdy = subscription.ready();
+    // Get the User documents
+    const userItems = Users.collection.find({}).fetch();
+    return {
+      users: userItems,
+      ready: rdy,
+    };
   }, []);
-
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
-  if (!user) {
-    return <div>Please log in to view this page.</div>;
-  }
-
-  return (
-    <Container>
-      <h2>User Profile</h2>
-      {userData ? (
-        <Card>
-          <Card.Body>
-            <ListGroup variant="flush">
-              <ListGroup.Item>First Name: {userData.firstName}</ListGroup.Item>
-              <ListGroup.Item>Last Name: {userData.lastName}</ListGroup.Item>
-              <ListGroup.Item>Email: {userData.email}</ListGroup.Item>
-              <ListGroup.Item>Phone Number: {userData.phoneNumber}</ListGroup.Item>
-              <ListGroup.Item>Address: {userData.address}</ListGroup.Item>
-            </ListGroup>
-          </Card.Body>
-        </Card>
-      ) : (
-        <div>No user data found.</div>
-      )}
+  return (ready ? (
+    <Container className="py-3">
+      <Row className="justify-content-center">
+        <Col md={7}>
+          <Col className="text-center">
+            <h2>User Profile</h2>
+          </Col>
+          <Table striped bordered hover>
+            <thead>
+              <tr>
+                <th>firstName</th>
+                <th>lastName</th>
+                <th>email</th>
+                <th>phone</th>
+                <th>address</th>
+                <th>status</th>
+                <th>Edit</th>
+              </tr>
+            </thead>
+            <tbody>
+              {users.map((user) => <UserItem key={user._id} user={user} />)}
+            </tbody>
+          </Table>
+        </Col>
+      </Row>
     </Container>
-  );
+  ) : <LoadingSpinner />);
 };
 
 export default UserProfile;

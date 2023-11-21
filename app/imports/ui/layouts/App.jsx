@@ -40,13 +40,13 @@ const App = () => {
           <Route path="/resources" element={<ResourcesPage />} />
           <Route path="/home" element={<Landing />} />
           <Route path="/list" element={<ListProviderswFilter />} />
-          <Route path="/edituser/:email" element={<EditUser />} />
           <Route path="/notauthorized" element={<NotAuthorized />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signout" element={<SignOut />} />
           <Route path="/createuser" element={<CreateUser />} />
-          <Route path="/userprofile" element={<UserProfile />} />
+          <Route path="/userprofile" element={<ProtectedRoute><UserProfile /></ProtectedRoute>} />
+          <Route path="/edituser/_id" element={<ProtectedRoute><EditUser /></ProtectedRoute>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <FooterPono />

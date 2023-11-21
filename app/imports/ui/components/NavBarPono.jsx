@@ -44,14 +44,17 @@ const NavBarPono = () => {
                 </NavDropdown.Item>
               </NavDropdown>
             ) : (
-              <NavDropdown id="navbar-current-user" title={currentUser}>
-                <NavDropdown.Item id="navbar-sign-out" as={NavLink} to="/signout">
-                  <BoxArrowRight />
-                  {' '}
-                  Sign
-                  out
-                </NavDropdown.Item>
-              </NavDropdown>
+              <>
+                <Nav.Link href="/userprofile">Profile</Nav.Link>
+                <NavDropdown id="navbar-current-user" title={currentUser}>
+                  <NavDropdown.Item id="navbar-sign-out" as={NavLink} to="/signout">
+                    <BoxArrowRight />
+                    {' '}
+                    Sign
+                    out
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </>
             )}
           </Nav>
         </Navbar.Collapse>

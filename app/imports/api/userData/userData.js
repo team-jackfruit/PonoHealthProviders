@@ -1,45 +1,46 @@
 import { Mongo } from 'meteor/mongo';
 import SimpleSchema from 'simpl-schema';
 
-/** Define a Mongo collection to hold the user data. */
-const UsersData = new Mongo.Collection('UsersData');
+class UsersDataCollection {
+  constructor() {
+    /** Define a Mongo collection to hold the user data. */
+    this.name = 'UsersDataCollection';
+    this.collection = new Mongo.Collection(this.name);
 
-const DataValues = {
-  insuranceStatus: ['Insured', 'Uninsured', 'Under-insured'],
-};
+    /** Define a schema to specify the structure of each document in the collection. */
+    this.schema = new SimpleSchema({
+      firstName: {
+        type: String,
+        label: 'First Name',
+      },
+      lastName: {
+        type: String,
+        label: 'Last Name',
+      },
+      email: String,
+      phone: {
+        type: String,
+        optional: true,
+        label: 'Phone Number',
+      },
+      address: {
+        type: String,
+        optional: true,
+        label: 'Address',
+      },
+      status: { type: String, allowedValues: ['Insured', 'Uninsured', 'Under-insured'] },
+    });
+    /** Attach the schema to the collection. */
+    this.collection.attachSchema(this.schema);
+    this.userPublicationName = `${this.name}.publication.user`;
+    this.adminPublicationName = `${this.name}.publication.admin`;
 
-/** Define a schema to specify the structure of each document in the collection. */
-const UsersDataSchema = new SimpleSchema({
-  firstName: {
-    type: String,
-    label: 'First Name',
-  },
-  lastName: {
-    type: String,
-    label: 'Last Name',
-  },
-  email: String,
-  phone: {
-    type: String,
-    optional: true,
-    label: 'Phone Number',
-  },
-  address: {
-    type: String,
-    optional: true,
-    label: 'Address',
-  },
-  status: { type: String, allowedValues: DataValues.insuranceStatus },
-});
-
-/** Attach the schema to the collection. */
-UsersData.attachSchema(UsersDataSchema);
-
-/** Define names for publications and subscriptions, if needed. */
-const UsersDataPublicationNames = {
-  userPublicationName: 'UsersData.publication.user',
-  adminPublicationName: 'UsersData.publication.admin',
-};
+  } // close constructor
+}
 
 /** Make these objects available to others. */
-export { UsersData, UsersDataSchema, UsersDataPublicationNames, DataValues };
+/**
+ * The singleton instance of the StuffsCollection.
+ * @type {UsersDataCollection}
+ */
+export const Users = new UsersDataCollection();

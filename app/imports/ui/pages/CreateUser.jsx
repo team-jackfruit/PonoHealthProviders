@@ -1,67 +1,70 @@
-import React, { useState } from 'react';
-import { Alert, Card, Col, Container, Row } from 'react-bootstrap';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { AutoForm, TextField, SelectField, SubmitField } from 'uniforms-bootstrap5';
+import { Card, Col, Container, Row } from 'react-bootstrap';
+import { AutoForm, ErrorsField, SelectField, SubmitField, TextField } from 'uniforms-bootstrap5';
 import swal from 'sweetalert';
+import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
-import { UserFormSchema } from '../forms/UserFormInfo';
-import { UsersData } from '../../api/userData/userData';
+import SimpleSchema from 'simpl-schema';
+import { Users } from '../../api/userData/userData';
 
-const bridge = new SimpleSchema2Bridge(UserFormSchema);
+// Create a schema to specify the structure of the data to appear in the form.
+const formSchema = new SimpleSchema({
+  firstName: String,
+  lastName: String,
+  email: String,
+  phone: String,
+  address: String,
+  status: {
+    type: String,
+    allowedValues: ['Insured', 'Uninsured', 'Under-insured'],
+  },
+});
 
+const bridge = new SimpleSchema2Bridge(formSchema);
+
+/* Renders the CreateUser page for adding a document. */
 const CreateUser = () => {
-  const [emailState, setEmailState] = useState('');
   const navigate = useNavigate();
-  let fRef = null;
-
-  const submit = (data) => {
+  // On submit, insert the data.
+  const submit = (data, formRef) => {
     const { firstName, lastName, email, phone, address, status } = data;
-    UsersData.insert({ firstName, lastName, email, phone, address, status }, (error) => {
-      if (error) {
-        swal('Error', error.message, 'error');
-      } else {
-        swal('Success', 'The user record was created.', 'success').then(() => {
-          setEmailState(email);
-          if (fRef) fRef.reset();
-          navigate('/home'); // Redirect after the alert
-        });
-      }
-    });
+    const owner = Meteor.user().username;
+    Users.collection.insert(
+      { firstName, lastName, email, phone, address, status, owner },
+      (error) => {
+        if (error) {
+          swal('Error', error.message, 'error');
+        } else {
+          swal('Success', 'Item added successfully', 'success');
+          formRef.reset();
+          navigate('/'); // Redirect Landing
+        }
+      },
+    );
   };
 
+  // Render the form. Use Uniforms: https://github.com/vazco/uniforms
+  let fRef = null;
   return (
-    <Container>
+    <Container className="py-3">
       <Row className="justify-content-center">
-        <Col>
-          <h2 className="text-center">Create User</h2>
-          <AutoForm ref={(ref) => { fRef = ref; }} schema={bridge} onSubmit={(data) => submit(data)}>
-            <Card className="p-2">
-              <Row>
-                <Col>
-                  <TextField name="firstName" />
-                </Col>
-                <Col>
-                  <TextField name="lastName" />
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <TextField name="email" />
-                </Col>
-                <Col>
-                  <TextField name="phone" optional />
-                </Col>
-              </Row>
-              <TextField name="address" optional />
-              <SelectField name="status" placeholder="Insurance Status" />
-              <SubmitField value="Submit" />
+        <Col xs={5}>
+          <Col className="text-center"><h2>Create User</h2></Col>
+          <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => submit(data, fRef)}>
+            <Card>
+              <Card.Body>
+                <TextField name="firstName" />
+                <TextField name="lastName" />
+                <TextField name="email" />
+                <TextField name="phone" />
+                <TextField name="address" />
+                <SelectField name="status" />
+                <SubmitField value="Submit" />
+                <ErrorsField />
+              </Card.Body>
             </Card>
           </AutoForm>
-          {emailState ? (
-            <Alert className="py-2">
-              <a href={`/user/${emailState}`}>Edit this data</a>
-            </Alert>
-          ) : ''}
         </Col>
       </Row>
     </Container>
