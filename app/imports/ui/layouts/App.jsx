@@ -44,9 +44,9 @@ const App = () => {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signout" element={<SignOut />} />
+          <Route path="/edituser/:email" element={<EditUser />} />
           <Route path="/createuser" element={<CreateUser />} />
           <Route path="/userprofile" element={<ProtectedRoute><UserProfile /></ProtectedRoute>} />
-          <Route path="/edituser/_id" element={<ProtectedRoute><EditUser /></ProtectedRoute>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <FooterPono />

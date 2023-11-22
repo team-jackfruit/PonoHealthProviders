@@ -16,8 +16,16 @@ Meteor.publish(Stuffs.userPublicationName, function () {
 // Returns User collection
 Meteor.publish(Users.userPublicationName, function () {
   if (this.userId) {
-    const username = Meteor.users.findOne(this.userId).username;
-    return Users.collection.find({ owner: username });
+    const user = Meteor.users.findOne(this.userId);
+    console.log('Fetched user:', user);
+    if (user && user.username) {
+      console.log('Querying with username:', user.username);
+      return Users.collection.find({ owner: user.username });
+    }
+    console.log('User has no username or user not found');
+
+  } else {
+    console.log('No user ID found, not publishing data');
   }
   return this.ready();
 });

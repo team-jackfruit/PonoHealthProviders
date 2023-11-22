@@ -28,6 +28,7 @@ class UsersDataCollection {
         optional: true,
         label: 'Address',
       },
+      owner: String,
       status: { type: String, allowedValues: ['Insured', 'Uninsured', 'Under-insured'] },
     });
     /** Attach the schema to the collection. */

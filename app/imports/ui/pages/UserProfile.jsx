@@ -10,19 +10,20 @@ import LoadingSpinner from '../components/LoadingSpinner';
 const UserProfile = () => {
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
   const { ready, users } = useTracker(() => {
-    // Note that this subscription will get cleaned up
-    // when your component is unmounted or deps change.
-    // Get access to User documents.
     const subscription = Meteor.subscribe(Users.userPublicationName);
-    // Determine if the subscription is ready
     const rdy = subscription.ready();
-    // Get the User documents
     const userItems = Users.collection.find({}).fetch();
+
+    // Logging statements
+    console.log('Subscription ready:', rdy);
+    console.log('Fetched users:', userItems);
+
     return {
       users: userItems,
       ready: rdy,
     };
   }, []);
+
   return (ready ? (
     <Container className="py-3">
       <Row className="justify-content-center">
