@@ -41,39 +41,45 @@ const SignIn = () => {
   }
   // Otherwise return the Login form.
   return (
-    <Container id="signin-page" className=" py-4 signin-form">
-      <Row className="justify-content-center">
-        <Col md={6} className="position-relative w-50 h-100 flex flex-column">
-          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" className="w-100 " alt="Login" />
-        </Col>
-        <Col md={6} className="p-0">
-          <div className="text-center">
-            <h2>Login to your account</h2>
-          </div>
-          <AutoForm schema={bridge} onSubmit={data => submit(data)}>
-            <Card>
-              <Card.Body>
-                <TextField id="signin-form-email" name="email" placeholder="E-mail address" />
-                <TextField id="signin-form-password" name="password" placeholder="Password" type="password" />
-                <ErrorsField />
-                <SubmitField id="signin-form-submit" />
-              </Card.Body>
-            </Card>
-          </AutoForm>
-          <Alert variant="light">
-            <Link to="/signup">Click here to Register</Link>
-          </Alert>
-          {error === '' ? (
-            ''
-          ) : (
-            <Alert variant="danger">
-              <Alert.Heading>Login was not successful</Alert.Heading>
-              {error}
+    <>
+      <Container id="signin-page" className=" py-4 signin-form">
+        <Row className="justify-content-center">
+          <Col md={6} className="position-relative w-50 h-100 flex flex-column">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" className="w-100 " alt="Login" />
+          </Col>
+          <Col md={6} className="p-0">
+            <div className="text-center">
+              <h2>Login to your account</h2>
+            </div>
+            <AutoForm schema={bridge} onSubmit={data => submit(data)}>
+              <Card>
+                <Card.Body>
+                  <TextField id="signin-form-email" name="email" placeholder="E-mail address" />
+                  <TextField id="signin-form-password" name="password" placeholder="Password" type="password" />
+                  <ErrorsField />
+                  <SubmitField id="signin-form-submit" />
+                </Card.Body>
+              </Card>
+            </AutoForm>
+            <Alert variant="light">
+              <h4>Don't have an account? </h4>
+              <Link to="/signup">Click here to Register</Link>
             </Alert>
-          )}
-        </Col>
-      </Row>
-    </Container>
+            {error === '' ? (
+              ''
+            ) : (
+              <Alert variant="danger">
+                <Alert.Heading>Login was not successful</Alert.Heading>
+                {error}
+              </Alert>
+            )}
+          </Col>
+        </Row>
+      </Container>
+      <Container>
+        <p>Hey</p>
+      </Container>
+    </>
   );
 };
 
