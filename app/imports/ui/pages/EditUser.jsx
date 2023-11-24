@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
 import { Card, Col, Container, Row } from 'react-bootstrap';
 import { AutoForm, ErrorsField, HiddenField, SelectField, SubmitField, TextField } from 'uniforms-bootstrap5';
@@ -11,14 +12,16 @@ import LoadingSpinner from '../components/LoadingSpinner';
 
 const bridge = new SimpleSchema2Bridge(Users.schema);
 
-/* Renders the EditStuff page for editing a single document. */
+/* Renders the EditUser page for editing a single document. */
 const EditUser = () => {
+  // eslint-disable-next-line new-cap
+  const navigate = new useNavigate();
   // Get the documentID from the URL field. See imports/ui/layouts/App.jsx for the route containing :_id.
   const { _id } = useParams();
   // console.log('EditStuff', _id);
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
   const { doc, ready } = useTracker(() => {
-    // Get access to Stuff documents.
+    // Get access to User documents.
     const subscription = Meteor.subscribe(Users.userPublicationName);
     // Determine if the subscription is ready
     const rdy = subscription.ready();
@@ -36,6 +39,7 @@ const EditUser = () => {
     Users.collection.update(_id, { $set: { firstName, lastName, email, phone, address, status } }, (error) => (error ?
       swal('Error', error.message, 'error') :
       swal('Success', 'Item updated successfully', 'success')));
+    navigate('/'); // Redirect Landing
   };
 
   return ready ? (
