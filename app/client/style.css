@@ -99,3 +99,9 @@ body {
   background-size: cover;
   height: 100vh;
 }
+
+#signup-page{
+  background-image: url("images/OceanWave.jpeg");
+  background-size: cover;
+  height: 100vh;
+}

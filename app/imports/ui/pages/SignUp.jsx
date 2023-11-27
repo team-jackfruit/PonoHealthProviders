@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link, Navigate } from 'react-router-dom';
 import { Accounts } from 'meteor/accounts-base';
-import { Alert, Card, Col, Container, Row } from 'react-bootstrap';
+import { Alert, Card, Col, Container, Row, CardGroup, Button } from 'react-bootstrap';
 import SimpleSchema from 'simpl-schema';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import { AutoForm, ErrorsField, SubmitField, TextField } from 'uniforms-bootstrap5';
@@ -40,35 +40,47 @@ const SignUp = ({ location }) => {
     return <Navigate to={from} />;
   }
   return (
-    <Container id="signup-page" className="py-3">
-      <Row className="justify-content-center">
-        <Col xs={5}>
-          <Col className="text-center">
-            <h2>Register your account</h2>
-          </Col>
+    <Container fluid id="signup-page">
+      <Row>
+        <Col md={{ span: 6, offset: 3 }} className="py-4">
           <AutoForm schema={bridge} onSubmit={data => submit(data)}>
-            <Card>
-              <Card.Body>
-                <TextField name="email" placeholder="E-mail address" />
-                <TextField name="password" placeholder="Password" type="password" />
-                <ErrorsField />
-                <SubmitField />
-              </Card.Body>
-            </Card>
+            <CardGroup>
+              <Card bg="light">
+                <Card.Img src="images/login_card2.jpeg" alt="Card image" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
+                <Card.ImgOverlay>
+                  <Card.Body>
+                    <h2 className="text-center"> I'm a Member! </h2>
+                    <p>If you already have an account with us and are trying to log back in, no worries! Just click on below to head on over to the login page. We're happy to have you back!</p>
+                    <div className="text-center py-4">
+                      <Button variant="primary" as={Link} to="/signin">Sign In</Button>
+                    </div>
+                  </Card.Body>
+                </Card.ImgOverlay>
+              </Card>
+              <Card bg="light">
+                <Card.Img src="images/login_card.jpeg" alt="Card image" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
+                <Card.ImgOverlay>
+                  <Card.Body>
+                    <Card.Title as="h2" className="text-center">Register Your New Account</Card.Title>
+                    <TextField name="email" placeholder="E-mail address" />
+                    <TextField name="password" placeholder="Password" type="password" />
+                    <ErrorsField />
+                    <div className="text-center py-4">
+                      <SubmitField value="Sign-Up" />
+                    </div>
+                    {error === '' ? (
+                      ''
+                    ) : (
+                      <Alert variant="danger">
+                        <Alert.Heading>Registration was not successful</Alert.Heading>
+                        {error}
+                      </Alert>
+                    )}
+                  </Card.Body>
+                </Card.ImgOverlay>
+              </Card>
+            </CardGroup>
           </AutoForm>
-          <Alert variant="light">
-            Already have an account? Login
-            {' '}
-            <Link to="/signin">here</Link>
-          </Alert>
-          {error === '' ? (
-            ''
-          ) : (
-            <Alert variant="danger">
-              <Alert.Heading>Registration was not successful</Alert.Heading>
-              {error}
-            </Alert>
-          )}
         </Col>
       </Row>
     </Container>
