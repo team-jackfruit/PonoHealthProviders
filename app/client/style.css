@@ -91,3 +91,11 @@ body {
 .card-address{
   color: #505050;
 }
+
+
+{/* sign in page */}
+#signin-page{
+  background-image: url("images/OceanWave.jpeg");
+  background-size: cover;
+  height: 100vh;
+}
