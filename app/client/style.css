@@ -99,3 +99,11 @@ body {
   background-size: cover;
   height: 100vh;
 }
+
+.custom-card-background {
+  background-color: #ff4444; /* Or any other color */
+  /* For a background image, use:
+  background-image: url('path-to-your-image.jpg');
+  background-size: cover;
+  */
+}
