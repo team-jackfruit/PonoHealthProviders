@@ -105,3 +105,9 @@ body {
   background-size: cover;
   height: 100vh;
 }
+
+#signout-page{
+  background-image: url("images/SignOutBackground.png");
+  background-size: cover;
+  height: 100vh;
+}
