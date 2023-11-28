@@ -78,3 +78,27 @@ body {
 #provider-card:hover{
   transform: scale(1.1);
 }
+
+.userProfile{
+  background-image: url("images/UsersProfileBackground.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.card-title {
+  font-size: 1.5rem; /* Adjust size as needed */
+}
+
+.card-subtitle {
+  font-size: 1.2rem; /* Adjust size as needed */
+}
+
+.user-card .bi {
+  font-size: 2rem; /* Adjust size as needed */
+}
+
+.bold-large-header {
+  font-weight: bold;
+  font-size: 1.25rem; /* Adjust the size as needed */
+}
