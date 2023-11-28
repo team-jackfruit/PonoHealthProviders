@@ -79,6 +79,8 @@ body {
   transform: scale(1.1);
 }
 
+/* These are for the User Profile and related pages */
+
 .userProfile{
   background-image: url("images/UsersProfileBackground.png");
   background-size: cover;

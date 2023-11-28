@@ -7,11 +7,11 @@ const UserCard = ({ user }) => (
   <Card className="align-content-center user-card">
     <Card.Body className="text-center">
       <Card.Header className="bold-large-header">Your Profile</Card.Header>
-      <Card.Title className="pt-2"> <i className="bi bi-people-fill"></i> {user.firstName} {user.lastName}</Card.Title>
-      <Card.Subtitle className="pb-4 text-muted"> <i className="bi bi-envelope-fill"></i> {user.email}</Card.Subtitle>
-      <Card.Subtitle className="pb-2"> <i className="bi bi-telephone-fill"></i> {user.phone}</Card.Subtitle>
-      <Card.Subtitle className="pb-2"> <i className="bi bi-house-fill"></i> {user.address}</Card.Subtitle>
-      <Card.Subtitle className="pb-4"> <i className="bi bi-file-medical-fill"></i> {user.status}</Card.Subtitle>
+      <Card.Title className="pt-2"> <i className="bi bi-people-fill" /> {user.firstName} {user.lastName}</Card.Title>
+      <Card.Subtitle className="pb-4 text-muted"> <i className="bi bi-envelope-fill" /> {user.email}</Card.Subtitle>
+      <Card.Subtitle className="pb-2"> <i className="bi bi-telephone-fill" /> {user.phone}</Card.Subtitle>
+      <Card.Subtitle className="pb-2"> <i className="bi bi-house-fill" /> {user.address}</Card.Subtitle>
+      <Card.Subtitle className="pb-4"> <i className="bi bi-file-medical-fill" /> {user.status}</Card.Subtitle>
       {/* Here you can add more user details or action buttons */}
       <h4>Have your details changed since your last edit?</h4>
       <Link to={`/edit/${user._id}`} className="btn btn-primary">I Want To Update My Information</Link>
