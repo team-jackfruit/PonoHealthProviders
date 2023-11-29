@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { Meteor } from 'meteor/meteor';
-import { Alert, Card, Col, Container, Row } from 'react-bootstrap';
+import { Alert, Card, Col, Container, Row, Button } from 'react-bootstrap';
 import SimpleSchema from 'simpl-schema';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
-import { AutoForm, ErrorsField, SubmitField, TextField } from 'uniforms-bootstrap5';
+import { AutoForm, ErrorsField, TextField } from 'uniforms-bootstrap5';
 
 const SignIn = () => {
   const [error, setError] = useState('');
   const [redirect, setRedirect] = useState(false);
+  const formRef = useRef(null);
   const schema = new SimpleSchema({
     email: String,
     password: String,
@@ -26,6 +27,12 @@ const SignIn = () => {
     });
   };
 
+  const handleSubmit = () => {
+    if (formRef.current) {
+      formRef.current.submit();
+    }
+  };
+
   if (redirect) {
     return (<Navigate to="/" />);
   }
@@ -37,11 +44,11 @@ const SignIn = () => {
           <Card className="shadow">
             <Card.Body>
               <h2 className="text-center mb-4">Login to Your Account</h2>
-              <AutoForm schema={bridge} onSubmit={data => submit(data)}>
+              <AutoForm ref={formRef} schema={bridge} onSubmit={data => submit(data)}>
                 <TextField id="signin-form-email" name="email" placeholder="E-mail Address" />
                 <TextField id="signin-form-password" name="password" placeholder="Password" type="password" />
                 <ErrorsField />
-                <SubmitField id="signin-form-submit" className="btn btn-primary w-100 mt-3" value="Sign In" />
+                <Button onClick={handleSubmit} className="w-100 mt-3" variant="primary">Sign In</Button>
               </AutoForm>
               {error && (
                 <Alert variant="danger" className="mt-3">

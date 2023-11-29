@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { Link, useNavigate } from 'react-router-dom';
 import { Accounts } from 'meteor/accounts-base';
-import { Alert, Card, Col, Container, Row } from 'react-bootstrap';
+import { Alert, Card, Col, Container, Row, Button } from 'react-bootstrap';
 import SimpleSchema from 'simpl-schema';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
-import { AutoForm, ErrorsField, SubmitField, TextField } from 'uniforms-bootstrap5';
+import { AutoForm, ErrorsField, TextField } from 'uniforms-bootstrap5';
 
 const SignUp = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
+  const formRef = useRef(null);
 
   const schema = new SimpleSchema({
     email: String,
@@ -29,6 +30,12 @@ const SignUp = () => {
     });
   };
 
+  const handleSubmit = () => {
+    if (formRef.current) {
+      formRef.current.submit();
+    }
+  };
+
   return (
     <Container id="signup-page" fluid className="py-3 userProfile">
       <Row className="justify-content-center">
@@ -36,11 +43,11 @@ const SignUp = () => {
           <Card className="shadow">
             <Card.Body>
               <h2 className="text-center mb-4">Register Your Account</h2>
-              <AutoForm schema={bridge} onSubmit={data => submit(data)}>
+              <AutoForm ref={formRef} schema={bridge} onSubmit={data => submit(data)}>
                 <TextField name="email" placeholder="E-mail Address" />
                 <TextField name="password" placeholder="Password" type="password" />
                 <ErrorsField />
-                <SubmitField className="btn btn-primary w-100 mt-3" value="Register" />
+                <Button onClick={handleSubmit} className="btn btn-primary w-100 mt-3">Register</Button>
               </AutoForm>
               {error && (
                 <Alert variant="danger" className="mt-3">
