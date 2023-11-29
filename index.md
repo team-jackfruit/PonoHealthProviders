@@ -28,7 +28,6 @@ Access to affordable healthcare is a significant issue in Hawaii. Uninsured or u
 
 * **Resources**: Links to government and non-profit resources for healthcare, as well as links to other healthcare-related websites.
 
-## User Guide
 ### Mockup Page Ideas
 **Landing Page**: Welcomes users to the website and provides a brief mission statement. Lists the main services provided by the website.
 <img src="doc/Landing_Page.png">
@@ -36,6 +35,11 @@ Access to affordable healthcare is a significant issue in Hawaii. Uninsured or u
 <img src="doc/Directory_Page.png">
 **Resource Page**: Provides links to government and non-profit resources for healthcare. Also provides links to other healthcare-related websites.
 <img src="doc/Resource_Page.png">
+
+## User Guide
+
+
+
 
 ## Implementation
 ### Prerequisites
