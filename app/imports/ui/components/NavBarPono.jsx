@@ -30,7 +30,6 @@ const NavBarPono = () => {
             <Nav.Link href="/list">FIND A PROVIDER</Nav.Link>
             <Nav.Link href="/resources">RESOURCES</Nav.Link>
             <Nav.Link href="/faq">FAQ</Nav.Link>
-            {/* <Nav.Link href="/blog">BLOG</Nav.Link> */}
             {currentUser === '' ? (
               <NavDropdown id="login-dropdown" title="LOGIN">
                 <NavDropdown.Item id="login-dropdown-sign-in" as={NavLink} to="/signin">
@@ -43,14 +42,17 @@ const NavBarPono = () => {
                 </NavDropdown.Item>
               </NavDropdown>
             ) : (
-              <NavDropdown id="navbar-current-user" title={currentUser}>
-                <NavDropdown.Item id="navbar-sign-out" as={NavLink} to="/signout">
-                  <BoxArrowRight />
-                  {' '}
-                  Sign
-                  out
-                </NavDropdown.Item>
-              </NavDropdown>
+              <>
+                <Nav.Link href="/userprofile">Profile</Nav.Link>
+                <NavDropdown id="navbar-current-user" title={currentUser}>
+                  <NavDropdown.Item id="navbar-sign-out" as={NavLink} to="/signout">
+                    <BoxArrowRight />
+                    {' '}
+                    Sign
+                    out
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </>
             )}
           </Nav>
         </Navbar.Collapse>
