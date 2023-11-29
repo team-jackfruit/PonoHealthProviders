@@ -7,6 +7,7 @@
    - [The Problem](#the-problem)
    - [Overview](#overview)
    - [User Guide](#user-guide)
+   - [Developer Guide](#developer-guide)
    - [Deployment](#deployment)
    - [Implementation](#implementation)
    - [Development History](#development-history)
@@ -58,6 +59,11 @@ Access to affordable healthcare is a significant issue in Hawaii. Uninsured or u
 <img src="doc/M2/EditUser.PNG">   
 **Sign-Out Page**: Users needing more resources can find provided links to government and non-profit websites for healthcare or any other healthcare-related websites.   
 <img src="doc/M2/SignOut.PNG">   
+
+## Developer Guide
+<img src="doc/DevGuide/1.PNG">   
+<img src="doc/DevGuide/2.PNG">   
+<img src="doc/DevGuide/3.PNG">   
 
 
 ## Implementation
