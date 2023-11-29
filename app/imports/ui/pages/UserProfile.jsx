@@ -1,9 +1,9 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Col, Container, Row, Table } from 'react-bootstrap';
+import { Col, Container, Image, Row } from 'react-bootstrap';
 import { useTracker } from 'meteor/react-meteor-data';
 import { Users } from '../../api/userData/userData';
-import UserItem from '../components/UserItem';
+import UserCard from '../components/UserCard';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 /* Renders a table containing all of the User documents. Use <UserItem> to render each row. */
@@ -24,33 +24,22 @@ const UserProfile = () => {
     };
   }, []);
 
-  return (ready ? (
-    <Container className="py-3">
+  return ready ? (
+    <Container fluid className="py-3 userProfile">
       <Row className="justify-content-center">
-        <Col md={7}>
-          <Col className="text-center">
-            <h2>User Profile</h2>
-          </Col>
-          <Table striped bordered hover>
-            <thead>
-              <tr>
-                <th>firstName</th>
-                <th>lastName</th>
-                <th>email</th>
-                <th>phone</th>
-                <th>address</th>
-                <th>status</th>
-                <th>Edit</th>
-              </tr>
-            </thead>
-            <tbody>
-              {users.map((user) => <UserItem key={user._id} user={user} />)}
-            </tbody>
-          </Table>
+        <Col md={4}>
+          <Image src="/images/UserAccount.png" fluid />
         </Col>
+        {users.map((user) => (
+          <Col md={4} key={user._id} className="mb-4">
+            <UserCard user={user} />
+          </Col>
+        ))}
       </Row>
     </Container>
-  ) : <LoadingSpinner />);
+  ) : (
+    <LoadingSpinner />
+  );
 };
 
 export default UserProfile;

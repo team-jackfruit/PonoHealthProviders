@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Card, Col, Container, Row } from 'react-bootstrap';
+import { Card, Col, Container, InputGroup, Row } from 'react-bootstrap';
 import { AutoForm, ErrorsField, SelectField, SubmitField, TextField } from 'uniforms-bootstrap5';
 import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
@@ -47,7 +47,7 @@ const CreateUser = () => {
   // Render the form. Use Uniforms: https://github.com/vazco/uniforms
   let fRef = null;
   return (
-    <Container className="py-3">
+    <Container fluid className="py-3 userProfile">
       <Row className="justify-content-center">
         <Col xs={5}>
           <Col className="text-center"><h2>Create User</h2></Col>
