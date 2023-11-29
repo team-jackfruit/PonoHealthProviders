@@ -87,6 +87,9 @@ If all goes well, the application will appear at [http://localhost:3000](http://
 If you run into issues, try:
 `$ meteor npm run reset`
 
+Using the IDE of your choice, the web application can be modified through components in the app folder:
+<img src="doc/DevGuide/5.PNG">   
+
 ## Development History
 ### Milestone 1: Project Board
 [Milestone 1 Project Board](https://github.com/orgs/team-jackfruit/projects/3)
