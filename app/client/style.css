@@ -1,0 +1,107 @@
+/* Use Open Sans as the default sans serif font. */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700|Source+Code+Pro:300,400,500,700");
+
+/* Set up some CSS variables to theme the application. */
+:root {
+  --matr-navbar-bg: #ECECEC;
+  --matr-navbar-bg-rgb: 236, 236, 236;
+  --navbar-bg-color: #05445E;
+}
+
+/* Change bootstrap variable values.
+ See https://getbootstrap.com/docs/5.2/customize/css-variables/
+ */
+body {
+  --bs-light-rgb: var(--matr-navbar-bg-rgb);
+}
+
+/* Set the alert background on the signin and signup pages. */
+#signin-page .alert-light, #signup-page .alert-light {
+  --bs-alert-bg: var(--matr-navbar-bg);
+}
+
+/* Custom styles for header and footer */
+.custom-navbar {
+  background-color: var(--navbar-bg-color); /* Replace with your desired color */
+  min-height: 50px;
+}
+
+.custom-footer {
+  background-color: var(--navbar-bg-color);
+  min-height: 50px;
+}
+
+.hero-banner {
+  background-image: url('images/banner.jpg'); /* Add your image path here */
+  background-size: cover;
+  background-position: center;
+  height: 600px; /* Adjust the height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Text color */
+  text-align: center;
+}
+
+.mission-section {
+  background-color: #2D9EDD; /* Replace with your specific color */
+}
+
+.mission-heading {
+  font-size: 2.5rem; /* Adjust the size as needed */
+  color: #05445E;
+}
+
+.mission-text {
+  font-size: 1rem; /* Adjust the size as needed */
+  color: #05445E;
+}
+
+.services-section {
+  background-color: #189AB4; /* Replace with your specific color */
+}
+
+.healthcare-solutions-section {
+  background-color: #D4F1F4; /* Replace with your desired color */
+}
+
+.health-insurance-basics-section {
+  background-color: #75E6DA; /* Replace with your desired color */
+}
+
+{/* Creates the smooth transition when hovering over provider cards*/}
+#provider-card{
+  transition: all 0.3s;
+}
+
+{/* Scales the provider cards by 1.1 when hovering over the card */}
+#provider-card:hover{
+  transform: scale(1.1);
+}
+
+#provider-page-title{
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+#filter-button{
+  margin: 20px 5px 10px 0px;
+}
+
+.card-address{
+  color: #505050;
+}
+
+
+{/* sign in page */}
+#signin-page{
+  background-image: url("images/OceanWave.jpeg");
+  background-size: cover;
+  height: 100vh;
+}
+
+#signup-page{
+  background-image: url("images/OceanWave.jpeg");
+  background-size: cover;
+  height: 100vh;
+}
