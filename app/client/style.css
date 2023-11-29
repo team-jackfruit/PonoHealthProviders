@@ -20,17 +20,15 @@ body {
   --bs-alert-bg: var(--matr-navbar-bg);
 }
 
-/* Define custom styles */
-/* .gray-background {
-  background-color: var(--matr-navbar-bg);
-  color: var(--bs-dark);
-  padding-top: 10px;
-  padding-bottom: 20px;
-} */
-
 /* Custom styles for header and footer */
 .custom-navbar {
   background-color: var(--navbar-bg-color); /* Replace with your desired color */
+  min-height: 50px;
+}
+
+.custom-footer {
+  background-color: var(--navbar-bg-color);
+  min-height: 50px;
 }
 
 .hero-banner {
@@ -94,3 +92,22 @@ body {
   color: #505050;
 }
 
+
+{/* sign in page */}
+#signin-page{
+  background-image: url("images/OceanWave.jpeg");
+  background-size: cover;
+  height: 100vh;
+}
+
+#signup-page{
+  background-image: url("images/OceanWave.jpeg");
+  background-size: cover;
+  height: 100vh;
+}
+
+#signout-page{
+  background-image: url("images/SignOutBackground.png");
+  background-size: cover;
+  height: 100vh;
+}
