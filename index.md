@@ -37,8 +37,27 @@ Access to affordable healthcare is a significant issue in Hawaii. Uninsured or u
 <img src="doc/Resource_Page.png">
 
 ## User Guide
-
-
+**Landing Page**: This page is for the general information of Pono Health Providers.   
+<img src="doc/M2/Landing.PNG">   
+**Directory Page**: Our directory page features a filter in which a user can utilize to find proper heatlh care facilities based off of the user's preferences.   
+<img src="doc/M2/updatedFilter.PNG">
+<img src="doc/M2/updatedFilter2.PNG">
+<img src="doc/M2/updatedFilter3.PNG">   
+**Resource Page**: Users needing more resources can find provided links to government and non-profit websites for healthcare or any other healthcare-related websites.   
+<img src="doc/M2/resource.PNG">   
+**Sign-In Page**: This page allows users with existing accounts to log in to view their profiles.   
+<img src="doc/M2/updatedSignIn.PNG">
+<img src="doc/M2/SignedIn.PNG">   
+**Sign-Up Page**: Users without an account can sign up here leading to create profile page after submission.   
+<img src="doc/M2/updatedSignUp.PNG">   
+**Create User Profile Page**: After filling out the required fields, users now have access to their personal profile.   
+<img src="doc/M2/createUser.PNG">   
+**Profile Page**: This page allows users to view their profile while leaving the option to make changes.   
+<img src="doc/M2/Profile.PNG">   
+**Edit User Profile Page**: This page allows users to make changes to their profile information.   
+<img src="doc/M2/EditUser.PNG">   
+**Sign-Out Page**: Users needing more resources can find provided links to government and non-profit websites for healthcare or any other healthcare-related websites.   
+<img src="doc/M2/SignOut.PNG">   
 
 
 ## Implementation
@@ -70,21 +89,21 @@ If you run into issues, try:
 [Milestone 1 Project Board](https://github.com/orgs/team-jackfruit/projects/3)
 
 ### Home Page / Landing
-Introduction to webpage and services provided.
+Introduction to webpage and services provided.   
 <img src="doc/home.PNG">
 <img src="doc/home2.PNG">
 
 ### Resources
-Information on various healthcare options with links to sites.
+Information on various healthcare options with links to sites.   
 <img src="doc/Resources.PNG">
 <img src="doc/Resources2.PNG">
 
 ### Faq
-Page for commonly asked questions.
+Page for commonly asked questions.   
 <img src="doc/Faq.PNG">
 
 ### Filter
-Provides user interactive filter to find providers. 
+Provides user interactive filter to find providers.    
 <img src="doc/filter.PNG">
 <img src="doc/FilterTest.PNG">
 
