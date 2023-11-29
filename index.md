@@ -60,12 +60,6 @@ Access to affordable healthcare is a significant issue in Hawaii. Uninsured or u
 **Sign-Out Page**: Users needing more resources can find provided links to government and non-profit websites for healthcare or any other healthcare-related websites.   
 <img src="doc/M2/SignOut.PNG">   
 
-## Developer Guide
-<img src="doc/DevGuide/1.PNG">   
-<img src="doc/DevGuide/2.PNG">   
-<img src="doc/DevGuide/3.PNG">   
-
-
 ## Implementation
 ### Prerequisites
 This application requires the following technologies to be installed:
@@ -74,16 +68,19 @@ This application requires the following technologies to be installed:
 * [React Bootstrap](https://react-bootstrap.github.io/) CSS Framework for UI design.
 * [Uniforms](https://uniforms.tools/) for React form design and display
 
-### Installation
+### Developer Guide
 First, install Meteor.
-
 Second, visit the [Team Jackfruit application github page](https://github.com/team-jackfruit), and click the "Use this template" button to create your own repository initialized with a copy of this application. Alternatively, you can download the sources as a zip file or make a fork of the repo. However you do it, download a copy of the repo to your local computer.
+
+<img src="doc/DevGuide/1.PNG">   
 
 Third, cd into the Opportunity-Finder/app directory and install libraries with:
 `$ meteor npm install`
+<img src="doc/DevGuide/4.PNG">   
 
 Fourth, run the system with:
 `$ meteor npm run start`
+<img src="doc/DevGuide/3.PNG">   
 
 If all goes well, the application will appear at [http://localhost:3000](http://localhost:3000).
 
