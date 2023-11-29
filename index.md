@@ -144,7 +144,7 @@ const healthcareFacilities = [
 [M2](https://github.com/orgs/team-jackfruit/projects/5/views/1)
 
 ### Milestone 3:
-***TBD***
+[M3](https://github.com/orgs/team-jackfruit/projects/7)
 
 ## Deployment
 [PonoHealthProviders](https://ponohealthproviders.com/)
