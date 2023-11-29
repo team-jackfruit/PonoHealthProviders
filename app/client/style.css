@@ -20,6 +20,24 @@ body {
   --bs-alert-bg: var(--matr-navbar-bg);
 }
 
+#signup-page {
+  background-image: url("images/OceanWave.jpeg");
+  background-size: cover;
+  height: 100vh;
+}
+
+#signin-page {
+  background-image: url("images/OceanWave.jpeg");
+  background-size: cover;
+  height: 100vh;
+}
+
+#signout-page {
+  background-image: url("images/SignOutBackground.png");
+  background-size: cover;
+  height: 100vh;
+}
+
 /* Define custom styles */
 /* .gray-background {
   background-color: var(--matr-navbar-bg);
@@ -30,6 +48,10 @@ body {
 
 /* Custom styles for header and footer */
 .custom-navbar {
+  background-color: var(--navbar-bg-color); /* Replace with your desired color */
+}
+
+.custom-footer{
   background-color: var(--navbar-bg-color); /* Replace with your desired color */
 }
 
