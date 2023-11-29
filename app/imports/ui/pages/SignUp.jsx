@@ -7,12 +7,9 @@ import SimpleSchema from 'simpl-schema';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import { AutoForm, ErrorsField, SubmitField, TextField } from 'uniforms-bootstrap5';
 
-/**
- * SignUp component is similar to signin component, but we create a new user instead.
- */
 const SignUp = () => {
   const [error, setError] = useState('');
-  const navigate = useNavigate(); // Added useNavigate
+  const navigate = useNavigate();
 
   const schema = new SimpleSchema({
     email: String,
@@ -27,48 +24,43 @@ const SignUp = () => {
         setError(err.reason);
       } else {
         setError('');
-        navigate('/createuser'); // Redirect to Create User page
+        navigate('/createuser');
       }
     });
   };
 
   return (
-    <Container id="signup-page" className="py-3">
+    <Container id="signup-page" fluid className="py-3 userProfile">
       <Row className="justify-content-center">
-        <Col xs={5}>
-          <Col className="text-center">
-            <h2>Register your account</h2>
-          </Col>
-          <AutoForm schema={bridge} onSubmit={data => submit(data)}>
-            <Card>
-              <Card.Body>
-                <TextField name="email" placeholder="E-mail address" />
+        <Col md={6} lg={4}>
+          <Card className="shadow">
+            <Card.Body>
+              <h2 className="text-center mb-4">Register Your Account</h2>
+              <AutoForm schema={bridge} onSubmit={data => submit(data)}>
+                <TextField name="email" placeholder="E-mail Address" />
                 <TextField name="password" placeholder="Password" type="password" />
                 <ErrorsField />
-                <SubmitField />
-              </Card.Body>
-            </Card>
-          </AutoForm>
-          <Alert variant="light">
-            Already have an account? Login
-            {' '}
-            <Link to="/signin">here</Link>
-          </Alert>
-          {error === '' ? (
-            ''
-          ) : (
-            <Alert variant="danger">
-              <Alert.Heading>Registration was not successful</Alert.Heading>
-              {error}
-            </Alert>
-          )}
+                <SubmitField className="btn btn-primary w-100 mt-3" value="Register" />
+              </AutoForm>
+              {error && (
+                <Alert variant="danger" className="mt-3">
+                  <Alert.Heading>Registration was not successful</Alert.Heading>
+                  {error}
+                </Alert>
+              )}
+            </Card.Body>
+            <Card.Footer className="text-center">
+              <small>
+                Already have an account? <Link to="/signin">Login here</Link>
+              </small>
+            </Card.Footer>
+          </Card>
         </Col>
       </Row>
     </Container>
   );
 };
 
-/* Ensure that the React Router location object is available in case we need to redirect. */
 SignUp.propTypes = {
   location: PropTypes.shape({
     state: PropTypes.string,
