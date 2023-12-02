@@ -1,31 +1,18 @@
 import React from 'react';
+import { Meteor } from 'meteor/meteor';
 import PropTypes from 'prop-types';
 import { Card, Button, Modal } from 'react-bootstrap';
-import {Users} from "../../api/userData/userData";
-import {Favorite} from "../../api/favData/favData";
+import swal from 'sweetalert';
+import { Users } from '../../api/userData/userData';
+import { Favorite } from '../../api/favData/favData';
+
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 const Provider = ({ provider }) => {
   const [modalShow, setModalShow] = React.useState(false);
+
   const handleCardClick = () => {
     setModalShow(true);
   };
-}
-const favorite = (data) => {
-    const facilityName = data.facility;
-    const owner = Meteor.user().username;
-
-    Favorite.collection.insert(
-        { name: facilityName, owner },
-        (error) => {
-            if (error) {
-                swal('Error', error.message, 'error');
-            } else {
-                swal('Success', 'Item added successfully', 'success');
-            }
-        },
-    );
-};
-
 
   const handleCloseModal = () => {
     setModalShow(false);
@@ -33,6 +20,32 @@ const favorite = (data) => {
 
   const openWebsite = () => {
     window.open('https://ponohealthproviders.com', '_blank');
+  };
+
+  const favorite = (data) => {
+    const facilityName = data.facility;
+    const owner = Meteor.user().username;
+
+    Favorite.collection.insert(
+      { name: facilityName, owner },
+      (error) => {
+        if (error) {
+          swal('Error', error.message, 'error');
+        } else {
+          swal('Success', 'Item added successfully', 'success');
+        }
+      },
+    );
+  };
+
+  const handleFavoriteClick = () => {
+    if (Meteor.userId()) {
+      favorite(provider);
+    } else {
+      // Redirect to the sign-up page
+      // Replace '/signup' with the actual path to your sign-up page
+      window.location.href = '/signin';
+    }
   };
 
   return (
@@ -62,11 +75,16 @@ const favorite = (data) => {
           <Button variant="primary" onClick={openWebsite}>
             Visit Website
           </Button>
+
+          <Button variant="primary" onClick={handleFavoriteClick}>
+            Favorite
+          </Button>
         </Modal.Footer>
       </Modal>
     </>
   );
 };
+
 // Require a document to be passed to this component.
 Provider.propTypes = {
   provider: PropTypes.shape({
@@ -78,4 +96,5 @@ Provider.propTypes = {
     // _id: PropTypes.string,
   }).isRequired,
 };
+
 export default Provider;
