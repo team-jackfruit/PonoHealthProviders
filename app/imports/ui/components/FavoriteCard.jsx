@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const FavoriteCard = ({ user }) => (
   <Card className="align-content-center user-card">
     <Card.Body className="text-center">
-      <Card.Header className="bold-large-header">Selections</Card.Header>
+      <Card.Header className="bold-large-header">Favorite Places</Card.Header>
       <Card.Title className="pt-2"> <i className="bi bi-people-fill" /> {user.name} </Card.Title>
     </Card.Body>
   </Card>
