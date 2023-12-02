@@ -1,12 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, Button, Modal } from 'react-bootstrap';
+import {Users} from "../../api/userData/userData";
+import {Favorite} from "../../api/favData/favData";
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 const Provider = ({ provider }) => {
   const [modalShow, setModalShow] = React.useState(false);
   const handleCardClick = () => {
     setModalShow(true);
   };
+}
+const favorite = (data) => {
+    const facilityName = data.facility;
+    const owner = Meteor.user().username;
+
+    Favorite.collection.insert(
+        { name: facilityName, owner },
+        (error) => {
+            if (error) {
+                swal('Error', error.message, 'error');
+            } else {
+                swal('Success', 'Item added successfully', 'success');
+            }
+        },
+    );
+};
+
 
   const handleCloseModal = () => {
     setModalShow(false);
