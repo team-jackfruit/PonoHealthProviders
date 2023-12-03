@@ -33,8 +33,13 @@ const Provider = ({ provider }) => {
           <Modal.Title>{provider.facility}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          {provider.administrator && <p>Administrated by {provider.administrator}</p>}
           <p>Address: {provider.address}</p>
+          {provider.mailingAddress && <p>Mailing Address: {provider.mailingAddress}</p>}
           <p>Island: {provider.location}</p>
+          <p>Phone: {provider.phone}</p>
+          {provider.fax && <p>Fax: {provider.fax}</p>}
+          {provider.numberOfLicensedBeds && <p>This facility contains {provider.numberOfLicensedBeds} licensed beds available</p>}
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseModal}>
@@ -55,6 +60,12 @@ Provider.propTypes = {
     providerBased: PropTypes.string,
     location: PropTypes.string,
     address: PropTypes.string,
+    mailingAddress: PropTypes.string,
+    phone: PropTypes.string,
+    fax: PropTypes.string,
+    administrator: PropTypes.string,
+    executiveDirector: PropTypes.string,
+    numberOfLicensedBeds: PropTypes.string
     // services: PropTypes.string,
     // _id: PropTypes.string,
   }).isRequired,
