@@ -23,16 +23,25 @@ const Provider = ({ provider }) => {
   };
 
   const favorite = (data) => {
+    // Extract the necessary information from the 'data' object
     const facilityName = data.facility;
+    const facilityAddress = data.address; // Assuming 'address' is a field in the 'data' object
+    const facilityLocation = data.location; // Assuming 'location' is a field in the 'data' object
     const owner = Meteor.user().username;
 
+    // Insert the new data into the Favorite collection
     Favorite.collection.insert(
-      { name: facilityName, owner },
+      {
+        name: facilityName,
+        address: facilityAddress,
+        location: facilityLocation,
+        owner,
+      },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
         } else {
-          swal('Success', 'Item added successfully', 'success');
+          swal('Success', 'Provider added to Favorites', 'success');
         }
       },
     );
@@ -75,7 +84,6 @@ const Provider = ({ provider }) => {
           <Button variant="primary" onClick={openWebsite}>
             Visit Website
           </Button>
-
           <Button variant="primary" onClick={handleFavoriteClick}>
             Favorite
           </Button>
