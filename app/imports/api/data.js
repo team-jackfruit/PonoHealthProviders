@@ -102,6 +102,18 @@ const healthcareFacilities = [
         phone: '(808) 961-1500',
         administrator: 'Douglas Taylor',
       },
+      {
+        number: 10,
+        facility: 'University Health Services Manoa',
+        providerBased: 'X',
+        freeStanding: '',
+        location: 'Oahu',
+        address: 'University Health Services\n' +
+          '1710 East West Road\n' +
+          'Honolulu, HI 96822',
+        phone: '(808) 956-5361',
+        email: 'shio@hawaii.edu',
+      },
     ],
   },
   {

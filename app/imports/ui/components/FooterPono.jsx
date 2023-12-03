@@ -3,13 +3,15 @@ import { Container, Row, Col, Nav } from 'react-bootstrap';
 
 /** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
 const FooterPono = () => (
-  <footer className="custom-navbar" style={{ color: 'white' }}>
+  <footer className="custom-footer" style={{ color: 'white' }}>
     <Container>
       <Row className="py-3">
         <Col md={6} className="text-center text-md-left mb-3 mb-md-0">
-          <div>Contact Us</div>
-          <div>Phone: (000) 000-0000</div>
-          <div>Email: abcdef@ghjkl.com</div>
+          <div>Liam (Kula) Van Asperen</div>
+          <div>Jakapop Khongnawang</div>
+          <div>Chad Maeshiro</div>
+          <div>Taitusi Vadei</div>
+          <div>University of Hawaii at Manoa - ICS 314 F23</div>
         </Col>
         <Col md={6} className="text-center text-md-right">
           <Nav className="justify-content-center justify-content-md-end">

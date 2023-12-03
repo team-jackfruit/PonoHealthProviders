@@ -44,7 +44,7 @@ If you run into issues, try:
 [Milestone 1 Project Board](https://github.com/orgs/team-jackfruit/projects/3)
 
 ### Milestone 2: 
-***TBD***
+[Milestone 2 Project Board](https://github.com/orgs/team-jackfruit/projects/5/views/1)
 
 ### Milestone 3:
 ***TBD***

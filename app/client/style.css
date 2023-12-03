@@ -20,6 +20,24 @@ body {
   --bs-alert-bg: var(--matr-navbar-bg);
 }
 
+#signup-page {
+  background-image: url("images/OceanWave.jpeg");
+  background-size: cover;
+  height: 100vh;
+}
+
+#signin-page {
+  background-image: url("images/OceanWave.jpeg");
+  background-size: cover;
+  height: 100vh;
+}
+
+#signout-page {
+  background-image: url("images/SignOutBackground.png");
+  background-size: cover;
+  height: 100vh;
+}
+
 /* Define custom styles */
 /* .gray-background {
   background-color: var(--matr-navbar-bg);
@@ -30,6 +48,10 @@ body {
 
 /* Custom styles for header and footer */
 .custom-navbar {
+  background-color: var(--navbar-bg-color); /* Replace with your desired color */
+}
+
+.custom-footer{
   background-color: var(--navbar-bg-color); /* Replace with your desired color */
 }
 
@@ -71,31 +93,36 @@ body {
   background-color: #0D98BA; /* Replace with your desired color */
 }
 
-{/* Creates the smooth transition when hovering over provider cards*/}
 #provider-card{
   transition: all 0.3s;
 }
 
-{/* Scales the provider cards by 1.1 when hovering over the card */}
 #provider-card:hover{
   transform: scale(1.1);
 }
 
-#provider-page-title{
-  padding-bottom: 20px;
-  padding-top: 20px;
+/* These are for the User Profile and related pages */
+
+.userProfile{
+  background-image: url("images/UsersProfileBackground.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
 }
 
-#filter-button{
-  margin: 20px 5px 10px 0px;
+.card-title {
+  font-size: 1.5rem; /* Adjust size as needed */
 }
 
-.card-address{
-  color: #505050;
+.card-subtitle {
+  font-size: 1.2rem; /* Adjust size as needed */
 }
 
-.card-img-top {
-  width: 100%;
-  height: 15vw;
-  object-fit: contain;
+.user-card .bi {
+  font-size: 2rem; /* Adjust size as needed */
+}
+
+.bold-large-header {
+  font-weight: bold;
+  font-size: 1.25rem; /* Adjust the size as needed */
 }

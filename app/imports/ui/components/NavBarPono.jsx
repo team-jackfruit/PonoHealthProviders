@@ -3,7 +3,7 @@ import { Meteor } from 'meteor/meteor';
 import { useTracker } from 'meteor/react-meteor-data';
 import { NavLink } from 'react-router-dom';
 // import { Roles } from 'meteor/alanning:roles';
-import { Nav, Navbar, Container, NavDropdown } from 'react-bootstrap';
+import { Nav, Navbar, Container, NavDropdown, Image } from 'react-bootstrap';
 import { BoxArrowRight, PersonFill, PersonPlusFill } from 'react-bootstrap-icons';
 
 const NavBarPono = () => {
@@ -15,7 +15,7 @@ const NavBarPono = () => {
   return (
     <Navbar className="custom-navbar" variant="dark" expand="lg">
       <Container>
-        <img
+        <Image
           alt="Logo"
           src="images/PonoHealthProvidersLogo.png"
           width="60"
@@ -30,7 +30,6 @@ const NavBarPono = () => {
             <Nav.Link href="/list">FIND A PROVIDER</Nav.Link>
             <Nav.Link href="/resources">RESOURCES</Nav.Link>
             <Nav.Link href="/faq">FAQ</Nav.Link>
-            {/* <Nav.Link href="/blog">BLOG</Nav.Link> */}
             {currentUser === '' ? (
               <NavDropdown id="login-dropdown" title="LOGIN">
                 <NavDropdown.Item id="login-dropdown-sign-in" as={NavLink} to="/signin">
@@ -43,14 +42,17 @@ const NavBarPono = () => {
                 </NavDropdown.Item>
               </NavDropdown>
             ) : (
-              <NavDropdown id="navbar-current-user" title={currentUser}>
-                <NavDropdown.Item id="navbar-sign-out" as={NavLink} to="/signout">
-                  <BoxArrowRight />
-                  {' '}
-                  Sign
-                  out
-                </NavDropdown.Item>
-              </NavDropdown>
+              <>
+                <Nav.Link href="/userprofile">PROFILE</Nav.Link>
+                <NavDropdown id="navbar-current-user" title={currentUser}>
+                  <NavDropdown.Item id="navbar-sign-out" as={NavLink} to="/signout">
+                    <BoxArrowRight />
+                    {' '}
+                    Sign
+                    out
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </>
             )}
           </Nav>
         </Navbar.Collapse>
