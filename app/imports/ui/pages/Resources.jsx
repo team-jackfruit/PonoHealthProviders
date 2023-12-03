@@ -6,13 +6,13 @@ import { Button, Card, Col, Container, Row, Accordion } from 'react-bootstrap';
 const ResourcesPage = () => (
   <Container fluid>
     <Row className="px-5 healthcare-solutions-section">
-      <Col md={12} className="text-center">
+      <Col md={12} className="text-center p-4">
         <h2>Searching for Low Cost Healthcare Solutions?</h2>
       </Col>
     </Row>
     <Row className="px-5 healthcare-solutions-section">
-      <Col md={4}>
-        <Card border="info">
+      <Col sm={1} md={4}>
+        <Card>
           <Card.Img variant="top" src="images/medquest_hawaii.png" />
           <Card.Body>
             <Card.Title>QUEST HAWAI&apos;I</Card.Title>
@@ -24,7 +24,7 @@ const ResourcesPage = () => (
         </Card>
       </Col>
       <Col md={4}>
-        <Card border="info">
+        <Card>
           <Card.Img variant="top" src="images/Medicare-Logo.png" />
           <Card.Body>
             <Card.Title>Medicare</Card.Title>
@@ -36,7 +36,7 @@ const ResourcesPage = () => (
         </Card>
       </Col>
       <Col md={4}>
-        <Card border="info">
+        <Card>
           <Card.Img variant="top" src="images/ACA_logo.png" />
           <Card.Body>
             <Card.Title>HealthCare.gov</Card.Title>
@@ -50,26 +50,26 @@ const ResourcesPage = () => (
     </Row>
     <Row className="px-5 healthcare-solutions-section">
       <Col md={4}>
-        <Card border="info">
+        <Card>
           <Card.Img variant="top" src="images/HPCA_logo.png" />
           <Card.Body>
             <Card.Title>HPCA</Card.Title>
             <Card.Text>
               These centers receive federal funding to provide primary care services at reduced rates.
             </Card.Text>
-            <Button variant="primary" href="https://www.hawaiipca.net/">visit website</Button>
+            <Button variant="primary" href="https://www.hawaiipca.net/">Visit Website</Button>
           </Card.Body>
         </Card>
       </Col>
       <Col md={4}>
-        <Card border="info">
+        <Card>
           <Card.Img variant="top" src="images/NeedyMeds_Logo.png" />
           <Card.Body bg="info">
             <Card.Title>NeedyMeds</Card.Title>
             <Card.Text>
               A national non-profit, educates and empowers those seeking affordable healthcare.
             </Card.Text>
-            <Button variant="primary" href="https://www.needymeds.org/">visit website</Button>
+            <Button variant="primary" href="https://www.needymeds.org/">Visit Website</Button>
           </Card.Body>
         </Card>
       </Col>

@@ -64,11 +64,11 @@ body {
 }
 
 .healthcare-solutions-section {
-  background-color: #D4F1F4; /* Replace with your desired color */
+  background-color: #7EC8E3; /* Replace with your desired color */
 }
 
 .health-insurance-basics-section {
-  background-color: #75E6DA; /* Replace with your desired color */
+  background-color: #0D98BA; /* Replace with your desired color */
 }
 
 {/* Creates the smooth transition when hovering over provider cards*/}
@@ -94,3 +94,8 @@ body {
   color: #505050;
 }
 
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  object-fit: contain;
+}
