@@ -1,24 +1,32 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Col, FormCheck, FormGroup, FormLabel, Row } from 'react-bootstrap';
 
-const FilterComponent = (onFilterChange) => {
+const FilterComponent = ({ onFilterChange }) => {
+  console.log('Received onFilterChange:', onFilterChange);
   const [service, setService] = useState('');
   const [insuranceType, setInsuranceType] = useState('');
   const [location, setLocation] = useState('');
 
   const handleServiceChange = (e) => {
-    setService(e.target.value);
-    onFilterChange({ service: e.target.value, insuranceType, location });
+    const updatedService = e.target.value;
+    setService(updatedService);
+    onFilterChange({ service: updatedService, insuranceType, location });
+    console.log('Service is now: ', updatedService);
   };
 
   const handleInsuranceTypeChange = (e) => {
-    setInsuranceType(e.target.value);
-    onFilterChange({ service, insuranceType: e.target.value, location });
+    const updatedInsuranceType = e.target.value;
+    setInsuranceType(updatedInsuranceType);
+    onFilterChange({ service, insuranceType: updatedInsuranceType, location });
+    console.log('InsuranceType is now: ', updatedInsuranceType);
   };
 
   const handleLocationChange = (e) => {
-    setLocation(e.target.value);
-    onFilterChange({ service, insuranceType, location: e.target.value });
+    const updatedLocation = e.target.value;
+    setLocation(updatedLocation);
+    onFilterChange({ service, insuranceType, location: updatedLocation });
+    console.log('Location is now: ', updatedLocation);
   };
 
   return (
@@ -287,6 +295,10 @@ const FilterComponent = (onFilterChange) => {
       </FormGroup>
     </Row>
   );
+};
+
+FilterComponent.propTypes = {
+  onFilterChange: PropTypes.func.isRequired, // onFilterChange is expected to be a function
 };
 
 export default FilterComponent;

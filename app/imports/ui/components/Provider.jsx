@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Card, Button, Modal } from 'react-bootstrap';
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 const Provider = ({ provider }) => {
+  console.log('Provider Data:', provider);
   const [modalShow, setModalShow] = React.useState(false);
   const handleCardClick = () => {
     setModalShow(true);
@@ -65,7 +66,7 @@ Provider.propTypes = {
     fax: PropTypes.string,
     administrator: PropTypes.string,
     executiveDirector: PropTypes.string,
-    numberOfLicensedBeds: PropTypes.string
+    numberOfLicensedBeds: PropTypes.string,
     // services: PropTypes.string,
     // _id: PropTypes.string,
   }).isRequired,
