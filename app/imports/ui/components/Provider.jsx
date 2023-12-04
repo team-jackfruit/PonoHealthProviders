@@ -3,7 +3,6 @@ import { Meteor } from 'meteor/meteor';
 import PropTypes from 'prop-types';
 import { Card, Button, Modal } from 'react-bootstrap';
 import swal from 'sweetalert';
-import { Users } from '../../api/userData/userData';
 import { Favorite } from '../../api/favData/favData';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
