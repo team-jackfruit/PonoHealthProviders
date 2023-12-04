@@ -11,15 +11,15 @@ const FavoriteCard = ({ user, onRemove }) => {
   return (
     <Card className="align-content-center user-card">
       <Card.Body className="text-center">
-        <Card.Header className="bold-large-header">Favorite Provider</Card.Header>
-        <Card.Title className="pt-2"> <i className="bi bi-people-fill" /> {user.name} </Card.Title>
+        <Card.Header className="bold-large-header"> <i className="bi bi-bookmark-heart-fill" />Favorite Provider</Card.Header>
+        <Card.Title className="pt-2"> <i className="bi bi-shop" /> {user.name} </Card.Title>
         <Card.Text>
           Address: {user.address || 'Not Available'}
         </Card.Text>
         <Card.Text>
-          Location: {user.location || 'Not Available'}
+          Island: {user.location || 'Not Available'}
         </Card.Text>
-        <Button variant="danger" onClick={() => onRemove(user._id)}>Remove</Button>
+        <Button variant="danger" onClick={() => onRemove(user._id)} className="me-2">Remove</Button>
         <Button variant="primary" onClick={handleFindDirections}>Find Directions</Button>
       </Card.Body>
     </Card>
@@ -35,10 +35,6 @@ FavoriteCard.propTypes = {
     _id: PropTypes.string,
   }).isRequired,
   onRemove: PropTypes.func.isRequired,
-  userCoordinates: PropTypes.shape({
-    latitude: PropTypes.number.isRequired,
-    longitude: PropTypes.number.isRequired,
-  }).isRequired,
 };
 
 export default FavoriteCard;

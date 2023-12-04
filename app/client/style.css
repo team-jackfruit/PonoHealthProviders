@@ -53,6 +53,8 @@ body {
 
 .custom-footer{
   background-color: var(--navbar-bg-color); /* Replace with your desired color */
+  clear: both;
+  position: sticky;
 }
 
 .hero-banner {
@@ -107,7 +109,6 @@ body {
   background-image: url("images/UsersProfileBackground.png");
   background-size: cover;
   background-position: center;
-  height: 100vh;
 }
 
 .card-title {

@@ -50,8 +50,10 @@ const UserProfile = () => {
             <UserCard user={user} />
           </Col>
         ))}
+      </Row>
+      <Row>
         {users2.map((user) => (
-          <Col md={4} key={user._id} className="mb-4">
+          <Col xs={12} md={6} lg={4} key={user._id} className="mb-4"> {/* Adjust column sizes as needed */}
             <FavoriteCard user={user} onRemove={handleRemoveFavorite} />
           </Col>
         ))}
