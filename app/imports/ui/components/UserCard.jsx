@@ -12,8 +12,7 @@ const UserCard = ({ user }) => (
       <Card.Subtitle className="pb-2"> <i className="bi bi-telephone-fill" /> {user.phone}</Card.Subtitle>
       <Card.Subtitle className="pb-2"> <i className="bi bi-house-fill" /> {user.address}</Card.Subtitle>
       <Card.Subtitle className="pb-4"> <i className="bi bi-file-medical-fill" /> {user.status}</Card.Subtitle>
-      {/* Here you can add more user details or action buttons */}
-      <h4>Have your details changed since your last edit?</h4>
+      <h4>Have your details changed since your last check-in?</h4>
       <Link to={`/edit/${user._id}`} className="btn btn-primary">I Want To Update My Information</Link>
     </Card.Body>
   </Card>

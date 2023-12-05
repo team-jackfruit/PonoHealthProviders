@@ -53,6 +53,8 @@ body {
 
 .custom-footer{
   background-color: var(--navbar-bg-color); /* Replace with your desired color */
+  clear: both;
+  position: relative; 
 }
 
 .hero-banner {
@@ -86,11 +88,11 @@ body {
 }
 
 .healthcare-solutions-section {
-  background-color: #7EC8E3; /* Replace with your desired color */
+  background-color: #D4F1F4; /* Replace with your desired color */
 }
 
 .health-insurance-basics-section {
-  background-color: #0D98BA; /* Replace with your desired color */
+  background-color: #75E6DA; /* Replace with your desired color */
 }
 
 #provider-card{
@@ -109,7 +111,6 @@ body {
   background-image: url("images/UsersProfileBackground.png");
   background-size: cover;
   background-position: center;
-  height: 100vh;
 }
 
 .card-title {

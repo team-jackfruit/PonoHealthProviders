@@ -62,8 +62,8 @@ const Landing = () => (
         <Image src="images/Community_Forum.png" width="150" height="150" />
       </Col>
       <Col className="services-section">
-        <h2>Community Forum</h2>
-        <p>Join the community forum to discuss and share healthcare solutions and experiences.</p>
+        <h2>Favorite</h2>
+        <p>Streamline your healthcare experience by favoriting your preferred clinics and providers, ensuring easy access and personalized care at your fingertips.</p>
       </Col>
     </Row>
   </Container>
