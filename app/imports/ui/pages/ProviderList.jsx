@@ -12,22 +12,14 @@ const ListProviderswFilterDebug = () => {
 
   const handleFilterChange = (filters) => {
     console.log('handleFilterChange called with:', filters);
-    let filtered = healthcareFacilities.flatMap(category => category.facilities.map(facility => ({ ...facility, category: category.category })));
-
-    // Filter by service type
-    if (filters.service) {
-      filtered = filtered.filter(facility => facility.service === filters.service);
-    }
-
-    // Filter by insurance type
-    if (filters.insuranceType) {
-      filtered = filtered.filter(facility => facility.insuranceType === filters.insuranceType);
-    }
-
-    // Filter by location
-    if (filters.location) {
-      filtered = filtered.filter(facility => facility.location === filters.location);
-    }
+    const filtered = healthcareFacilities
+      .filter(category => !filters.category || category.category === filters.category)
+      .flatMap(category => category.facilities
+        .filter(facility => (!filters.providerBased || facility.providerBased === 'X') &&
+                (!filters.freeStanding || facility.freeStanding === 'X') &&
+                (!filters.medicare || facility.medicare === 'X') &&
+                (!filters.location || facility.location === filters.location))
+        .map(facility => ({ ...facility, category: category.category })));
 
     // Add more filters as needed...
     console.log('Filtered Data:', filtered);
@@ -44,8 +36,9 @@ const ListProviderswFilterDebug = () => {
         <Col>
           <h2 id="provider-page-title">Providers</h2>
           <Row xs={1} md={3} lg={6} className="g-3">
-            {filteredData.map((facility) => (
-              <Col key={facility.number}>
+            {filteredData.map((facility, index) => (
+              // Use a combination of category, number, and index for a unique key
+              <Col key={`${facility.category}-${facility.number}-${index}`}>
                 <Provider provider={facility} />
               </Col>
             ))}
