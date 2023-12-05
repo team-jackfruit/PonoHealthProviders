@@ -148,3 +148,12 @@ body {
   justify-content: center;
   margin-top: 150px;
 }
+
+#filter-page {
+  background-image: url('/images/BlueGradient.png');
+  background-size: cover;
+}
+
+#provider-page-title {
+  color: white;
+}
