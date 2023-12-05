@@ -16,19 +16,16 @@ const FooterPono = () => (
         <Col md={6} className="text-center text-md-right">
           <Nav className="justify-content-center justify-content-md-end">
             <Nav.Item>
-              <Nav.Link href="/" style={{ color: 'white' }}>Home</Nav.Link>
+              <Nav.Link href="/" style={{ color: 'white' }}>HOME</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/list" style={{ color: 'white' }}>Find a Provider</Nav.Link>
+              <Nav.Link href="/list" style={{ color: 'white' }}>FIND A PROVIDER</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/resources" style={{ color: 'white' }}>Resources</Nav.Link>
+              <Nav.Link href="/resources" style={{ color: 'white' }}>RESOURCES</Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="/faq" style={{ color: 'white' }}>FAQ</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="/blog" style={{ color: 'white' }}>Blog</Nav.Link>
             </Nav.Item>
           </Nav>
         </Col>

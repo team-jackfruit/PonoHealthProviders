@@ -19,13 +19,13 @@ const Provider = ({ provider }) => {
   return (
     <>
       <Card className="card h-100" id="provider-card" onClick={handleCardClick}>
-        <Card.Header className="h-80">
+        <Card.Body className="h-100">
           {/* <Image fluid src={provider.image} className="rounded mx-auto d-block" /> */}
           <Card.Title>{provider.facility}</Card.Title>
-        </Card.Header>
-        <Card.Body>
-          <Card.Text className="card-address">{provider.address}</Card.Text>
         </Card.Body>
+        {/* <Card.Body>
+          <Card.Text className="card-address">{provider.address}</Card.Text>
+        </Card.Body> */}
       </Card>
 
       <Modal show={modalShow} onHide={handleCloseModal} centered>

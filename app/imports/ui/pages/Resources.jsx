@@ -12,7 +12,7 @@ const ResourcesPage = () => (
     </Row>
     <Row className="px-5 healthcare-solutions-section">
       <Col sm={1} md={4}>
-        <Card>
+        <Card style={{ flex: '1' }}>
           <Card.Img variant="top" src="images/medquest_hawaii.png" />
           <Card.Body>
             <Card.Title>QUEST HAWAI&apos;I</Card.Title>
@@ -24,7 +24,7 @@ const ResourcesPage = () => (
         </Card>
       </Col>
       <Col md={4}>
-        <Card>
+        <Card style={{ flex: '1' }}>
           <Card.Img variant="top" src="images/Medicare-Logo.png" />
           <Card.Body>
             <Card.Title>Medicare</Card.Title>
@@ -36,7 +36,7 @@ const ResourcesPage = () => (
         </Card>
       </Col>
       <Col md={4}>
-        <Card>
+        <Card style={{ flex: '1' }}>
           <Card.Img variant="top" src="images/ACA_logo.png" />
           <Card.Body>
             <Card.Title>HealthCare.gov</Card.Title>
@@ -50,7 +50,7 @@ const ResourcesPage = () => (
     </Row>
     <Row className="px-5 healthcare-solutions-section">
       <Col md={4}>
-        <Card>
+        <Card style={{ flex: '1' }}>
           <Card.Img variant="top" src="images/HPCA_logo.png" />
           <Card.Body>
             <Card.Title>HPCA</Card.Title>
@@ -62,7 +62,7 @@ const ResourcesPage = () => (
         </Card>
       </Col>
       <Col md={4}>
-        <Card>
+        <Card style={{ flex: '1' }}>
           <Card.Img variant="top" src="images/NeedyMeds_Logo.png" />
           <Card.Body bg="info">
             <Card.Title>NeedyMeds</Card.Title>
@@ -177,6 +177,34 @@ const ResourcesPage = () => (
                   </ul>
                 </Accordion.Body>
               </Accordion.Item>
+              <Accordion.Item eventKey="4">
+                <Accordion.Header>Deductibles</Accordion.Header>
+                <Accordion.Body>
+                  A deductible is what you pay annually for health services before your insurance company pays its share. For instance, if you have a deductible of $1,000, your insurance plan might not start covering its share of your bills until you’ve paid $1,000 for healthcare in a given year. However, plans often cover the cost of things like preventive care doctor’s visits even before you’ve paid your full deductible amount.
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="5">
+                <Accordion.Header>Premium</Accordion.Header>
+                <Accordion.Body>
+                  Your premium is what you’ll pay the insurance company for the privilege of having an active insurance plan. Most people pay theirs every month, but your payments might be due once a quarter or once a year.
+
+                  {/* eslint-disable-next-line max-len */}
+                  Fortunately, there are tax credits available to offset the costs of health insurance premiums for plans purchased on the Affordable Care Act marketplace. If you get health insurance through work, your employer probably covers a share of your monthly premium.
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="6">
+                <Accordion.Header>FSA (Flexible Spending Account)</Accordion.Header>
+                <Accordion.Body>
+                  An FSA is often set up through an employer plan. It lets you set aside pre-tax money for common medical costs and dependent care. FSA funds must be used by the end of the term-year. It will be sent back to the employer if you don't use it. Check with your employer's Human Resources team. The can provide a list of FSA-qualified costs that you can purchase directly or be reimbursed for. A few common FSA-qualified costs include:
+                  <ul>
+                    <li>Copays for doctors’ visits, chiropractor and psychological sessions</li>
+                    <li>Hospital fees, medical tests and services (like X-rays and screenings)</li>
+                    <li>Physical rehabilitation</li>
+                    <li>Dental and orthodontic expenses (like cleaning, fillings and braces)</li>
+                    <li>Inpatient treatment for alcohol or drug addiction</li>
+                  </ul>
+                </Accordion.Body>
+              </Accordion.Item>
             </Accordion>
           </Card.Body>
         </Card>
@@ -201,12 +229,6 @@ const ResourcesPage = () => (
                   This provision mandates that health plans cover preventive services like vaccinations, screenings, and regular check-ups without any cost to the patient. This encourages individuals to seek preventative care, potentially reducing the likelihood of severe health issues later.
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="2">
-                <Accordion.Header>Young Adult Coverage</Accordion.Header>
-                <Accordion.Body>
-                  Young adults can stay on their parents&apos; health insurance plans until their mid 20&apos;s, providing them with more options for coverage during early career stages or education.
-                </Accordion.Body>
-              </Accordion.Item>
               <Accordion.Item eventKey="3">
                 <Accordion.Header>Ends Lifetime and Yearly Limits</Accordion.Header>
                 <Accordion.Body>
@@ -225,12 +247,6 @@ const ResourcesPage = () => (
                   This protection makes it illegal for insurers to cancel someone&apos;s health insurance if they get sick, safeguarding continuous coverage during illness.
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="6">
-                <Accordion.Header>Choice of Doctors</Accordion.Header>
-                <Accordion.Body>
-                  Patients have the right to choose their healthcare providers within their plan&apos;s network, allowing for more personalized and suitable medical care.
-                </Accordion.Body>
-              </Accordion.Item>
               <Accordion.Item eventKey="7">
                 <Accordion.Header>Informed Consent</Accordion.Header>
                 <Accordion.Body>
@@ -243,12 +259,6 @@ const ResourcesPage = () => (
                   Patients have the right to refuse medical treatment, except in emergencies, altered mental status due to certain conditions, when refusal poses a public threat, or in cases of life-saving treatment for minors.
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="9">
-                <Accordion.Header>Decisions About End-of-Life Care</Accordion.Header>
-                <Accordion.Body>
-                  Patients have the right to make decisions about their end-of-life care, including the refusal of life-extending treatments, through advance directives.
-                </Accordion.Body>
-              </Accordion.Item>
               <Accordion.Item eventKey="10">
                 <Accordion.Header>Access to Medical Records</Accordion.Header>
                 <Accordion.Body>
@@ -259,12 +269,6 @@ const ResourcesPage = () => (
                 <Accordion.Header>Pre-existing Health Conditions</Accordion.Header>
                 <Accordion.Body>
                   Insurance companies can&apos;t refuse coverage or charge more due to pre-existing conditions. This ensures that people with health issues, such as chronic illnesses or previous diagnoses, receive the same access to insurance as those without such conditions.
-                </Accordion.Body>
-              </Accordion.Item>
-              <Accordion.Item eventKey="12">
-                <Accordion.Header>Non-Discrimination</Accordion.Header>
-                <Accordion.Body>
-                  This provision ensures that individuals are not discriminated against in healthcare settings based on race, color, national origin, sex, age, or disability.
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
