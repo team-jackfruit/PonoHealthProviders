@@ -49,11 +49,11 @@ const ListProviders = () => {
 
   // Render the providers list or loading spinner
   return (
-    <Container className="filter-page py-3">
+      <Container className="filter-page">
       {/* Filter form */}
       <Row>
         <Col fluid="sm">
-          <h2 id="provider-page-title">Provider Filter</h2>
+          <h2 id="provider-page-title" className="py-4">Provider Filter</h2>
           <Card>
             <Card.Body>
               <Form onSubmit={applyFilters}>
@@ -244,6 +244,7 @@ const ListProviders = () => {
                         value="Provider-Based"
                         checked={facilityType === 'Provider-Based'}
                         block
+                        className="pb-3"
                       />
                     </div>
                     {/* Island Filter */}
@@ -323,8 +324,8 @@ const ListProviders = () => {
                   </FormGroup>
                   {/* Apply and Reset Filter Buttons */}
                 </Row>
-                <Button variant="primary" type="submit" id="filter-button">Apply Filters</Button>
-                <Button variant="secondary" onClick={resetFilters} id="filter-button">Reset Filters</Button>
+                <Button variant="primary" type="submit" id="filter-button" className="m-2 mt-3">Apply Filters</Button>
+                <Button variant="secondary" onClick={resetFilters} id="filter-button" className="m-2 mt-3">Reset Filters</Button>
               </Form>
             </Card.Body>
           </Card>
@@ -334,8 +335,8 @@ const ListProviders = () => {
       {/* Providers list */}
       <Row>
         <Col>
-          <h2 id="provider-page-title">Providers</h2>
-          <Row xs={1} md={3} lg={6} className="g-3">
+          <h2 id="provider-page-title" className="py-4">Providers</h2>
+          <Row xs={1} md={2} lg={2} className="g-3">
             {filteredFacilities.map((provider) => (
               <Col key={provider.number}>
                 <Provider provider={provider} />
