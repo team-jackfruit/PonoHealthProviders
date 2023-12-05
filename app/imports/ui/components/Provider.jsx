@@ -17,6 +17,7 @@ const Provider = ({ provider }) => {
     setModalShow(false);
   };
 
+  // eslint-disable-next-line no-unused-vars
   const openWebsite = () => {
     window.open('https://ponohealthproviders.com', '_blank');
   };
@@ -63,9 +64,9 @@ const Provider = ({ provider }) => {
           {/* <Image fluid src={provider.image} className="rounded mx-auto d-block" /> */}
           <Card.Title>{provider.facility}</Card.Title>
         </Card.Body>
-        {/* <Card.Body>
+        <Card.Body>
           <Card.Text className="card-address">{provider.address}</Card.Text>
-        </Card.Body> */}
+        </Card.Body>
       </Card>
 
       <Modal show={modalShow} onHide={handleCloseModal} centered>
@@ -80,9 +81,9 @@ const Provider = ({ provider }) => {
           <Button variant="secondary" onClick={handleCloseModal}>
             Close
           </Button>
-          <Button variant="primary" onClick={openWebsite}>
-            Visit Website
-          </Button>
+          {/* <Button variant="primary" onClick={openWebsite}> */}
+          {/*  Visit Website */}
+          {/* </Button> */}
           <Button variant="primary" onClick={handleFavoriteClick}>
             Favorite
           </Button>

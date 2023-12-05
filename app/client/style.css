@@ -54,7 +54,7 @@ body {
 .custom-footer{
   background-color: var(--navbar-bg-color); /* Replace with your desired color */
   clear: both;
-  /* position: sticky; */
+  position: relative; 
 }
 
 .hero-banner {

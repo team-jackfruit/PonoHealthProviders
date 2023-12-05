@@ -30,7 +30,7 @@ const ListProviders = () => {
 
   // Render the providers list
   return (
-    <Container className="filter-page">
+    <Container className="filter-page py-4">
       {/* Filter form */}
       <Row>
         <Col fluid="sm">
