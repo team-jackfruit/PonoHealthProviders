@@ -30,22 +30,21 @@ const ListProviders = () => {
 
   // Render the providers list
   return (
-    <Container className="filter-page py-3">
+    <Container className="filter-page">
       {/* Filter form */}
       <Row>
         <Col fluid="sm">
-          <h2 id="provider-page-title">Provider Filter</h2>
+          <h2 id="provider-page-title" className="py-4">Provider Filter</h2>
           <Card>
             <Card.Body>
               <Form>
                 {/* Service Type Filter */}
                 <Row className="g-3">
-                  <FormGroup as={Col} sm={8}>
+                  <FormGroup as={Col} sm={8} className="py-4">
                     <FormLabel><h5>Service Type</h5></FormLabel>
                     {/* ... Service Type FormCheck components ... */}
                     <FormCheck
                       className="service-type-radio-button"
-                      inline
                       label="Adult Day Health Centers"
                       name="serviceType"
                       type="radio"
@@ -58,7 +57,6 @@ const ListProviders = () => {
                     />
                     <FormCheck
                       className="service-type-radio-button"
-                      inline
                       label="Ambulatory Surgery Centers"
                       name="serviceType"
                       type="radio"
@@ -71,7 +69,6 @@ const ListProviders = () => {
                     />
                     <FormCheck
                       className="service-type-radio-button"
-                      inline
                       label="End Stage Renal Disease (ESRD) Program"
                       name="serviceType"
                       type="radio"
@@ -84,7 +81,6 @@ const ListProviders = () => {
                     />
                     <FormCheck
                       className="service-type-radio-button"
-                      inline
                       label="Home Health Agencies"
                       name="serviceType"
                       type="radio"
@@ -97,7 +93,6 @@ const ListProviders = () => {
                     />
                     <FormCheck
                       className="service-type-radio-button"
-                      inline
                       label="Hospice"
                       name="serviceType"
                       type="radio"
@@ -110,7 +105,6 @@ const ListProviders = () => {
                     />
                     <FormCheck
                       className="service-type-radio-button"
-                      inline
                       label="Hospitals"
                       name="serviceType"
                       type="radio"
@@ -123,7 +117,6 @@ const ListProviders = () => {
                     />
                     <FormCheck
                       className="service-type-radio-button"
-                      inline
                       label="Intermediate Care Facilities for Individuals with Intellectual Disabilities"
                       name="serviceType"
                       type="radio"
@@ -136,7 +129,6 @@ const ListProviders = () => {
                     />
                     <FormCheck
                       className="service-type-radio-button"
-                      inline
                       label="Organ Procurement Organization"
                       name="serviceType"
                       type="radio"
@@ -149,7 +141,6 @@ const ListProviders = () => {
                     />
                     <FormCheck
                       className="service-type-radio-button"
-                      inline
                       label="Outpatient Physical Therapy/Speech Pathology"
                       name="serviceType"
                       type="radio"
@@ -162,7 +153,6 @@ const ListProviders = () => {
                     />
                     <FormCheck
                       className="service-type-radio-button"
-                      inline
                       label="Rural Health Clinics"
                       name="serviceType"
                       type="radio"
@@ -175,7 +165,6 @@ const ListProviders = () => {
                     />
                     <FormCheck
                       className="service-type-radio-button"
-                      inline
                       label="Skilled Nursing/Intermediate Care Facilities"
                       name="serviceType"
                       type="radio"
@@ -188,7 +177,6 @@ const ListProviders = () => {
                     />
                     <FormCheck
                       className="service-type-radio-button"
-                      inline
                       label="Free-Standing X-Ray Facility"
                       name="serviceType"
                       type="radio"
@@ -208,7 +196,6 @@ const ListProviders = () => {
                     {/* ... Facility Type FormCheck components ... */}
                     <FormCheck
                       className="facility-type-radio-button"
-                      inline
                       label="Free-Standing"
                       name="facilityType"
                       type="radio"
@@ -222,7 +209,6 @@ const ListProviders = () => {
                     />
                     <FormCheck
                       className="facility-type-radio-button"
-                      inline
                       label="Provider-Based"
                       name="providerBased"
                       type="radio"
@@ -242,7 +228,6 @@ const ListProviders = () => {
                     {/* ... Island FormCheck components ... */}
                     <FormCheck
                       className="island-radio-button"
-                      inline
                       label="Oahu"
                       name="island"
                       type="radio"
@@ -253,7 +238,6 @@ const ListProviders = () => {
                     />
                     <FormCheck
                       className="island-radio-button"
-                      inline
                       label="Hawaii"
                       name="island"
                       type="radio"
@@ -264,7 +248,6 @@ const ListProviders = () => {
                     />
                     <FormCheck
                       className="island-radio-button"
-                      inline
                       label="Maui"
                       name="island"
                       type="radio"
@@ -275,7 +258,6 @@ const ListProviders = () => {
                     />
                     <FormCheck
                       className="island-radio-button"
-                      inline
                       label="Kauai"
                       name="island"
                       type="radio"
@@ -286,7 +268,6 @@ const ListProviders = () => {
                     />
                     <FormCheck
                       className="island-radio-button"
-                      inline
                       label="Molokai"
                       name="island"
                       type="radio"
@@ -297,7 +278,6 @@ const ListProviders = () => {
                     />
                     <FormCheck
                       className="island-radio-button"
-                      inline
                       label="Lihue"
                       name="island"
                       type="radio"

@@ -54,7 +54,7 @@ body {
 .custom-footer{
   background-color: var(--navbar-bg-color); /* Replace with your desired color */
   clear: both;
-  position: sticky;
+  /* position: sticky; */
 }
 
 .hero-banner {
@@ -96,11 +96,13 @@ body {
 }
 
 #provider-card{
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
 
 #provider-card:hover{
-  transform: scale(1.1);
+  transform: scale(1.03);
+  background-color: #05445E;
+  color: white;
 }
 
 /* These are for the User Profile and related pages */
@@ -126,4 +128,23 @@ body {
 .bold-large-header {
   font-weight: bold;
   font-size: 1.25rem; /* Adjust the size as needed */
+}
+
+.carousel-item{
+  opacity:0;
+  transition: opacity 1s !important;
+}
+.carousel-item.active{
+  opacity:1;
+  transition: opacity 1s !important;
+}
+
+#faq-page {
+  background-image: url('/images/BlueGradient.png');
+  background-size: cover;
+}
+
+#carousel{
+  justify-content: center;
+  margin-top: 150px;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import { Container, Row, Col, Image, Button } from 'react-bootstrap';
 
 /* A simple static component to render some text for the landing page. */
 const Landing = () => (
@@ -9,6 +9,7 @@ const Landing = () => (
       <Col className="text-center">
         <h1>Welcome to PonoHealth Providers</h1>
         <h2>Where everyone gets equal access</h2>
+        <Button size="lg" className="m-4" variant="outline-light" href="\list">Find a Provider</Button>
       </Col>
     </Row>
     {/* This is the Mission section */}
@@ -19,7 +20,7 @@ const Landing = () => (
         <h2 className="mission-heading">TRYING TO FIND AFFORDABLE HEALTHCARE?</h2>
         <p className="mission-text">PonoHealth Providers aims to bridge the gap for the uninsured and under-insured, by enhancing healthcare accessibility, promoting informed decision-making, and fostering a community where quality health services are attainable for all, regardless of their financial circumstances.</p>
       </Col>
-      <Col className="col-4 p-5 text-center">
+      <Col className="col-4 p-5 pt-6 text-center">
         <Image fluid src="images/second_section_landing.png" />
       </Col>
     </Row>
@@ -61,8 +62,8 @@ const Landing = () => (
         <Image src="images/Community_Forum.png" width="150" height="150" />
       </Col>
       <Col className="services-section">
-        <h2>Community Forum</h2>
-        <p>Join the community forum to discuss and share healthcare solutions and experiences.</p>
+        <h2>Favorite</h2>
+        <p>Streamline your healthcare experience by favoriting your preferred clinics and providers, ensuring easy access and personalized care at your fingertips.</p>
       </Col>
     </Row>
   </Container>
