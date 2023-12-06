@@ -15,6 +15,7 @@ const formSchema = new SimpleSchema({
   email: String,
   phone: String,
   address: String,
+  image: String,
   status: {
     type: String,
     allowedValues: ['Insured', 'Uninsured', 'Under-insured'],
@@ -28,10 +29,10 @@ const CreateUser = () => {
   const navigate = useNavigate();
   // On submit, insert the data.
   const submit = (data, formRef) => {
-    const { firstName, lastName, email, phone, address, status } = data;
+    const { firstName, lastName, email, phone, address, image, status } = data;
     const owner = Meteor.user().username;
     Users.collection.insert(
-      { firstName, lastName, email, phone, address, status, owner },
+      { firstName, lastName, email, phone, address, status, image, owner },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -59,6 +60,7 @@ const CreateUser = () => {
                 <TextField name="email" />
                 <TextField name="phone" />
                 <TextField name="address" />
+                <TextField name="image" />
                 <SelectField name="status" />
                 <SubmitField value="Submit" />
                 <ErrorsField />

@@ -42,6 +42,7 @@ const App = () => {
           <Route path="/list" element={<ListProviderswFilter />} />
           <Route path="/notauthorized" element={<NotAuthorized />} />
           <Route path="/signin" element={<SignIn />} />
+          <Route path="/test" element={<test />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signout" element={<SignOut />} />
           <Route path="/edit/:_id" element={<ProtectedRoute><EditUser /></ProtectedRoute>} />

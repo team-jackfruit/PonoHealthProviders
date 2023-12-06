@@ -7,6 +7,7 @@ import UserCard from '../components/UserCard';
 import FavoriteCard from '../components/FavoriteCard';
 import LoadingSpinner from '../components/LoadingSpinner';
 import { Favorite } from '../../api/favData/favData';
+import ProfileImage from '../components/ProfileImage';
 
 /* Renders a table containing all of the User documents. Use <UserItem> to render each row. */
 const UserProfile = () => {
@@ -42,8 +43,9 @@ const UserProfile = () => {
   return (ready || ready2) ? (
     <Container fluid className="py-3 userProfile">
       <Row className="justify-content-center">
+        {/* User Account Image */}
         <Col md={4}>
-          <Image src="/images/UserAccount.png" fluid />
+          <ProfileImage user={users} />
         </Col>
         {users.map((user) => (
           <Col md={4} key={user._id} className="mb-4">

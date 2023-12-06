@@ -35,8 +35,8 @@ const EditUser = () => {
   // console.log('EditUser', doc, ready);
   // On successful submit, insert the data.
   const submit = (data) => {
-    const { firstName, lastName, email, phone, address, status } = data;
-    Users.collection.update(_id, { $set: { firstName, lastName, email, phone, address, status } }, (error) => (error ?
+    const { firstName, lastName, email, phone, address, image, status } = data;
+    Users.collection.update(_id, { $set: { firstName, lastName, email, phone, address, image, status } }, (error) => (error ?
       swal('Error', error.message, 'error') :
       swal('Success', 'Item updated successfully', 'success')));
     navigate('/'); // Redirect Landing
@@ -55,6 +55,7 @@ const EditUser = () => {
                 <TextField name="email" />
                 <TextField name="phone" />
                 <TextField name="address" />
+                <TextField name="image" />
                 <SelectField name="status" />
                 <SubmitField value="Submit" />
                 <ErrorsField />

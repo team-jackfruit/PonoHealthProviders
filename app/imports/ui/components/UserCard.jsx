@@ -11,6 +11,7 @@ const UserCard = ({ user }) => (
       <Card.Subtitle className="pb-4 text-muted"> <i className="bi bi-envelope-fill" /> {user.email}</Card.Subtitle>
       <Card.Subtitle className="pb-2"> <i className="bi bi-telephone-fill" /> {user.phone}</Card.Subtitle>
       <Card.Subtitle className="pb-2"> <i className="bi bi-house-fill" /> {user.address}</Card.Subtitle>
+      <Card.Subtitle className="pb-2"> <i className="bi bi-image-fill" /> {user.image}</Card.Subtitle>
       <Card.Subtitle className="pb-4"> <i className="bi bi-file-medical-fill" /> {user.status}</Card.Subtitle>
       <h4>Have your details changed since your last check-in?</h4>
       <Link to={`/edit/${user._id}`} className="btn btn-primary">I Want To Update My Information</Link>
@@ -26,6 +27,7 @@ UserCard.propTypes = {
     email: PropTypes.string.isRequired,
     phone: PropTypes.string,
     address: PropTypes.string,
+    image: PropTypes.string,
     status: PropTypes.string.isRequired,
     _id: PropTypes.string,
   }).isRequired,
