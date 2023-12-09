@@ -1,20 +1,27 @@
 import React from 'react';
-import { Container, Row, Col, Nav } from 'react-bootstrap';
+import { Container, Row, Col, Nav, Image } from 'react-bootstrap';
 
 /** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
 const FooterPono = () => (
   <footer className="custom-footer" style={{ color: 'white' }}>
-    <Container>
-      <Row className="py-3">
-        <Col md={6} className="text-center text-md-left mb-3 mb-md-0">
+      <Row className="p-4">
+        <Col md={4} className="text-center">
           <div>Liam (Kula) Van Asperen</div>
           <div>Jakapop Khongnawang</div>
           <div>Chad Maeshiro</div>
           <div>Taitusi Vadei</div>
           <div>University of Hawaii at Manoa - ICS 314 F23</div>
         </Col>
-        <Col md={6} className="text-center text-md-right">
-          <Nav className="justify-content-center justify-content-md-end">
+        <Col md={4} className="text-center">
+          <Image
+            alt="Logo"
+            src="images/JackFruitLogo.png"
+            width="300px"
+            className="d-inline-block align-top me-5"
+          />
+        </Col>
+        <Col md={4} className="text-center">
+          <Nav className="justify-content-center d-flex align-items-center">
             <Nav.Item>
               <Nav.Link href="/" style={{ color: 'white' }}>HOME</Nav.Link>
             </Nav.Item>
@@ -30,12 +37,6 @@ const FooterPono = () => (
           </Nav>
         </Col>
       </Row>
-      <Row>
-        <Col className="text-center py-3">
-          © 2023 Team Jackfruit. All Rights Reserved.
-        </Col>
-      </Row>
-    </Container>
   </footer>
 );
 

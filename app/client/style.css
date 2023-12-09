@@ -70,29 +70,38 @@ body {
 }
 
 .mission-section {
-  background-color: #2D9EDD; /* Replace with your specific color */
+  background-color: #0979a7; /* Replace with your specific color */
 }
 
 .mission-heading {
   font-size: 2.5rem; /* Adjust the size as needed */
-  color: #05445E;
+  color: white;
 }
 
 .mission-text {
   font-size: 1rem; /* Adjust the size as needed */
-  color: #05445E;
+  color: white;
 }
 
 .services-section {
-  background-color: #189AB4; /* Replace with your specific color */
+  background-color: #189ab4; /* Replace with your specific color */
 }
 
 .healthcare-solutions-section {
-  background-color: #D4F1F4; /* Replace with your desired color */
+  background-color: #02909e;
+  color: #004047;
+}
+
+.resource-header{
+  background-image: url("images/ResourcesBanner.jpg");
+  background-size: cover;
+  max-height: 300px;
+  color: #05445E;
 }
 
 .health-insurance-basics-section {
-  background-color: #75E6DA; /* Replace with your desired color */
+  background-color: #01818e;
+  color: white;
 }
 
 #provider-card{
@@ -149,6 +158,16 @@ body {
   margin-top: 150px;
 }
 
+
+#resource-card{
+  max-height: 100px;
+  max-width: 100px;
+  padding-right: 10px;
+}
+
+#resource-card-image{
+  max-height: 100vh;
+  
 #filter-page {
   background-image: url('/images/BlueGradient.png');
   background-size: cover;
@@ -156,4 +175,5 @@ body {
 
 #provider-page-title {
   color: white;
+
 }

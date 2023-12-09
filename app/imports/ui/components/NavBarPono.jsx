@@ -17,9 +17,8 @@ const NavBarPono = () => {
       <Container>
         <Image
           alt="Logo"
-          src="images/PonoHealthProvidersLogo.png"
+          src="images/PonoHealthLogo.png"
           width="60"
-          height="60"
           className="d-inline-block align-top"
         />
         <Navbar.Brand className="p-3" href="/home">PONOHEALTH PROVIDERS</Navbar.Brand>
@@ -33,11 +32,11 @@ const NavBarPono = () => {
             {currentUser === '' ? (
               <NavDropdown id="login-dropdown" title="LOGIN">
                 <NavDropdown.Item id="login-dropdown-sign-in" as={NavLink} to="/signin">
-                  <PersonFill />
+                  <PersonFill className="me-2" />
                   Sign In
                 </NavDropdown.Item>
                 <NavDropdown.Item id="login-dropdown-sign-up" as={NavLink} to="/signup">
-                  <PersonPlusFill />
+                  <PersonPlusFill className="me-2" />
                   Sign Up
                 </NavDropdown.Item>
               </NavDropdown>
