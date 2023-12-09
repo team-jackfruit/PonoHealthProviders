@@ -21,8 +21,17 @@ class SignupPage {
     if (shouldSucceed) {
       await navBar.isLoggedIn(testController, username);
     } else {
-      await testController.expect(Selector('.alert-danger').exists).ok('Error message displayed for registration failure');
+      await testController.expect(Selector('#reg-error').visible).ok();
     }
+  }
+
+  /** Test the signup with an invalid detail */
+  async signupWithInvalidInfo(testController, username, password) {
+    await this.isDisplayed(testController);
+    await testController.typeText('input[name="email"]', username);
+    await testController.typeText('input[name="password"]', password);
+    await testController.click('input[type="submit"]');
+    await testController.expect(Selector('#reg-error').visible).ok();
   }
 }
 

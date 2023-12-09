@@ -83,7 +83,7 @@ const SignUp = () => {
                     {error === '' ? (
                       ''
                     ) : (
-                      <Alert variant="danger">
+                      <Alert id="reg-error" variant="danger">
                         <Alert.Heading>Registration was not successful</Alert.Heading>
                         {error}
                       </Alert>
