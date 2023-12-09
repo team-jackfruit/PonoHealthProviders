@@ -1,32 +1,21 @@
 import React from 'react';
-import { Button, Card, Col, Container, Row, Accordion } from 'react-bootstrap';
+import { Button, Card, Col, Container, Row, Accordion, Image } from 'react-bootstrap';
 // import ServiceSection from '../components/ServiceSection';
 // import InsuranceTerms from '../components/InsuranceTerms';
 
 const ResourcesPage = () => (
   <Container fluid>
-    <Row className="px-5 healthcare-solutions-section">
-      <Col md={12} className="text-center p-4">
-        <h2>Searching for Low Cost Healthcare Solutions?</h2>
-      </Col>
+    <Row className="resource-header text-center">
+      <h1 className="p-4">Resources</h1>
     </Row>
-    <Row className="px-5 healthcare-solutions-section">
-      <Col sm={1} md={4}>
-        <Card style={{ flex: '1' }}>
-          <Card.Img variant="top" src="images/medquest_hawaii.png" />
+    <Row className="healthcare-solutions-section">
+      <h2 className="text-center pt-5">Searching for Low Cost Healthcare Solutions?</h2>
+    </Row>
+    <Row className="p-5 healthcare-solutions-section" sm={1} md={3} lg={4}>
+      <Col className="p-2">
+        <Card className="resource-card h-100">
           <Card.Body>
-            <Card.Title>QUEST HAWAI&apos;I</Card.Title>
-            <Card.Text>
-              Medicaid plans for low-income families, children, pregnant women, elderly adults, and individuals with disabilities.
-            </Card.Text>
-            <Button variant="primary" href="https://medquest.hawaii.gov/">Visit Website</Button>
-          </Card.Body>
-        </Card>
-      </Col>
-      <Col md={4}>
-        <Card style={{ flex: '1' }}>
-          <Card.Img variant="top" src="images/Medicare-Logo.png" />
-          <Card.Body>
+            <Image variant="top" src="images/Medicare-Logo.png" className="img-fluid p-2" />
             <Card.Title>Medicare</Card.Title>
             <Card.Text>
               Primarily for people who are 65 or older, or those with certain disabilities or conditions.
@@ -35,10 +24,10 @@ const ResourcesPage = () => (
           </Card.Body>
         </Card>
       </Col>
-      <Col md={4}>
-        <Card style={{ flex: '1' }}>
-          <Card.Img variant="top" src="images/ACA_logo.png" />
+      <Col className="p-2">
+        <Card className="resource-card h-100">
           <Card.Body>
+            <Image variant="top" src="images/ACA_logo.png" className="img-fluid p-2" />
             <Card.Title>HealthCare.gov</Card.Title>
             <Card.Text>
               For those with lower incomes, HealthCare.gov can help determine eligibility for subsidies that make premiums more affordable.
@@ -47,12 +36,10 @@ const ResourcesPage = () => (
           </Card.Body>
         </Card>
       </Col>
-    </Row>
-    <Row className="px-5 healthcare-solutions-section">
-      <Col md={4}>
-        <Card style={{ flex: '1' }}>
-          <Card.Img variant="top" src="images/HPCA_logo.png" />
+      <Col className="p-2">
+        <Card className="resource-card h-100">
           <Card.Body>
+            <Image variant="top" src="images/HPCA_logo.png" className="img-fluid p-2" />
             <Card.Title>HPCA</Card.Title>
             <Card.Text>
               These centers receive federal funding to provide primary care services at reduced rates.
@@ -61,10 +48,10 @@ const ResourcesPage = () => (
           </Card.Body>
         </Card>
       </Col>
-      <Col md={4}>
-        <Card style={{ flex: '1' }}>
-          <Card.Img variant="top" src="images/NeedyMeds_Logo.png" />
+      <Col className="p-2">
+        <Card className="resource-card h-100">
           <Card.Body bg="info">
+            <Image variant="top" src="images/NeedyMeds_Logo.png" className="img-fluid p-2" />
             <Card.Title>NeedyMeds</Card.Title>
             <Card.Text>
               A national non-profit, educates and empowers those seeking affordable healthcare.
@@ -73,25 +60,20 @@ const ResourcesPage = () => (
           </Card.Body>
         </Card>
       </Col>
-      {/* Add more columns/cards if needed */}
     </Row>
     {/* This is the Insurance Section */}
-    <Row className="px-5 health-insurance-basics-section">
-      <Col md={12} className="text-center">
-        <h2>Know Health Insurance Basics</h2>
-      </Col>
-    </Row>
-    <Row className="px-5 health-insurance-basics-section">
+    <Row className="p-4 health-insurance-basics-section">
+      <h2 className="text-center p-3">Know Health Insurance Basics</h2>
       <Col md={4}>
         <Card>
           <Card.Body>
             <Card.Title>Picking Out Health Insurance Plans</Card.Title>
             <Card.Text>
-              Choosing the right healthcare or insurance plan is a critical decision that can significantly impact your health and financial well-being. This process involves understanding various plan options, considering your own health needs, and evaluating factors. Let&apos;s delve into the key considerations and steps involved in selecting a healthcare or insurance plan that best suits your individual needs and circumstances.
+              Choosing the right healthcare or insurance plan is a critical decision with a profound impact on your health and financial well-being. This process entails understanding different plan options, evaluating your health needs, and considering various factors. Let's delve into the key considerations and steps involved in selecting a healthcare or insurance plan that best suits your individual needs and circumstances. Here are some steps to assist you in picking out health insurance plans, ensuring comprehensive coverage for your well-being.
             </Card.Text>
             <Accordion>
               <Accordion.Item eventKey="0">
-                <Accordion.Header>Understanding Different Types of Health Insurance Plans</Accordion.Header>
+                <Accordion.Header>Understanding Different Types of Plans</Accordion.Header>
                 <Accordion.Body>
                   An HMO (Health Maintenance Organization) offers lower premiums and a primary care physician who coordinates all healthcare needs, but requires staying in-network except for emergencies. A PPO (Preferred Provider Organization) offers more flexibility in choosing providers and doesn&apos;t require referrals, but typically comes with higher out-of-pocket costs. An EPO (Exclusive Provider Organization) is similar to an HMO in its network restrictions but often doesn&apos;t require referrals. Lastly, a POS (Point of Service) plan combines elements of HMOs and PPOs, requiring referrals but offering more provider options.
                 </Accordion.Body>
@@ -118,6 +100,18 @@ const ResourcesPage = () => (
                 <Accordion.Header>Maximizing Additional Benefits and Coverage</Accordion.Header>
                 <Accordion.Body>
                   Many insurance plans offer additional benefits that can be decisive factors in your choice. These may include dental and vision coverage, mental health services, prescription drug coverage, and wellness programs. Also, consider the coverage for preventative care, which can include vaccinations, screenings, and annual check-ups. Evaluate these benefits in conjunction with the plan’s overall cost to determine which plan offers the best value for your specific health and wellness needs.
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="5">
+                <Accordion.Header>Customer Reviews and Ratings</Accordion.Header>
+                <Accordion.Body>
+                  Research the reputation of insurance companies by reading customer reviews and ratings. Consider customer satisfaction and the company's track record in handling claims.
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="6">
+                <Accordion.Header>Additional Benefits</Accordion.Header>
+                <Accordion.Body>
+                  Some plans offer additional benefits like wellness programs, maternity care, mental health services, or telehealth. Consider these extras based on your needs.
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
@@ -214,7 +208,7 @@ const ResourcesPage = () => (
           <Card.Body>
             <Card.Title>Consumer Rights</Card.Title>
             <Card.Text>
-              Healthcare laws in the United States are designed to provide a variety of protections to ensure that individuals have access to necessary medical services, are treated fairly, and have their personal health information protected. These laws have been enacted to address various aspects of healthcare access and insurance coverage, aiming to create a more equitable and efficient healthcare system. Let&apos;s explore these protections in more detail to understand how they benefit patients and contribute to the overall healthcare landscape. Here are the key protections provided by healthcare law in the United States:
+              Healthcare laws in the United States are designed to provide a variety of protections to ensure that individuals have access to necessary medical services, are treated fairly, and have their personal health information protected. These laws address various aspects of healthcare access and insurance coverage, aiming to create a more equitable and efficient healthcare system. Let&apos;s explore these protections in more detail to understand how they benefit patients and contribute to the overall healthcare landscape. Here are the key protections provided by healthcare law in the United States:
             </Card.Text>
             <Accordion>
               <Accordion.Item eventKey="0">
@@ -254,18 +248,6 @@ const ResourcesPage = () => (
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="8">
-                <Accordion.Header>Right to Refuse Treatment</Accordion.Header>
-                <Accordion.Body>
-                  Patients have the right to refuse medical treatment, except in emergencies, altered mental status due to certain conditions, when refusal poses a public threat, or in cases of life-saving treatment for minors.
-                </Accordion.Body>
-              </Accordion.Item>
-              <Accordion.Item eventKey="10">
-                <Accordion.Header>Access to Medical Records</Accordion.Header>
-                <Accordion.Body>
-                  The HIPAA Privacy Rule gives individuals the right to access their medical records, ensuring transparency and enabling patients to make informed decisions about their health.
-                </Accordion.Body>
-              </Accordion.Item>
-              <Accordion.Item eventKey="11">
                 <Accordion.Header>Pre-existing Health Conditions</Accordion.Header>
                 <Accordion.Body>
                   Insurance companies can&apos;t refuse coverage or charge more due to pre-existing conditions. This ensures that people with health issues, such as chronic illnesses or previous diagnoses, receive the same access to insurance as those without such conditions.
