@@ -9,9 +9,8 @@ const FavoriteCard = ({ user, onRemove }) => {
     window.open(googleMapsUrl, '_blank');
   };
   return (
-    <Card className="align-content-center user-card">
+    <Card className="align-content-center user-card h-100">
       <Card.Body className="text-center">
-        <Card.Header className="bold-large-header"> <i className="bi bi-bookmark-heart-fill" />Favorite Provider</Card.Header>
         <Card.Title className="pt-2"> <i className="bi bi-shop" /> {user.name} </Card.Title>
         <Card.Text>
           Address: {user.address || 'Not Available'}

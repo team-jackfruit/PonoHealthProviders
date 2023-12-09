@@ -165,8 +165,9 @@ body {
   padding-right: 10px;
 }
 
-#resource-card-image{
+#resource-card-image {
   max-height: 100vh;
+}
   
 #filter-page {
   background-image: url('/images/BlueGradient.png');
@@ -175,5 +176,5 @@ body {
 
 #provider-page-title {
   color: white;
-
 }
+

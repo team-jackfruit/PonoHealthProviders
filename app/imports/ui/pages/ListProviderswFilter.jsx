@@ -41,7 +41,7 @@ const ListProviders = () => {
                 <Form>
                   {/* Service Type Filter */}
                   <Row className="g-3">
-                    <FormGroup as={Col} sm={8} className="py-4">
+                    <FormGroup as={Col} sm={4} className="p-3 pb-4">
                       <FormLabel><h5>Service Type</h5></FormLabel>
                       {/* ... Service Type FormCheck components ... */}
                       <FormCheck
@@ -192,7 +192,7 @@ const ListProviders = () => {
                     </FormGroup>
 
                     {/* Facility Type Filter */}
-                    <FormGroup as={Col} sm={4} disabled={!isFacilityTypeEnabled}>
+                    <FormGroup as={Col} sm={4} disabled={!isFacilityTypeEnabled} className="p-3">
                       <FormLabel><h5>Facility Type</h5></FormLabel>
                       {/* ... Facility Type FormCheck components ... */}
                       <FormCheck
@@ -224,7 +224,7 @@ const ListProviders = () => {
                     </FormGroup>
 
                     {/* Island Filter */}
-                    <FormGroup as={Col} sm={4} disabled={!isIslandEnabled}>
+                    <FormGroup as={Col} sm={4} disabled={!isIslandEnabled} className="p-3">
                       <FormLabel><h5>Island</h5></FormLabel>
                       {/* ... Island FormCheck components ... */}
                       <FormCheck
@@ -299,7 +299,7 @@ const ListProviders = () => {
         {/* Providers list */}
         <Row>
           <Col>
-            <h2 id="provider-page-title">Providers</h2>
+            <h2 className="p-2"></h2>
             <Row xs={1} md={3} lg={6} className="g-3">
               {filteredFacilities.map((provider, index) => (
                 <Col key={index}>
