@@ -2,7 +2,7 @@ import { Selector } from 'testcafe';
 
 class LandingPage {
   constructor() {
-    this.pageId = '#landing-page';
+    this.pageId = '#home-page';
     this.pageSelector = Selector(this.pageId);
   }
 
@@ -13,3 +13,4 @@ class LandingPage {
 }
 
 export const landingPage = new LandingPage();
+

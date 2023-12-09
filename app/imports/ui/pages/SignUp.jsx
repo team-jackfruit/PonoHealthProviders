@@ -20,8 +20,27 @@ const SignUp = () => {
   });
   const bridge = new SimpleSchema2Bridge(schema);
 
+  const validateEmail = (email) => {
+    const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.(com|edu)$/;
+    return re.test(String(email).toLowerCase());
+  };
+
+  const validatePassword = (password) => {
+    const re = /^[a-zA-Z0-9]{7}$/;
+    return re.test(password);
+  };
+
   const submit = (doc) => {
     const { email, password } = doc;
+    if (!validateEmail(email)) {
+      setError('Invalid email format. Email must have an @ and end with .com or .edu');
+      return;
+    }
+
+    if (!validatePassword(password)) {
+      setError('Invalid password. Password must be 7 characters long and alphanumeric');
+      return;
+    }
     Accounts.createUser({ email, username: email, password }, (err) => {
       if (err) {
         setError(err.reason);

@@ -13,12 +13,16 @@ class SignupPage {
   }
 
   /** Signs up a new user, then checks to see that they are logged in by checking the navbar. */
-  async signupUser(testController, username, password) {
+  async signupUser(testController, username, password, shouldSucceed) {
     await this.isDisplayed(testController);
-    await testController.typeText('#signup-form-email', username);
-    await testController.typeText('#signup-form-password', password);
-    await testController.click('#signup-form-submit input.btn.btn-primary');
-    await navBar.isLoggedIn(testController, username);
+    await testController.typeText('input[name="email"]', username);
+    await testController.typeText('input[name="password"]', password);
+    await testController.click('input[type="submit"]');
+    if (shouldSucceed) {
+      await navBar.isLoggedIn(testController, username);
+    } else {
+      await testController.expect(Selector('.alert-danger').exists).ok('Error message displayed for registration failure');
+    }
   }
 }
 

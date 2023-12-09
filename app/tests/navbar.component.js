@@ -52,6 +52,11 @@ class NavBar {
     await testController.click('#login-dropdown');
     await testController.click('#login-dropdown-sign-up');
   }
+
+  /** Go to Find Provider page */
+  async gotoProviderFilterPage(testController) {
+    await testController.navigateTo('/list');
+  }
 }
 
 export const navBar = new NavBar();
