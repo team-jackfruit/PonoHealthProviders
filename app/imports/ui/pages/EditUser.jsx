@@ -38,7 +38,7 @@ const EditUser = () => {
     const { firstName, lastName, email, phone, address, status } = data;
     Users.collection.update(_id, { $set: { firstName, lastName, email, phone, address, status } }, (error) => (error ?
       swal('Error', error.message, 'error') :
-      swal('Success', 'Item updated successfully', 'success')));
+      swal('Success', 'Profile Edited Successfully', 'success')));
     navigate('/'); // Redirect Landing
   };
 

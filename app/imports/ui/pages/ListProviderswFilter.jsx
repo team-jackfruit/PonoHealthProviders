@@ -301,11 +301,17 @@ const ListProviders = () => {
           <Col>
             <h2 className="p-2"></h2>
             <Row xs={1} md={3} lg={6} className="g-3">
-              {filteredFacilities.map((provider, index) => (
-                <Col key={index}>
-                  <Provider provider={provider} />
+              {filteredFacilities.length > 0 ? (
+                filteredFacilities.map((provider, index) => (
+                  <Col id="provider-is-available" key={index}>
+                    <Provider provider={provider} />
+                  </Col>
+                ))
+              ) : (
+                <Col className="text-white" id="no-results-message">
+                  <h2>No providers available.</h2>
                 </Col>
-              ))}
+              )}
             </Row>
           </Col>
         </Row>

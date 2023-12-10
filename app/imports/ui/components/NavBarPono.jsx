@@ -26,9 +26,9 @@ const NavBarPono = () => {
         <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
           <Nav>
             <Nav.Link href="/home">HOME</Nav.Link>
-            <Nav.Link href="/list">FIND A PROVIDER</Nav.Link>
-            <Nav.Link href="/resources">RESOURCES</Nav.Link>
-            <Nav.Link href="/faq">FAQ</Nav.Link>
+            <Nav.Link href="/list" id="navbar-findProvider">FIND A PROVIDER</Nav.Link>
+            <Nav.Link href="/resources" id="navbar-resources">RESOURCES</Nav.Link>
+            <Nav.Link href="/faq" id="navbar-faq">FAQ</Nav.Link>
             {currentUser === '' ? (
               <NavDropdown id="login-dropdown" title="LOGIN">
                 <NavDropdown.Item id="login-dropdown-sign-in" as={NavLink} to="/signin">
@@ -42,7 +42,7 @@ const NavBarPono = () => {
               </NavDropdown>
             ) : (
               <>
-                <Nav.Link href="/userprofile">PROFILE</Nav.Link>
+                <Nav.Link href="/userprofile" id="navbar-profile">PROFILE</Nav.Link>
                 <NavDropdown id="navbar-current-user" title={currentUser}>
                   <NavDropdown.Item id="navbar-sign-out" as={NavLink} to="/signout">
                     <BoxArrowRight />
@@ -59,25 +59,5 @@ const NavBarPono = () => {
     </Navbar>
   );
 };
-
-/*
-const NavBarPono = () => (
-  <Navbar className="custom-navbar" variant="dark" expand="lg">
-    <Container>
-      <Navbar.Brand href="#home">PONOHEALTH PROVIDERS</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
-        <Nav>
-          <Nav.Link href="/list">FIND A PROVIDER</Nav.Link>
-          <Nav.Link href="/home">HOME</Nav.Link>
-          <Nav.Link href="/resources">RESOURCES</Nav.Link>
-          <Nav.Link href="/faq">FAQ</Nav.Link>
-          <Nav.Link href="/blog">BLOG</Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
-    </Container>
-  </Navbar>
-);
- */
 
 export default NavBarPono;

@@ -72,10 +72,14 @@ const Provider = ({ provider }) => {
 
       <Modal show={modalShow} onHide={handleCloseModal} centered>
         <Modal.Header closeButton>
-          <Modal.Title>{provider.facility}</Modal.Title>
+          <Modal.Title id="facility-name">{provider.facility}</Modal.Title>
         </Modal.Header>
+<<<<<<< HEAD
         <Modal.Body>
           {provider.administrator && <p>Administrated by {provider.administrator}</p>}
+=======
+        <Modal.Body id="facility-information">
+>>>>>>> origin/issue-48-2
           <p>Address: {provider.address}</p>
           {provider.mailingAddress && <p>Mailing Address: {provider.mailingAddress}</p>}
           <p>Island: {provider.location}</p>
@@ -84,14 +88,19 @@ const Provider = ({ provider }) => {
           {provider.numberOfLicensedBeds && <p>This facility contains {provider.numberOfLicensedBeds} licensed beds available</p>}
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseModal}>
+          <Button variant="secondary" onClick={handleCloseModal} id="closeProviderCard">
             Close
           </Button>
+<<<<<<< HEAD
           {/* <Button variant="primary" onClick={openWebsite}> */}
           {/*  Visit Website */}
           {/* </Button> */}
           <Button variant="warning" onClick={handleFavoriteClick}>
             <StarFill color="white" />
+=======
+          <Button variant="primary" onClick={handleFavoriteClick} id="favoriteButton">
+            Favorite
+>>>>>>> origin/issue-48-2
           </Button>
         </Modal.Footer>
       </Modal>
