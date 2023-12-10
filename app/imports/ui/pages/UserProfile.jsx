@@ -8,6 +8,7 @@ import FavoriteCard from '../components/FavoriteCard';
 import LoadingSpinner from '../components/LoadingSpinner';
 import { Favorite } from '../../api/favData/favData';
 import ProfileImage from '../components/ProfileImage';
+import userItem from '../components/UserItem';
 
 /* Renders a table containing all of the User documents. Use <UserItem> to render each row. */
 const UserProfile = () => {
@@ -23,7 +24,6 @@ const UserProfile = () => {
     // Logging statements
     console.log('Subscription ready:', rdy);
     console.log('Fetched users:', userItems);
-
     return {
       users: userItems,
       users2: favItems,
@@ -44,9 +44,11 @@ const UserProfile = () => {
     <Container fluid className="py-3 userProfile">
       <Row className="justify-content-center">
         {/* User Account Image */}
-        <Col md={4}>
-          <ProfileImage user={users} />
-        </Col>
+        {users.map((user) => (
+          <Col md={4}>
+            <ProfileImage user={user} />
+          </Col>
+        ))}
         {users.map((user) => (
           <Col md={4} key={user._id} className="mb-4">
             <UserCard user={user} />
