@@ -7,9 +7,9 @@ import { useTracker } from 'meteor/react-meteor-data';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import firebase from 'firebase/app';
 import swal from 'sweetalert';
+import { getStorage, ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { Users } from '../../api/userData/userData';
 import LoadingSpinner from '../components/LoadingSpinner';
-import 'firebase/storage';
 
 const bridge = new SimpleSchema2Bridge(Users.schema);
 
@@ -27,10 +27,9 @@ const EditUser = () => {
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
     if (!file) return;
-    const storageRef = firebase.storage().ref();
-    const fileRef = storageRef.child(`uploads/${file.name}`);
-    const uploadTask = fileRef.put(file);
-
+    const storage = getStorage();
+    const storageRef = ref(storage, `/files/${file.name}`);
+    const uploadTask = uploadBytesResumable(storageRef, file);
     uploadTask.on(
       'state_changed',
       (snapshot) => {
@@ -41,8 +40,7 @@ const EditUser = () => {
         swal('Error', `Failed to upload image: ${error.message}`, 'error');
       },
       () => {
-        fileRef.getDownloadURL().then((url) => {
-          console.log(url);
+        getDownloadURL(uploadTask.snapshot.ref).then((url) => {
           setImageURL(url); // Save the URL for later use
           swal('Success', 'Image uploaded successfully', 'success');
         });

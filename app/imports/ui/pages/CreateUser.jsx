@@ -14,7 +14,10 @@ const formSchema = new SimpleSchema({
   email: String,
   phone: String,
   address: String,
-  image: String,
+  image: {
+    type: String,
+    optional: true,
+  },
   status: {
     type: String,
     allowedValues: ['Insured', 'Uninsured', 'Under-insured'],
