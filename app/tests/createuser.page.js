@@ -11,10 +11,7 @@ class CreateUserPage {
     const addressField = Selector('#addressField');
     const statusField = Selector('#statusField');
     // const submitButton = Selector('#submitButton');
-    const submitButton = Selector('#submitButton');
-    const spinner = Selector('#loadingSpinner');
     const successSwal = Selector('.swal-title').withText('Success');
-    const swalOkButton = Selector('button').withText('OK');
 
     // Enter valid data into form fields
     await testController
@@ -26,19 +23,13 @@ class CreateUserPage {
       .click(statusField)
       .click(Selector('option').withText('Insured')); // Select a valid status option
 
-    console.log('about to click submit button');
     // Click the submit button
     await testController.click('input[type="submit"]');
-    console.log('have clicked submit button');
 
-    console.log('waiting for swal to appear');
     // Wait for the success message to appear
     await testController.expect(successSwal.exists).ok({ timeout: 5000 });
-    console.log('swal appears');
 
-    console.log('clicking ok on swal');
     // Click the "OK" button on the success message
-    await testController.click(swalOkButton);
     console.log('clicked ok on swal');
   }
 

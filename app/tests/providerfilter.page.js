@@ -34,6 +34,11 @@ class ProviderFilterPage {
     await testController.expect(providers.exists || noResultsMessage.exists).ok('Providers are listed or no results message is shown');
   }
 
+  async verifyResultForFavorite(testController) {
+    const providers = Selector('#provider-is-available');
+    await testController.expect(providers.exists).ok('Providers are listed');
+  }
+
   // Function to select "Hospitals" as the service type
   async selectServiceTypeHospitals(testController) {
     const hospitalsOption = Selector('.service-type-radio-button').withText('Hospitals');

@@ -71,19 +71,16 @@ const Provider = ({ provider }) => {
 
       <Modal show={modalShow} onHide={handleCloseModal} centered>
         <Modal.Header closeButton>
-          <Modal.Title>{provider.facility}</Modal.Title>
+          <Modal.Title id="facility-name">{provider.facility}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body id="facility-information">
           <p>Address: {provider.address}</p>
           <p>Island: {provider.location}</p>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseModal}>
+          <Button variant="secondary" onClick={handleCloseModal} id="closeProviderCard">
             Close
           </Button>
-          {/* <Button variant="primary" onClick={openWebsite}> */}
-          {/*  Visit Website */}
-          {/* </Button> */}
           <Button variant="primary" onClick={handleFavoriteClick} id="favoriteButton">
             Favorite
           </Button>

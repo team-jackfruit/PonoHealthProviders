@@ -6,6 +6,7 @@ import { providerFilterPage } from './providerfilter.page';
 import { signupPage } from './signup.page';
 import { createUserPage } from './createuser.page';
 import { userProfilePage } from './userprofile.page';
+import { providerCard } from './providercard.component';
 
 /* global fixture:false, test:false */
 
@@ -21,9 +22,12 @@ function generateRandomWord() {
   return randomWord;
 }
 
-const randomWord = generateRandomWord();
-const email = `${randomWord}@gmail.com`;
-const new_credentials = { username: email, password: 'P4s5w8x' };
+const randomWordOne = generateRandomWord();
+const randomWordTwo = generateRandomWord();
+const email_one = `${randomWordOne}@gmail.com`;
+const email_two = `${randomWordTwo}@gmail.com`;
+const new_credentials_one = { username: email_one, password: 'P4s5w8x' };
+const new_credentials_two = { username: email_two, password: 'P4s5w8x' };
 const invalid_password = { username: 'abc@gmail.com', password: '123' };
 const invalid_email = { username: 'abc', password: 'P4s5w8x' };
 
@@ -52,18 +56,36 @@ test('Test that Provider Filter Page works', async (testController) => {
 
 test('Test that Sign Up works', async (testController) => {
   await navBar.gotoSignUpPage(testController);
-  await signupPage.signupUser(testController, new_credentials.username, new_credentials.password, true);
-  await navBar.isLoggedIn(testController, new_credentials.username);
+  await signupPage.signupUser(testController, new_credentials_one.username, new_credentials_one.password, true);
+  await navBar.isLoggedIn(testController, new_credentials_one.username);
   await navBar.logout(testController);
 });
 
-test.only('Test that Create User Page works and it shows on Profile', async (testController) => {
+test('Test that Create User Page works and it shows on Profile', async (testController) => {
   await navBar.gotoSignUpPage(testController);
-  await signupPage.signupUser(testController, new_credentials.username, new_credentials.password, true);
+  await signupPage.signupUser(testController, new_credentials_two.username, new_credentials_two.password, true);
   await createUserPage.submitFormWithValidData(testController);
-  await navBar.isLoggedIn(testController, new_credentials.username);
+  await navBar.isLoggedIn(testController, new_credentials_two.username);
   await navBar.gotoProfilePage(testController);
   await userProfilePage.profileShowsUserDetails(testController);
+  await navBar.logout(testController);
+});
+
+test('Test that Favoriting Providers shows up on Profile', async (testController) => {
+  await navBar.gotoSignInPage(testController);
+  await signinPage.signin(testController, existing_credentials.username, existing_credentials.password);
+  await navBar.isLoggedIn(testController, existing_credentials.username);
+  await navBar.gotoProviderFilterPage(testController);
+  await providerFilterPage.selectServiceTypeHospitals(testController);
+  await providerFilterPage.selectFacilityTypeProviderBased(testController);
+  await providerFilterPage.selectIslandOahu(testController);
+  await providerFilterPage.verifyResultForFavorite(testController);
+  await providerCard.ClickOnProviderCard(testController);
+  await providerCard.ClickOnFavoriteButton(testController);
+  await providerCard.ClickOutOfProviderCard(testController);
+  await navBar.gotoProfilePage(testController);
+  await userProfilePage.profileShowsFavorite(testController);
+  await navBar.logout(testController);
 });
 
 test('Test that Sign Up with invalid email generates error', async (testController) => {
