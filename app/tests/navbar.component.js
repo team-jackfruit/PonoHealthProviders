@@ -57,6 +57,10 @@ class NavBar {
   async gotoProviderFilterPage(testController) {
     await testController.navigateTo('/list');
   }
+
+  async gotoProfilePage(testController) {
+    await testController.navigateTo('/userprofile');
+  }
 }
 
 export const navBar = new NavBar();

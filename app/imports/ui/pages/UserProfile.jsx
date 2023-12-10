@@ -20,8 +20,8 @@ const UserProfile = () => {
     const favItems = Favorite.collection.find({}).fetch();
 
     // Logging statements
-    console.log('Subscription ready:', rdy);
-    console.log('Fetched users:', userItems);
+    // console.log('Subscription ready:', rdy);
+    // console.log('Fetched users:', userItems);
 
     return {
       users: userItems,
@@ -40,20 +40,20 @@ const UserProfile = () => {
   };
 
   return (ready || ready2) ? (
-    <Container fluid className="py-3 userProfile">
+    <Container fluid className="py-3 userProfile" id="user-profile">
       <Row className="justify-content-center">
-        <Col md={4}>
+        <Col md={4} id="user-image">
           <Image src="/images/UserAccount.png" fluid />
         </Col>
         {users.map((user) => (
-          <Col md={4} key={user._id} className="mb-4">
+          <Col md={4} key={user._id} className="mb-4" id="user-card">
             <UserCard user={user} />
           </Col>
         ))}
       </Row>
       <Row>
         {users2.map((user) => (
-          <Col xs={12} md={6} lg={4} key={user._id} className="mb-4"> {/* Adjust column sizes as needed */}
+          <Col xs={12} md={6} lg={4} key={user._id} className="mb-4" id="user-favorite"> {/* Adjust column sizes as needed */}
             <FavoriteCard user={user} onRemove={handleRemoveFavorite} />
           </Col>
         ))}

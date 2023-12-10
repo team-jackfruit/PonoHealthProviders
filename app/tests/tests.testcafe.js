@@ -4,6 +4,8 @@ import { signoutPage } from './signout.page';
 import { navBar } from './navbar.component';
 import { providerFilterPage } from './providerfilter.page';
 import { signupPage } from './signup.page';
+import { createUserPage } from './createuser.page';
+import { userProfilePage } from './userprofile.page';
 
 /* global fixture:false, test:false */
 
@@ -55,6 +57,15 @@ test('Test that Sign Up works', async (testController) => {
   await navBar.logout(testController);
 });
 
+test.only('Test that Create User Page works and it shows on Profile', async (testController) => {
+  await navBar.gotoSignUpPage(testController);
+  await signupPage.signupUser(testController, new_credentials.username, new_credentials.password, true);
+  await createUserPage.submitFormWithValidData(testController);
+  await navBar.isLoggedIn(testController, new_credentials.username);
+  await navBar.gotoProfilePage(testController);
+  await userProfilePage.profileShowsUserDetails(testController);
+});
+
 test('Test that Sign Up with invalid email generates error', async (testController) => {
   await navBar.gotoSignUpPage(testController);
   await signupPage.signupWithInvalidInfo(testController, invalid_email.username, invalid_email.password);
@@ -68,4 +79,5 @@ test('Test that Sign Up with invalid password generates error', async (testContr
 test('Test that Sign Up with registered User generates error', async (testController) => {
   await navBar.gotoSignUpPage(testController);
   await signupPage.signupUser(testController, existing_credentials.username, existing_credentials.password, false);
+  await navBar.gotoProfilePage(testController);
 });

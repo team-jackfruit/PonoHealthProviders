@@ -88,9 +88,23 @@ const CreateUser = () => {
       if (error) {
         swal('Error', error.message, 'error');
       } else {
-        swal('Success', 'Profile Information Added Successfully', 'success').then(() => {
+        swal({
+          title: 'Success',
+          text: 'Profile Information Added Successfully',
+          icon: 'success',
+          buttons: {
+            confirm: {
+              text: 'OK',
+              value: true,
+              visible: true,
+              className: 'success-ok-button', // Custom class for the OK button
+              closeModal: true,
+            },
+          },
+          className: 'success-swal', // Adding custom class to the popup
+        }).then(() => {
           formRef.reset();
-          navigate('/');
+          navigate('/home');
         });
       }
     });
@@ -98,11 +112,11 @@ const CreateUser = () => {
 
   let fRef = null;
   return (
-    <Container fluid className="py-3 userProfile" data-testid="createUserContainer">
+    <Container fluid className="py-3 userProfile" id="createUserContainer">
       <Row className="justify-content-center">
         <Col xs={5}>
           <Col className="text-center"><h2>Create User</h2></Col>
-          <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => submit(data, fRef)} validation="onChange">
+          <AutoForm id="createUserForm" ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => submit(data, fRef)} validation="onChange">
             <Card>
               <Card.Body>
                 <TextField name="firstName" id="firstNameField" />

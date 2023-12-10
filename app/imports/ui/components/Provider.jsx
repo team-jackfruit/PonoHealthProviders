@@ -84,7 +84,7 @@ const Provider = ({ provider }) => {
           {/* <Button variant="primary" onClick={openWebsite}> */}
           {/*  Visit Website */}
           {/* </Button> */}
-          <Button variant="primary" onClick={handleFavoriteClick}>
+          <Button variant="primary" onClick={handleFavoriteClick} id="favoriteButton">
             Favorite
           </Button>
         </Modal.Footer>
