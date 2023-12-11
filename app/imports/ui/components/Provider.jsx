@@ -3,8 +3,8 @@ import { Meteor } from 'meteor/meteor';
 import PropTypes from 'prop-types';
 import { Card, Button, Modal } from 'react-bootstrap';
 import swal from 'sweetalert';
-import { Favorite } from '../../api/favData/favData';
 import { StarFill } from 'react-bootstrap-icons';
+import { Favorite } from '../../api/favData/favData';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 const Provider = ({ provider }) => {
@@ -74,12 +74,8 @@ const Provider = ({ provider }) => {
         <Modal.Header closeButton>
           <Modal.Title id="facility-name">{provider.facility}</Modal.Title>
         </Modal.Header>
-<<<<<<< HEAD
-        <Modal.Body>
-          {provider.administrator && <p>Administrated by {provider.administrator}</p>}
-=======
         <Modal.Body id="facility-information">
->>>>>>> origin/issue-48-2
+          {provider.administrator && <p>Administrated by {provider.administrator}</p>}
           <p>Address: {provider.address}</p>
           {provider.mailingAddress && <p>Mailing Address: {provider.mailingAddress}</p>}
           <p>Island: {provider.location}</p>
@@ -91,16 +87,8 @@ const Provider = ({ provider }) => {
           <Button variant="secondary" onClick={handleCloseModal} id="closeProviderCard">
             Close
           </Button>
-<<<<<<< HEAD
-          {/* <Button variant="primary" onClick={openWebsite}> */}
-          {/*  Visit Website */}
-          {/* </Button> */}
-          <Button variant="warning" onClick={handleFavoriteClick}>
+          <Button variant="warning" onClick={handleFavoriteClick} id="favoriteButton">
             <StarFill color="white" />
-=======
-          <Button variant="primary" onClick={handleFavoriteClick} id="favoriteButton">
-            Favorite
->>>>>>> origin/issue-48-2
           </Button>
         </Modal.Footer>
       </Modal>
