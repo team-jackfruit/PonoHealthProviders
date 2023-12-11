@@ -80,7 +80,7 @@ Second, visit the [Team Jackfruit application github page](https://github.com/te
 <img src="doc/DevGuide/1.PNG">   
 
 Third, cd into the Opportunity-Finder/app directory and install libraries with:
-`$ meteor npm install`
+`meteor npm install --save firebase`
 <img src="doc/DevGuide/4.PNG">   
 
 Fourth, run the system with:
