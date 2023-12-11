@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 
 const FavoriteItem = ({ user }) => (
   <tr>
@@ -16,4 +15,4 @@ FavoriteItem.propTypes = {
   }).isRequired,
 };
 
-export default FavoriteItem
+export default FavoriteItem;

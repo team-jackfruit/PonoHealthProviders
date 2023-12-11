@@ -28,9 +28,6 @@ class CreateUserPage {
 
     // Wait for the success message to appear
     await testController.expect(successSwal.exists).ok({ timeout: 5000 });
-
-    // Click the "OK" button on the success message
-    console.log('clicked ok on swal');
   }
 
   async submitFormWithInvalidData(testController) {

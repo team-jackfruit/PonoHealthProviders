@@ -13,4 +13,3 @@ class LandingPage {
 }
 
 export const landingPage = new LandingPage();
-

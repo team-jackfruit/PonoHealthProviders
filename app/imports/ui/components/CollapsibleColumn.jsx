@@ -19,11 +19,11 @@ const CollapsibleColumn = () => {
         aria-expanded="false"
         aria-controls="collapsibleColumn"
       >
-                Toggle Column
+        Toggle Column
       </button>
       <div className="collapse" id="collapsibleColumn">
         <div className="card card-body">
-                    This is a collapsible column. It is now shown.
+          This is a collapsible column. It is now shown.
         </div>
       </div>
     </div>
