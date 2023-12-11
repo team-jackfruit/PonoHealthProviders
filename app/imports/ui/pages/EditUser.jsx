@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { Card, Col, Container, Row, Button } from 'react-bootstrap';
+import { Card, Col, Container, Row } from 'react-bootstrap';
 import { AutoForm, ErrorsField, HiddenField, SelectField, SubmitField, TextField } from 'uniforms-bootstrap5';
 import { Meteor } from 'meteor/meteor';
 import { useTracker } from 'meteor/react-meteor-data';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
-import firebase from 'firebase/app';
 import swal from 'sweetalert';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { Users } from '../../api/userData/userData';
@@ -15,6 +14,7 @@ const bridge = new SimpleSchema2Bridge(Users.schema);
 
 const EditUser = () => {
   const [imageURL, setImageURL] = useState(null);
+  const [isUploading, setIsUploading] = useState(false); // State variable for upload status
   const navigate = useNavigate();
   const { _id } = useParams();
   const { doc, ready } = useTracker(() => {
@@ -27,9 +27,11 @@ const EditUser = () => {
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
     if (!file) return;
+    setIsUploading(true); // Set upload status to true
     const storage = getStorage();
     const storageRef = ref(storage, `/files/${file.name}`);
     const uploadTask = uploadBytesResumable(storageRef, file);
+
     uploadTask.on(
       'state_changed',
       (snapshot) => {
@@ -38,11 +40,13 @@ const EditUser = () => {
       (error) => {
         // Handle error
         swal('Error', `Failed to upload image: ${error.message}`, 'error');
+        setIsUploading(false); // Set upload status to false on error
       },
       () => {
         getDownloadURL(uploadTask.snapshot.ref).then((url) => {
           setImageURL(url); // Save the URL for later use
           swal('Success', 'Image uploaded successfully', 'success');
+          setIsUploading(false); // Set upload status to false on success
         });
       },
     );
@@ -79,7 +83,7 @@ const EditUser = () => {
                   <input type="file" className="form-control" id="imageUpload" onChange={handleImageUpload} />
                 </div>
                 <SelectField name="status" />
-                <SubmitField value="Submit" />
+                <SubmitField value="Submit" disabled={isUploading} /> {/* Disable button during upload */}
                 <ErrorsField />
                 <HiddenField name="owner" />
                 <HiddenField name="image" value={imageURL || doc.image} />

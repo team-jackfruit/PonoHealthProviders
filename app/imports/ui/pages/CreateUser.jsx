@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Button, Card, Col, Container, InputGroup, Row } from 'react-bootstrap';
+import { Card, Col, Container, InputGroup, Row } from 'react-bootstrap';
 import { AutoForm, ErrorsField, SelectField, SubmitField, TextField } from 'uniforms-bootstrap5';
 import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import SimpleSchema from 'simpl-schema';
+import { Users } from '../../api/userData/userData';
 
 // Create a schema to specify the structure of the data to appear in the form.
 const formSchema = new SimpleSchema({
@@ -14,10 +15,6 @@ const formSchema = new SimpleSchema({
   email: String,
   phone: String,
   address: String,
-  image: {
-    type: String,
-    optional: true,
-  },
   status: {
     type: String,
     allowedValues: ['Insured', 'Uninsured', 'Under-insured'],
@@ -29,13 +26,12 @@ const bridge = new SimpleSchema2Bridge(formSchema);
 /* Renders the CreateUser page for adding a document. */
 const CreateUser = () => {
   const navigate = useNavigate();
-
   // On submit, insert the data.
   const submit = (data, formRef) => {
-    const { firstName, lastName, email, phone, address, image, status } = data;
+    const { firstName, lastName, email, phone, address, status } = data;
     const owner = Meteor.user().username;
     Users.collection.insert(
-      { firstName, lastName, email, phone, address, status, image, owner },
+      { firstName, lastName, email, phone, address, status, owner },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
