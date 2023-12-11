@@ -1,42 +1,56 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import swal from 'sweetalert';
-import { Card, Col, Container, Row } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import { Card, Col, Container, Row, Button } from 'react-bootstrap';
 import { AutoForm, ErrorsField, HiddenField, SelectField, SubmitField, TextField } from 'uniforms-bootstrap5';
 import { Meteor } from 'meteor/meteor';
 import { useTracker } from 'meteor/react-meteor-data';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
-import { useParams } from 'react-router';
+import firebase from 'firebase/app';
+import swal from 'sweetalert';
+import { getStorage, ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { Users } from '../../api/userData/userData';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 const bridge = new SimpleSchema2Bridge(Users.schema);
 
-/* Renders the EditUser page for editing a single document. */
 const EditUser = () => {
-  // eslint-disable-next-line new-cap
-  const navigate = new useNavigate();
-  // Get the documentID from the URL field. See imports/ui/layouts/App.jsx for the route containing :_id.
+  const [imageURL, setImageURL] = useState(null);
+  const navigate = useNavigate();
   const { _id } = useParams();
-  // console.log('EditStuff', _id);
-  // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
   const { doc, ready } = useTracker(() => {
-    // Get access to User documents.
     const subscription = Meteor.subscribe(Users.userPublicationName);
-    // Determine if the subscription is ready
     const rdy = subscription.ready();
-    // Get the document
     const document = Users.collection.findOne(_id);
-    return {
-      doc: document,
-      ready: rdy,
-    };
+    return { doc: document, ready: rdy };
   }, [_id]);
-  // console.log('EditUser', doc, ready);
-  // On successful submit, insert the data.
+
+  const handleImageUpload = (event) => {
+    const file = event.target.files[0];
+    if (!file) return;
+    const storage = getStorage();
+    const storageRef = ref(storage, `/files/${file.name}`);
+    const uploadTask = uploadBytesResumable(storageRef, file);
+    uploadTask.on(
+      'state_changed',
+      (snapshot) => {
+        // Handle progress
+      },
+      (error) => {
+        // Handle error
+        swal('Error', `Failed to upload image: ${error.message}`, 'error');
+      },
+      () => {
+        getDownloadURL(uploadTask.snapshot.ref).then((url) => {
+          setImageURL(url); // Save the URL for later use
+          swal('Success', 'Image uploaded successfully', 'success');
+        });
+      },
+    );
+  };
+
   const submit = (data) => {
-    const { firstName, lastName, email, phone, address, status } = data;
-    Users.collection.update(_id, { $set: { firstName, lastName, email, phone, address, status } }, (error) => (error ?
+    const newData = { ...data, image: imageURL || data.image };
+    Users.collection.update(_id, { $set: newData }, (error) => (error ?
       swal('Error', error.message, 'error') :
       swal('Success', 'Profile Edited Successfully', 'success')));
     navigate('/'); // Redirect Landing
@@ -55,10 +69,20 @@ const EditUser = () => {
                 <TextField name="email" />
                 <TextField name="phone" />
                 <TextField name="address" />
+                {imageURL && (
+                  <div>
+                    <img src={imageURL} alt="Uploaded" style={{ width: '100%', marginBottom: '10px' }} />
+                  </div>
+                )}
+                <div className="mb-3">
+                  <label htmlFor="imageUpload" className="form-label">Upload Image</label>
+                  <input type="file" className="form-control" id="imageUpload" onChange={handleImageUpload} />
+                </div>
                 <SelectField name="status" />
                 <SubmitField value="Submit" />
                 <ErrorsField />
                 <HiddenField name="owner" />
+                <HiddenField name="image" value={imageURL || doc.image} />
               </Card.Body>
             </Card>
           </AutoForm>

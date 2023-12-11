@@ -7,6 +7,8 @@ import UserCard from '../components/UserCard';
 import FavoriteCard from '../components/FavoriteCard';
 import LoadingSpinner from '../components/LoadingSpinner';
 import { Favorite } from '../../api/favData/favData';
+import ProfileImage from '../components/ProfileImage';
+import userItem from '../components/UserItem';
 
 /* Renders a table containing all of the User documents. Use <UserItem> to render each row. */
 const UserProfile = () => {
@@ -22,7 +24,6 @@ const UserProfile = () => {
     // Logging statements
     // console.log('Subscription ready:', rdy);
     // console.log('Fetched users:', userItems);
-
     return {
       users: userItems,
       users2: favItems,

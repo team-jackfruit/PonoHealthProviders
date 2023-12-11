@@ -28,6 +28,11 @@ class UsersDataCollection {
         optional: true,
         label: 'Address',
       },
+      image: {
+        type: String,
+        optional: true,
+        label: 'image',
+      },
       owner: String,
       status: { type: String, allowedValues: ['Insured', 'Uninsured', 'Under-insured'] },
     });

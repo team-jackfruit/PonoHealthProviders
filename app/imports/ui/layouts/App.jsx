@@ -5,6 +5,8 @@ import { useTracker } from 'meteor/react-meteor-data';
 import { Roles } from 'meteor/alanning:roles';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 // import Footer from '../components/Footer';
+import {initializeApp} from 'firebase/app';
+import {getStorage} from 'firebase/storage';
 import Landing from '../pages/Landing';
 import NotFound from '../pages/NotFound';
 import NotAuthorized from '../pages/NotAuthorized';
@@ -21,6 +23,11 @@ import SignOut from '../pages/SignOut';
 import EditUser from '../pages/EditUser';
 import UserProfile from '../pages/UserProfile';
 import CreateUser from '../pages/CreateUser';
+import firebaseConfig from './firebase-config';
+
+const app = initializeApp(firebaseConfig);
+// Firebase storage reference
+const storage = getStorage(app);
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => {
@@ -42,6 +49,7 @@ const App = () => {
           <Route path="/list" element={<ListProviderswFilter />} />
           <Route path="/notauthorized" element={<NotAuthorized />} />
           <Route path="/signin" element={<SignIn />} />
+          <Route path="/test" element={<test />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signout" element={<SignOut />} />
           <Route path="/edit/:_id" element={<ProtectedRoute><EditUser /></ProtectedRoute>} />

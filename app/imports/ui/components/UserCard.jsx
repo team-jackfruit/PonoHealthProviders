@@ -26,6 +26,7 @@ UserCard.propTypes = {
     email: PropTypes.string.isRequired,
     phone: PropTypes.string,
     address: PropTypes.string,
+    image: PropTypes.string,
     status: PropTypes.string.isRequired,
     _id: PropTypes.string,
   }).isRequired,
