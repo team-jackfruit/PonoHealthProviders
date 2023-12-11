@@ -160,8 +160,14 @@ const healthcareFacilities = [
 ## Deployment
 [PonoHealthProviders](https://ponohealthproviders.com/)
 
-## Community Feedback
-***TBD***
+## Community Feedback: 
+At deployment, the web-application was tested by 10 students from within the UH System.   
+<div style="display: flex; justify-content: center; align-items: center;">
+    <img src="doc/feed1.PNG" style="width: 33%; margin-right: 10px;">
+    <img src="doc/feed2.PNG" style="width: 33%; margin-right: 10px;">
+    <img src="doc/feed3.PNG" style="width: 33%;">
+</div>
+
 
 ## Team
 [Team Jackfruit Contract](https://docs.google.com/document/d/1qJgPv2CSdPikN0eX_icKm8f14ZhrNpCa6SEnEY4vdhk/edit?usp=sharing)
