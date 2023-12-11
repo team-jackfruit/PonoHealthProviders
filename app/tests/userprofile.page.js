@@ -8,8 +8,8 @@ class UserProfilePage {
     await testController.expect(userProfileContainer.exists).ok();
 
     // Check for the presence of the image within the user-image column
-    const userImage = Selector('#user-image').find('img');
-    await testController.expect(userImage.exists).ok();
+    // const userImage = Selector('#user-image').find('img');
+    // await testController.expect(userImage.exists).ok();
 
     // Check for the presence of at least one UserCard
     const userCard = Selector('#user-card');

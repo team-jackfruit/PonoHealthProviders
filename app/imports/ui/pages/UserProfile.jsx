@@ -43,9 +43,12 @@ const UserProfile = () => {
   return (ready || ready2) ? (
     <Container fluid className="py-3 userProfile" id="user-profile">
       <Row className="justify-content-center">
-        <Col md={4} id="user-image">
-          <Image src="/images/UserAccount.png" fluid />
-        </Col>
+        {/* User Account Image */}
+        {users.map((user) => (
+          <Col md={4}>
+            <ProfileImage user={user} />
+          </Col>
+        ))}
         {users.map((user) => (
           <Col md={4} key={user._id} className="mb-4" id="user-card">
             <UserCard user={user} />

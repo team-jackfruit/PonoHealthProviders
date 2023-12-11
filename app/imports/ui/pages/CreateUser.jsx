@@ -5,6 +5,7 @@ import { AutoForm, ErrorsField, SelectField, SubmitField, TextField } from 'unif
 import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
+import { Users } from '../../api/userData/userData';
 import SimpleSchema from 'simpl-schema';
 
 // Create a schema to specify the structure of the data to appear in the form.
