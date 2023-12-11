@@ -74,16 +74,16 @@ const EditUser = () => {
                 <TextField name="phone" />
                 <TextField name="address" />
                 {imageURL && (
-                  <div>
+                  <div id="image-preview">
                     <img src={imageURL} alt="Uploaded" style={{ width: '100%', marginBottom: '10px' }} />
                   </div>
                 )}
                 <div className="mb-3">
                   <label htmlFor="imageUpload" className="form-label">Upload Image</label>
-                  <input type="file" className="form-control" id="imageUpload" onChange={handleImageUpload} />
+                  <input type="file" className="form-control" id="image-upload" onChange={handleImageUpload} />
                 </div>
                 <SelectField name="status" />
-                <SubmitField value="Submit" disabled={isUploading} /> {/* Disable button during upload */}
+                <SubmitField value="Submit" disabled={isUploading} id="submit-button" /> {/* Disable button during upload */}
                 <ErrorsField />
                 <HiddenField name="owner" />
                 <HiddenField name="image" value={imageURL || doc.image} />

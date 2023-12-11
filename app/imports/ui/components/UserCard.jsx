@@ -13,7 +13,7 @@ const UserCard = ({ user }) => (
       <Card.Subtitle className="pb-2" id="address"> <i className="bi bi-house-fill" /> {user.address}</Card.Subtitle>
       <Card.Subtitle className="pb-4" id="status"> <i className="bi bi-file-medical-fill" /> {user.status}</Card.Subtitle>
       <h4>Have your details changed since your last check-in?</h4>
-      <Link to={`/edit/${user._id}`} className="btn btn-primary" id="editLink">I Want To Update My Information</Link>
+      <Link to={`/edit/${user._id}`} className="btn btn-primary" id="edit-Link">I Want To Update My Information</Link>
     </Card.Body>
   </Card>
 );

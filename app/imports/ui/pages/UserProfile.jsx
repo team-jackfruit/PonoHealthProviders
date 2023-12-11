@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Col, Container, Image, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import { useTracker } from 'meteor/react-meteor-data';
 import { Users } from '../../api/userData/userData';
 import UserCard from '../components/UserCard';
@@ -8,7 +8,6 @@ import FavoriteCard from '../components/FavoriteCard';
 import LoadingSpinner from '../components/LoadingSpinner';
 import { Favorite } from '../../api/favData/favData';
 import ProfileImage from '../components/ProfileImage';
-import userItem from '../components/UserItem';
 
 /* Renders a table containing all of the User documents. Use <UserItem> to render each row. */
 const UserProfile = () => {
@@ -45,7 +44,7 @@ const UserProfile = () => {
       <Row className="justify-content-center">
         {/* User Account Image */}
         {users.map((user) => (
-          <Col md={4}>
+          <Col md={4} id="user-image">
             <ProfileImage user={user} />
           </Col>
         ))}

@@ -61,6 +61,10 @@ class NavBar {
   async gotoProfilePage(testController) {
     await testController.navigateTo('/userprofile');
   }
+
+  async gotoEditUserPage(testController) {
+    await testController.navigateTo('/edit/:_id');
+  }
 }
 
 export const navBar = new NavBar();
