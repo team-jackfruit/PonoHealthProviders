@@ -1,5 +1,7 @@
 # PonoHealth Providers
 
+[![ci-teamJackfruit-PonoHealthProviders](https://github.com/team-jackfruit/PonoHealthProviders/actions/workflows/ci.yml/badge.svg)](https://github.com/team-jackfruit/PonoHealthProviders/actions/workflows/ci.yml)
+
 *A web application designed to guide uninsured and underinsured individuals in Hawaii to various healthcare options. It aggregates and simplifies information about various healthcare services, providing an easy-to-navigate platform that points users to the most relevant and cost-effective healthcare solutions.*
 
 ## The Problem

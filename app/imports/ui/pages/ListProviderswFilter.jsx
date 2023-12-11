@@ -35,7 +35,7 @@ const ListProviders = () => {
         {/* Filter form */}
         <Row>
           <Col fluid="sm">
-            <h1 id="provider-page-title" className="py-4 text-center">List of Providers in the State of Hawai'i</h1>
+            <h1 id="provider-page-title" className="py-4 text-center">List of Providers in the State of Hawai&apos;i</h1>
             <Card>
               <Card.Body>
                 <Form>

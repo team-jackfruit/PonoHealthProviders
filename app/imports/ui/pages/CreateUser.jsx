@@ -16,10 +16,10 @@ const formSchema = new SimpleSchema({
     // eslint-disable-next-line consistent-return
     custom() {
       if (!this.value || this.value.trim().length === 0) {
-        return 'First name cannot be empty- Invalid ';
+        return 'First name cannot be empty - Error -> Invalid ';
       }
       if (!/^[a-zA-Z ]+$/.test(this.value)) {
-        return 'First name can only contain letters - Invalid'; // Custom message for invalid characters
+        return 'First name can only contain letters - Error -> Invalid'; // Custom message for invalid characters
       }
     },
   },
@@ -30,10 +30,10 @@ const formSchema = new SimpleSchema({
     // eslint-disable-next-line consistent-return
     custom() {
       if (!this.value || this.value.trim().length === 0) {
-        return 'Last name cannot be empty- Invalid ';
+        return 'Last name cannot be empty- Error -> Invalid ';
       }
       if (!/^[a-zA-Z ]+$/.test(this.value)) {
-        return 'Last name can only contain letters - Invalid '; // Custom message for invalid characters
+        return 'Last name can only contain letters - Error -> Invalid '; // Custom message for invalid characters
       }
     },
   },
@@ -42,7 +42,7 @@ const formSchema = new SimpleSchema({
     // eslint-disable-next-line consistent-return
     custom() {
       if (this.isSet && !/^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/.test(this.value)) {
-        return 'Check your email format - Invalid ';
+        return 'Enter a valid email address - Error -> Invalid ';
       }
     },
   },
@@ -51,7 +51,7 @@ const formSchema = new SimpleSchema({
     // eslint-disable-next-line consistent-return
     custom() {
       if (this.isSet && !/^[2-9]\d{2}-\d{3}-\d{4}$/.test(this.value)) {
-        return 'Check your phone number for e.g 808-123-4567 - Invalid ';
+        return 'Enter your phone number and separate with dashes for e.g 808-123-4567 - Error -> Invalid ';
       }
     },
   },

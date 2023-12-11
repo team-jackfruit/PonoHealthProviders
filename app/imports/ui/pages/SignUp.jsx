@@ -21,24 +21,24 @@ const SignUp = () => {
   const bridge = new SimpleSchema2Bridge(schema);
 
   const validateEmail = (email) => {
-    const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.(com|edu)$/;
+    const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return re.test(String(email).toLowerCase());
   };
 
   const validatePassword = (password) => {
-    const re = /^[a-zA-Z0-9]{7}$/;
+    const re = /^[a-zA-Z0-9]{7,}$/;
     return re.test(password);
   };
 
   const submit = (doc) => {
     const { email, password } = doc;
     if (!validateEmail(email)) {
-      setError('Invalid email format. Email must have an @ and end with .com or .edu');
+      setError('Ensure that you have entered a valid email address');
       return;
     }
 
     if (!validatePassword(password)) {
-      setError('Invalid password. Password must be 7 characters long and alphanumeric');
+      setError('Password must be at least 7 characters containing lowercase, uppercase, and numbers');
       return;
     }
     Accounts.createUser({ email, username: email, password }, (err) => {
@@ -61,8 +61,8 @@ const SignUp = () => {
                 <Card.Img src="images/login_card2.jpeg" alt="Card image" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
                 <Card.ImgOverlay>
                   <Card.Body>
-                    <h2 className="text-center"> I'm a Member! </h2>
-                    <p>If you already have an account with us and are trying to log back in, no worries! Just click on below to head on over to the login page. We're happy to have you back!</p>
+                    <h2 className="text-center"> I&apos;m a Member! </h2>
+                    <p>If you already have an account with us and are trying to log back in, no worries! Just click on below to head on over to the login page. We&apos;re happy to have you back!</p>
                     <div className="text-center py-4">
                       <Button variant="primary" as={Link} to="/signin">Sign In</Button>
                     </div>

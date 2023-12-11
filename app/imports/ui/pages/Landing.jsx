@@ -18,6 +18,7 @@ const Landing = () => (
         <h2 className="mission-heading"><strong>NEED MEDICAL HELP?</strong></h2>
         <h2 className="mission-heading"><strong>ANXIOUS BECAUSE YOU&apos;RE UNINSURED OR UNDER-INSURED?</strong></h2>
         <h2 className="mission-heading"><strong>TRYING TO FIND AFFORDABLE HEALTHCARE?</strong></h2>
+        {/* eslint-disable-next-line max-len */}
         <p className="mission-text">PonoHealth Providers aims to bridge the gap for the uninsured and under-insured, by enhancing healthcare accessibility, promoting informed decision-making, and fostering a community where quality health services are attainable for all, regardless of their financial circumstances.</p>
       </Col>
       <Col className="col-4 ms-5 p-5 pt-6 text-center">

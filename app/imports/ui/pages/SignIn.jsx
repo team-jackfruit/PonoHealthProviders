@@ -73,6 +73,7 @@ const SignIn = () => {
                 <Card.ImgOverlay>
                   <Card.Body>
                     <h2 className="text-center"> New Here? </h2>
+                    {/* eslint-disable-next-line max-len */}
                     <p>Discover a world of wellness at your fingertips! Sign up today and connect with top healthcare providers who are ready to prioritize your health and well-being. Join our community and take the first step towards a healthier you!</p>
                     <div className="text-center py-4">
                       <Button variant="primary" as={Link} to="/signup">Sign Up</Button>

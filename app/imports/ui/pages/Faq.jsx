@@ -17,11 +17,11 @@ export const Faq = () => (
           </AccordionItem>
           <AccordionItem eventKey="1">
             <AccordionHeader><h5>What is provider-based billing?</h5></AccordionHeader>
-            <AccordionBody>Provider-based billing refers to a billing method where services delivered in hospital-affiliated facilities are billed under the hospital's outpatient department, potentially leading to higher costs.</AccordionBody>
+            <AccordionBody>Provider-based billing refers to a billing method where services delivered in hospital-affiliated facilities are billed under the hospital&apos;s outpatient department, potentially leading to higher costs.</AccordionBody>
           </AccordionItem>
           <AccordionItem eventKey="2">
             <AccordionHeader><h5>How does Medicare coverage differ between provider-based and freestanding facilities?</h5></AccordionHeader>
-            <AccordionBody>Medicare typically pays provider-based facilities higher rates due to additional facility fees, which can affect the patient's co-payment amounts.</AccordionBody>
+            <AccordionBody>Medicare typically pays provider-based facilities higher rates due to additional facility fees, which can affect the patient&apos;s co-payment amounts.</AccordionBody>
           </AccordionItem>
           <AccordionItem eventKey="3">
             <AccordionHeader><h5>Do provider-based facilities have better equipment and technology?</h5></AccordionHeader>
@@ -37,7 +37,7 @@ export const Faq = () => (
           </AccordionItem>
           <AccordionItem eventKey="6">
             <AccordionHeader><h5>How do I know if a clinic is provider-based or freestanding?</h5></AccordionHeader>
-            <AccordionBody>Facilities are usually required to notify patients of their status as provider-based. You can also ask directly or check the facility's website.</AccordionBody>
+            <AccordionBody>Facilities are usually required to notify patients of their status as provider-based. You can also ask directly or check the facility&apos;s website.</AccordionBody>
           </AccordionItem>
           <AccordionItem eventKey="7">
             <AccordionHeader><h5>Are the medical services different between provider-based and freestanding facilities?</h5></AccordionHeader>
@@ -45,11 +45,11 @@ export const Faq = () => (
           </AccordionItem>
           <AccordionItem eventKey="8">
             <AccordionHeader><h5>Is a referral required for treatment at a provider-based facility?</h5></AccordionHeader>
-            <AccordionBody>Referral requirements depend on your insurance plan and the specific facility's policies.</AccordionBody>
+            <AccordionBody>Referral requirements depend on your insurance plan and the specific facility&apos;s policies.</AccordionBody>
           </AccordionItem>
           <AccordionItem eventKey="9">
             <AccordionHeader><h5>Do provider-based facilities accept all types of insurance?</h5></AccordionHeader>
-            <AccordionBody>Most provider-based facilities accept a variety of insurance plans, but it's important to verify coverage with both the facility and your insurance provider.</AccordionBody>
+            <AccordionBody>Most provider-based facilities accept a variety of insurance plans, but it&apos;s important to verify coverage with both the facility and your insurance provider.</AccordionBody>
           </AccordionItem>
           <AccordionItem eventKey="10">
             <AccordionHeader><h5>Why are provider-based facilities often more expensive for patients?</h5></AccordionHeader>
@@ -60,8 +60,8 @@ export const Faq = () => (
             <AccordionBody>While you can inquire about facility fees and discuss concerns with the billing department, these fees are generally a standard part of billing for provider-based facilities.</AccordionBody>
           </AccordionItem>
           <AccordionItem eventKey="12">
-            <AccordionHeader><h5>What is the definition of 'provider-based'?</h5></AccordionHeader>
-            <AccordionBody>  'Provider-based' typically refers to a billing practice for services delivered in hospital outpatient departments or clinics that are owned by and integrated with a hospital.</AccordionBody>
+            <AccordionHeader><h5>What is the definition of &apos;provider-based&apos;?</h5></AccordionHeader>
+            <AccordionBody>  &apos;Provider-based&apos; typically refers to a billing practice for services delivered in hospital outpatient departments or clinics that are owned by and integrated with a hospital.</AccordionBody>
           </AccordionItem>
           <AccordionItem eventKey="13">
             <AccordionHeader><h5>What is the difference between provider-based and freestanding facilities?</h5></AccordionHeader>
@@ -69,7 +69,7 @@ export const Faq = () => (
           </AccordionItem>
           <AccordionItem eventKey="14">
             <AccordionHeader><h5>How does being treated at a provider-based facility affect my bill?</h5></AccordionHeader>
-            <AccordionBody>At a provider-based facility, you may receive two bills: one for the physician's services and another for facility fees, which can increase your total cost.</AccordionBody>
+            <AccordionBody>At a provider-based facility, you may receive two bills: one for the physician&apos;s services and another for facility fees, which can increase your total cost.</AccordionBody>
           </AccordionItem>
           <AccordionItem eventKey="16">
             <AccordionHeader><h5>Are facility fees covered by insurance?</h5></AccordionHeader>
@@ -93,15 +93,15 @@ export const Faq = () => (
           </AccordionItem>
           <AccordionItem eventKey="21">
             <AccordionHeader><h5>Do provider-based facilities accept all types of insurance?</h5></AccordionHeader>
-            <AccordionBody>Most provider-based facilities accept a variety of insurance plans, but it's important to verify coverage with both the facility and your insurance provider.</AccordionBody>
+            <AccordionBody>Most provider-based facilities accept a variety of insurance plans, but it&apos;s important to verify coverage with both the facility and your insurance provider.</AccordionBody>
           </AccordionItem>
           <AccordionItem eventKey="22">
             <AccordionHeader><h5>Is a referral required for treatment at a provider-based facility?</h5></AccordionHeader>
-            <AccordionBody> Referral requirements depend on your insurance plan and the specific facility's policies. It's advisable to check with both your insurance provider and the facility.</AccordionBody>
+            <AccordionBody> Referral requirements depend on your insurance plan and the specific facility&apos;s policies. It&apos;s advisable to check with both your insurance provider and the facility.</AccordionBody>
           </AccordionItem>
           <AccordionItem eventKey="23">
             <AccordionHeader><h5>How do I know if a clinic is provider-based or freestanding?</h5></AccordionHeader>
-            <AccordionBody>Facilities are usually required to notify patients of their status as provider-based. You can also ask directly or check the facility's website for this information.</AccordionBody>
+            <AccordionBody>Facilities are usually required to notify patients of their status as provider-based. You can also ask directly or check the facility&apos;s website for this information.</AccordionBody>
           </AccordionItem>
           <AccordionItem eventKey="24">
             <AccordionHeader><h5>Are the medical services different between provider-based and freestanding facilities?</h5></AccordionHeader>
@@ -117,7 +117,7 @@ export const Faq = () => (
           </AccordionItem>
           <AccordionItem eventKey="27">
             <AccordionHeader><h5>How does Medicare coverage differ between provider-based and freestanding facilities?</h5></AccordionHeader>
-            <AccordionBody>Medicare typically pays provider-based facilities higher rates due to additional facility fees, which can affect the patient's co-payment amounts.</AccordionBody>
+            <AccordionBody>Medicare typically pays provider-based facilities higher rates due to additional facility fees, which can affect the patient&apos;s co-payment amounts.</AccordionBody>
           </AccordionItem>
           <AccordionItem eventKey="28">
             <AccordionHeader><h5>Are provider-based facilities better for complex medical conditions?</h5></AccordionHeader>
