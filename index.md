@@ -169,6 +169,9 @@ At deployment, the web-application was tested by 10 students from within the UH 
 </div>
 
 
+Based on the community feedback, the PonoHealthProviders provide great usability, with users appreciating clear, easy-to-navigate interface and well-organized layout. An aspect users like is in the functionalities. Particularly in helping users find healthcare providers across different islands and through well-thought-out service categories. The filtering system is noted for its effectiveness, and the "Know Health Insurance Basics" section is a valuable addition. However, users suggested some areas for improvement, including the use of more colors and contrast in icons, adding pictures for visual engagement, and providing more background information through an 'About' page. There were also suggestions to improve the website's functionality, such as fixing the issue with .heic picture uploads and addressing glitches in the selection process. Despite these minor issues, the overall feedback is positive, with users finding the web application well-developed, informative, and easy to navigate, setting a good baseline for healthcare apps and websites.
+
+
 ## Team
 [Team Jackfruit Contract](https://docs.google.com/document/d/1qJgPv2CSdPikN0eX_icKm8f14ZhrNpCa6SEnEY4vdhk/edit?usp=sharing)
 
