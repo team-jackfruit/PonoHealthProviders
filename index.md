@@ -39,14 +39,14 @@ Access to affordable healthcare is a significant issue in Hawaii. Uninsured or u
 
 ## User Guide
 **Landing Page**: This page is for the general information of Pono Health Providers.   
-<img src="doc/M2/Landing.PNG">   
+<img src="doc/finalLand.PNG">   
 **Directory Page**: Our directory page features a filter in which a user can utilize to find proper heatlh care facilities based off of the user's preferences. User is required to pick one category at a time. If logged in, users can favorite item to be later viewed on their personal profile.   
 <img src="doc/newfilter1.PNG">
 <img src="doc/newfilter2.PNG">
 <img src="doc/newfilter3.PNG">   
-<img src="doc/newfilter4.PNG">  
+<img src="doc/picture.PNG">  
 **Resource Page**: Users needing more resources can find provided links to government and non-profit websites for healthcare or any other healthcare-related websites.   
-<img src="doc/M2/resource.PNG">   
+<img src="doc/newresource.PNG">   
 **FAQ Page**: Users needing more information can utilize the faq page for frequently asked questions.
 <img src="doc/newfaq.PNG">   
 **Sign-In Page**: This page allows users with existing accounts to log in to view their profiles.   
