@@ -21,8 +21,7 @@ Meteor.publish(Users.userPublicationName, function () {
       return Users.collection.find({ owner: user.username });
     }
 
-  } else {
-  }
+  } else { /* empty */ }
   return this.ready();
 });
 

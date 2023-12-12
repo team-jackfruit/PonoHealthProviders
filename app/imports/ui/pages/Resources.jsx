@@ -69,7 +69,7 @@ const ResourcesPage = () => (
           <Card.Body>
             <Card.Title>Picking Out Health Insurance Plans</Card.Title>
             <Card.Text>
-              {/* eslint-disable-next-line max-len */}
+              {/* eslint-disable-next-line max-len,react/no-unescaped-entities */}
               Choosing the right healthcare or insurance plan is a critical decision with a profound impact on your health and financial well-being. This process entails understanding different plan options, evaluating your health needs, and considering various factors. Let's delve into the key considerations and steps involved in selecting a healthcare or insurance plan that best suits your individual needs and circumstances. Here are some steps to assist you in picking out health insurance plans, ensuring comprehensive coverage for your well-being.
             </Card.Text>
             <Accordion>
@@ -111,6 +111,7 @@ const ResourcesPage = () => (
               <Accordion.Item eventKey="5">
                 <Accordion.Header>Customer Reviews and Ratings</Accordion.Header>
                 <Accordion.Body>
+                  {/* eslint-disable-next-line react/no-unescaped-entities */}
                   Research the reputation of insurance companies by reading customer reviews and ratings. Consider customer satisfaction and the company's track record in handling claims.
                 </Accordion.Body>
               </Accordion.Item>

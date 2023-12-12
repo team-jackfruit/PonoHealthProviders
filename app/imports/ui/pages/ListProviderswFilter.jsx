@@ -299,7 +299,7 @@ const ListProviders = () => {
         {/* Providers list */}
         <Row>
           <Col>
-            <h2 className="p-2"></h2>
+            <h2 className="p-2"> </h2>
             <Row xs={1} md={3} lg={6} className="g-3">
               {filteredFacilities.length > 0 ? (
                 filteredFacilities.map((provider, index) => (

@@ -27,6 +27,7 @@ import firebaseConfig from './firebase-config';
 
 const app = initializeApp(firebaseConfig);
 // Firebase storage reference
+// eslint-disable-next-line no-unused-vars
 const storage = getStorage(app);
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */

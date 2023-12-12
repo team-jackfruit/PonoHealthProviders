@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Card, Col, Container, Row } from 'react-bootstrap';
@@ -34,6 +35,7 @@ const EditUser = () => {
 
     uploadTask.on(
       'state_changed',
+      // eslint-disable-next-line no-unused-vars
       (snapshot) => {
         // Handle progress
       },
@@ -79,6 +81,7 @@ const EditUser = () => {
                   </div>
                 )}
                 <div className="mb-3">
+                  {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
                   <label htmlFor="imageUpload" className="form-label">Upload Image</label>
                   <input type="file" className="form-control" id="imageUpload" onChange={handleImageUpload} />
                 </div>

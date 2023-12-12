@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types'; // Make sure to install prop-types package if you haven't already
-import { Button, Card, Image } from 'react-bootstrap';
+import { Card, Image } from 'react-bootstrap';
 import firebase from 'firebase/app';
 import 'firebase/storage';
 
 const ProfileImage = ({ user }) => {
+  // eslint-disable-next-line no-unused-vars
   const [imageURL, setImageURL] = useState(null);
 
+  // eslint-disable-next-line no-unused-vars
   const handleFileUpload = (url) => {
     setImageURL(url);
   };
 
+  // eslint-disable-next-line no-unused-vars
   const uploadImage = (file) => {
     const storageRef = firebase.storage().ref();
     const uploadTask = storageRef.child(`images/${file.name}`).put(file);

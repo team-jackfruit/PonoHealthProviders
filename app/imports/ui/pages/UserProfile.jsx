@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Col, Container, Image, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import { useTracker } from 'meteor/react-meteor-data';
 import { Users } from '../../api/userData/userData';
 import UserCard from '../components/UserCard';
@@ -8,6 +8,7 @@ import FavoriteCard from '../components/FavoriteCard';
 import LoadingSpinner from '../components/LoadingSpinner';
 import { Favorite } from '../../api/favData/favData';
 import ProfileImage from '../components/ProfileImage';
+// eslint-disable-next-line no-unused-vars
 import userItem from '../components/UserItem';
 
 /* Renders a table containing all of the User documents. Use <UserItem> to render each row. */
