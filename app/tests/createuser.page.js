@@ -37,8 +37,11 @@ class CreateUserPage {
     const emailField = Selector('#emailField');
     const phoneField = Selector('#phoneField');
     const addressField = Selector('#addressField');
+    // eslint-disable-next-line no-unused-vars
     const statusField = Selector('#statusField');
+    // eslint-disable-next-line no-unused-vars
     const submitButton = Selector('#submitButton');
+    // eslint-disable-next-line no-unused-vars
     const errorField = Selector('#errorsField');
 
     // Test for first name validation

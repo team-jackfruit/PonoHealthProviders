@@ -46,7 +46,7 @@ const UserProfile = () => {
       <Row className="justify-content-center">
         {/* User Account Image */}
         {users.map((user) => (
-          <Col md={4}>
+          <Col md={4} id="user-image">
             <ProfileImage user={user} />
           </Col>
         ))}
