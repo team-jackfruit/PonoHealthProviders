@@ -39,19 +39,54 @@ class CreateUserPage {
     const addressField = Selector('#addressField');
     const statusField = Selector('#statusField');
     const submitButton = Selector('#submitButton');
+    const errorField = Selector('#errorsField');
 
-    // Enter invalid data into form fields
+    // Test for first name validation
     await testController
-      .typeText(firstNameField, '12345') // Invalid first name
-      .typeText(lastNameField, '') // Empty last name
-      .typeText(emailField, 'invalid-email') // Invalid email
-      .typeText(phoneField, '123') // Invalid phone number
-      .typeText(addressField, '') // Empty address
-      .click(statusField)
-      .click(Selector('option').withText('Uninsured')); // Just as an example
+      .typeText(firstNameField, '123')
+      .click('input[type="submit"]')
+      .expect(Selector('#errorsField').visible).ok()
+      .selectText(firstNameField)
+      .pressKey('delete')
+      .click('input[type="submit"]')
+      .expect(Selector('#errorsField').visible)
+      .ok();
+
+    // Test for last name validation
+    await testController
+      .typeText(lastNameField, '456')
+      .click('input[type="submit"]')
+      .expect(Selector('#errorsField').visible).ok()
+      .selectText(lastNameField)
+      .pressKey('delete')
+      .click('input[type="submit"]')
+      .expect(Selector('#errorsField').visible)
+      .ok();
+
+    // Test for email validation
+    await testController
+      .typeText(emailField, 'invalidemail')
+      .click('input[type="submit"]')
+      .expect(Selector('#errorsField').visible)
+      .ok();
+
+    // Test for phone validation
+    await testController
+      .typeText(phoneField(), '123')
+      .click('input[type="submit"]')
+      .expect(Selector('#errorsField').visible)
+      .ok();
+
+    // Test for address validation
+    await testController
+      .click(addressField)
+      .pressKey('delete')
+      .click('input[type="submit"]')
+      .expect(Selector('#errorsField').visible)
+      .ok();
 
     // Click the submit button
-    await testController.click(submitButton);
+    await testController.click('input[type="submit"]');
 
     // Assertion for the presence of any error message
     const errorsField = Selector('#errorsField');

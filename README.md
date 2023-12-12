@@ -49,13 +49,13 @@ If you run into issues, try:
 [Milestone 2 Project Board](https://github.com/orgs/team-jackfruit/projects/5/views/1)
 
 ### Milestone 3:
-***TBD***
+[Milestone 3 Project Board](https://github.com/orgs/team-jackfruit/projects/7)
 
 ## Deployment
-***TBD***
+[Website Deployment](https://ponohealthproviders.com/)
 
 ## Community Feedback
-***TBD***
+[Google Sheet of UH Manoa Feedback](https://docs.google.com/spreadsheets/d/1JRvh4Mlv8LFXiGRYBRDMCaBMnQ2andZNpcn5ZXmh7Vw/edit?usp=sharing)
 
 ## Team
 [Team Jackfruit Contract](https://docs.google.com/document/d/1qJgPv2CSdPikN0eX_icKm8f14ZhrNpCa6SEnEY4vdhk/edit?usp=sharing)

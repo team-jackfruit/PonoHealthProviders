@@ -7,6 +7,8 @@ import { signupPage } from './signup.page';
 import { createUserPage } from './createuser.page';
 import { userProfilePage } from './userprofile.page';
 import { providerCard } from './providercard.component';
+import { userCard } from './usercard.component';
+import { editUserPage } from './edituser.page';
 
 /* global fixture:false, test:false */
 
@@ -24,10 +26,16 @@ function generateRandomWord() {
 
 const randomWordOne = generateRandomWord();
 const randomWordTwo = generateRandomWord();
+const randomWordThree = generateRandomWord();
+const randomWordFour = generateRandomWord();
 const email_one = `${randomWordOne}@gmail.com`;
 const email_two = `${randomWordTwo}@gmail.com`;
+const email_three = `${randomWordThree}@gmail.com`;
+const email_four = `${randomWordFour}@gmail.com`;
 const new_credentials_one = { username: email_one, password: 'P4s5w8x' };
 const new_credentials_two = { username: email_two, password: 'P4s5w8x' };
+const new_credentials_three = { username: email_three, password: 'P4s5w8x' };
+const new_credentials_four = { username: email_four, password: 'P4s5w8x' };
 const invalid_password = { username: 'abc@gmail.com', password: '123' };
 const invalid_email = { username: 'abc', password: 'P4s5w8x' };
 
@@ -61,13 +69,34 @@ test('Test that Sign Up works', async (testController) => {
   await navBar.logout(testController);
 });
 
-test('Test that Create User Page works and it shows on Profile', async (testController) => {
+test('Test that Create User Page works and information shows on Profile', async (testController) => {
   await navBar.gotoSignUpPage(testController);
   await signupPage.signupUser(testController, new_credentials_two.username, new_credentials_two.password, true);
   await createUserPage.submitFormWithValidData(testController);
   await navBar.isLoggedIn(testController, new_credentials_two.username);
   await navBar.gotoProfilePage(testController);
   await userProfilePage.profileShowsUserDetails(testController);
+  await navBar.logout(testController);
+});
+
+test('Test that Information given to Create Page form is validated', async (testController) => {
+  await navBar.gotoSignUpPage(testController);
+  await signupPage.signupUser(testController, new_credentials_four.username, new_credentials_four.password, true);
+  await createUserPage.submitFormWithInvalidData(testController);
+});
+
+test('Test that Edit User works and information shows on Profile', async (testController) => {
+  await navBar.gotoSignUpPage(testController);
+  await signupPage.signupUser(testController, new_credentials_three.username, new_credentials_three.password, true);
+  await createUserPage.submitFormWithValidData(testController);
+  await navBar.isLoggedIn(testController, new_credentials_three.username);
+  await navBar.gotoProfilePage(testController);
+  await userProfilePage.profileShowsUserDetails(testController);
+  await userCard.ClickOnEditProfile(testController);
+  await editUserPage.validUserEditSubmission(testController);
+  await navBar.gotoProfilePage(testController);
+  await userProfilePage.profileShowsUserDetails(testController);
+  await userProfilePage.profileShowsPhoto(testController);
   await navBar.logout(testController);
 });
 

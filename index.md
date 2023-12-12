@@ -39,13 +39,16 @@ Access to affordable healthcare is a significant issue in Hawaii. Uninsured or u
 
 ## User Guide
 **Landing Page**: This page is for the general information of Pono Health Providers.   
-<img src="doc/M2/Landing.PNG">   
-**Directory Page**: Our directory page features a filter in which a user can utilize to find proper heatlh care facilities based off of the user's preferences.   
-<img src="doc/M2/updatedFilter.PNG">
-<img src="doc/M2/updatedFilter2.PNG">
-<img src="doc/M2/updatedFilter3.PNG">   
+<img src="doc/finalLand.PNG">   
+**Directory Page**: Our directory page features a filter in which a user can utilize to find proper heatlh care facilities based off of the user's preferences. User is required to pick one category at a time. If logged in, users can favorite item to be later viewed on their personal profile.   
+<img src="doc/newfilter1.PNG">
+<img src="doc/newfilter2.PNG">
+<img src="doc/newfilter3.PNG">   
+<img src="doc/picture.PNG">  
 **Resource Page**: Users needing more resources can find provided links to government and non-profit websites for healthcare or any other healthcare-related websites.   
-<img src="doc/M2/resource.PNG">   
+<img src="doc/newresource.PNG">   
+**FAQ Page**: Users needing more information can utilize the faq page for frequently asked questions.
+<img src="doc/newfaq.PNG">   
 **Sign-In Page**: This page allows users with existing accounts to log in to view their profiles.   
 <img src="doc/M2/updatedSignIn.PNG">
 <img src="doc/M2/SignedIn.PNG">   
@@ -55,8 +58,10 @@ Access to affordable healthcare is a significant issue in Hawaii. Uninsured or u
 <img src="doc/M2/createUser.PNG">   
 **Profile Page**: This page allows users to view their profile while leaving the option to make changes.   
 <img src="doc/M2/Profile.PNG">   
-**Edit User Profile Page**: This page allows users to make changes to their profile information.   
-<img src="doc/M2/EditUser.PNG">   
+**Edit User Profile Page**: This page allows users to make changes to their profile information while also uploading a profile picture.   
+<img src="doc/stack.PNG">   
+<img src="doc/stack2.PNG">   
+<img src="doc/newfilter4.PNG">   
 **Sign-Out Page**: Users needing more resources can find provided links to government and non-profit websites for healthcare or any other healthcare-related websites.   
 <img src="doc/M2/SignOut.PNG">   
 
@@ -75,7 +80,7 @@ Second, visit the [Team Jackfruit application github page](https://github.com/te
 <img src="doc/DevGuide/1.PNG">   
 
 Third, cd into the Opportunity-Finder/app directory and install libraries with:
-`$ meteor npm install`
+`meteor npm install --save firebase`
 <img src="doc/DevGuide/4.PNG">   
 
 Fourth, run the system with:
@@ -155,8 +160,17 @@ const healthcareFacilities = [
 ## Deployment
 [PonoHealthProviders](https://ponohealthproviders.com/)
 
-## Community Feedback
-***TBD***
+## Community Feedback: 
+At deployment, the web-application was tested by 10 students from within the UH System.   
+<div style="display: flex; justify-content: center; align-items: center;">
+    <img src="doc/feed1.PNG" style="width: 33%; margin-right: 10px;">
+    <img src="doc/feed2.PNG" style="width: 33%; margin-right: 10px;">
+    <img src="doc/feed3.PNG" style="width: 33%;">
+</div>
+
+
+Based on the community feedback, the PonoHealthProviders provide great usability, with users appreciating clear, easy-to-navigate interface and well-organized layout. An aspect users like is in the functionalities. Particularly in helping users find healthcare providers across different islands and through well-thought-out service categories. The filtering system is noted for its effectiveness, and the "Know Health Insurance Basics" section is a valuable addition. However, users suggested some areas for improvement, including the use of more colors and contrast in icons, adding pictures for visual engagement, and providing more background information through an 'About' page. There were also suggestions to improve the website's functionality, such as fixing the issue with .heic picture uploads and addressing glitches in the selection process. Despite these minor issues, the overall feedback is positive, with users finding the web application well-developed, informative, and easy to navigate, setting a good baseline for healthcare apps and websites.
+
 
 ## Team
 [Team Jackfruit Contract](https://docs.google.com/document/d/1qJgPv2CSdPikN0eX_icKm8f14ZhrNpCa6SEnEY4vdhk/edit?usp=sharing)
